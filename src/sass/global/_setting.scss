@@ -1,0 +1,167 @@
+@use "sass:math";
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700&display=swap');
+////////////////////
+// インナー幅設定
+////////////////////
+
+// コンテンツのインナー幅（最も共通の幅が多い部分）
+$inner: 1000px;
+// ※キャンパス幅ではなくインナーの幅を指す
+
+// 余白
+$padding-pc: 25px;
+$padding-tab: 24px;
+$padding-sp: 20px;
+// ※PC時：デザインカンプの余白の幅ではない。PC時は通常25pxで大丈夫！
+
+
+////////////////////
+// ヘッダー高さ
+////////////////////
+
+$header-height-pc: 80px;
+$header-height-sp: 60px;
+
+
+////////////////////
+// フォント設定
+////////////////////
+
+$font-family-default: 'M PLUS Rounded 1c', "游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic", sans-serif; //標準フォント
+$font-family-english: 'M PLUS Rounded 1c', sans-serif;
+$font-family-base: $font-family-default;
+$font-size-base: 14px;
+$line-height-base: 1.71428;
+// ※検証ツールでしっかり反映されているか確認する
+
+// フォントウェイト
+$font-light: 300;
+$font-normal: 400;
+$font-medium: 500;
+$font-semibold: 600;
+$font-bold: 700;
+
+//ラインハイト
+$leading-none: 1;
+$leading-x-tight: 1.25;
+$leading-tight: 1.5;
+$leading-snug: 1.6;
+$leading-normal: 1.7;
+$leading-relaxed: 1.8;
+$leading-loose: 2;
+
+////////////////////
+// 色の指定
+////////////////////
+
+//色指定（共通性のあるものは出来る限り指定すると良い）
+$black: #111;
+$white: #fff;
+$color-main: #1391E6; //メイン色
+$color-secondary: #DFF1FD; //サブ色
+$color-accent: #EE5A6D; //アクセント色
+$color-bg-base: #FFF; //背景色
+$color-text-main: #393939; //メインテキスト色
+$color-text-secondary: #FFF; //サブテキスト色
+
+
+////////////////////
+// メディアクエリとブレークポイントの設定
+////////////////////
+
+//ブレイクポイント
+$breakpoints: (
+  sm: 600,
+  md: 768,
+  lg: 1024,
+  xl: 1440,
+);
+
+
+//メディアクエリー
+$mediaquerys: (
+  sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
+  md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
+  lg: "screen and (min-width: #{map-get($breakpoints,'lg')}px)",
+  xl: "screen and (min-width: #{map-get($breakpoints,'xl')}px)",
+);
+
+// @include mq(){}で書くとブレークポイントが反映される（初期値はmd）
+@mixin mq($mediaquery: md) {
+  @media #{map-get($mediaquerys, $mediaquery)} {
+    @content;
+  }
+}
+
+// remへの計算式（16pxを基準としている。10pxを基準とする場合は16を10に変更する）
+@function rem($pixels) {
+  @return math.div($pixels, 16) * 1rem;
+}
+
+////////////////////
+// 非表示設定
+////////////////////
+
+//768px以上を表示
+.u-desktop {
+  display: none;
+  @include mq("md") {
+    display: block;
+  }
+}
+
+//モバイルのみ表示
+.u-mobile {
+  @include mq("md") {
+    display: none;
+  }
+}
+
+////////////////////
+// 文字の余白計算
+////////////////////
+
+// ハーフリーディング調整
+@mixin lineHeightCrop( $line-height ) {
+	&::before {
+	  display: block;
+	  width: 0;
+	  height: 0;
+	  margin-top: calc((1 - #{$line-height}) * .5em);
+	  content: "";
+	}
+	&::after {
+	  display: block;
+	  width: 0;
+	  height: 0;
+	  margin-bottom: calc((1 - #{$line-height}) * .5em);
+	  content: "";
+	}
+}
+
+// ラインハイト
+@mixin l_height( $pixels, $height ) {
+  font-size: $pixels * 1px;
+  line-height: math.div( $height, $pixels )
+}
+
+// レタースペーシング
+@mixin l_spacing( $spacing ) {
+	letter-spacing: math.div( $spacing, 1000 ) + em;
+}
+
+////////////////////
+// 階層
+////////////////////
+
+$layer: (
+	modal: 100, //モーダル
+	drawer: 40, //ドロワー
+	floating: 30, //フローティングアイテム
+	header: 20, //ヘッダー
+	footer: 10, //フッター
+  layerUp: 2,
+	default: 1,
+  layerDown: -1,
+);
+
