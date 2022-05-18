@@ -1,0 +1,76 @@
+@use "global" as *;
+
+.ctaFooter {
+	display: inline-block;
+	min-width: 150px; 
+	max-width: 100%;
+	padding: .43em 1.4em;
+	//text-align: center;
+	border-radius: 100vh;
+	transition: all 0.3s ease 0s;
+	display: inline-flex; // iconと横並べ
+	align-items: center; 
+	justify-content: center;
+	
+	@include mq('md') {
+        min-width: 220px;
+        padding: .83em 2.98em;
+		font-size: rem(16);
+	}
+}
+
+.ctaFooter__text {
+	margin-left: .57em;
+}
+
+/* 白いボタン */
+.ctaFooter_white {
+	background-color: $color-bg-base;
+	border: 1px solid currentColor;
+	color: $color-main;
+
+	&:focus,
+	&:hover {
+		background-color: $color-main;
+		border-color: transparent;
+		color: $color-text-secondary;
+        opacity: 1;
+	}
+}
+
+.ctaFooter_white:hover .ctaIcon_01_fill {
+	fill: $color-bg-base;
+} 
+
+.ctaIcon_01_size {
+
+	@include mq('md-down') {
+		width: 17.48px;
+	}
+}
+
+/* 青いボタン */
+.ctaFooter_blue {
+	background-color: $color-main;
+	border: 1px solid transparent;
+	color: $color-text-secondary;
+
+	&:focus,
+	&:hover {
+		background-color: $color-bg-base;
+		border-color: currentColor;
+		color: $color-main;
+        opacity: 1;
+	}
+}
+
+.ctaFooter_blue:hover .ctaIcon_02_fill {
+	fill: $color-main;
+} 
+
+.ctaIcon_02_size {
+
+	@include mq('md-down') {
+		width: 25.05px;
+	}
+}

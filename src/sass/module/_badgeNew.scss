@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.badgeNew {
+    width: rem(200);
+    height: rem(200);
+    background-color: $color-accent;
+    font-size: rem(10);
+    color: $color-text-secondary;
+}

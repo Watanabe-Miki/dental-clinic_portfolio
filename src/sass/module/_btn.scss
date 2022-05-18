@@ -1,0 +1,50 @@
+@use "global" as *;
+
+.btn {
+	display: inline-block;
+	min-width: 164px;
+	max-width: 100%;
+	padding: .465em 2.8em;
+    letter-spacing: 0;
+	background-color: $color-bg-base;
+	border: 1px solid currentColor;
+	color: $color-main;
+	text-align: center;
+	border-radius: 100vh;
+	transition: all 0.3s ease 0s;
+
+	&:focus,
+	&:hover {
+		background-color: $color-main;
+		border-color: transparent;
+		color: $color-text-secondary;
+        opacity: 1;
+	}
+	
+	@include mq('md') {
+        min-width: 176px;
+        padding: .6087em 3.2em;
+	}
+}
+
+.btn_arrow_right {
+	position: relative;
+	
+	&::after {
+		content: "";
+		width: 12px;
+		height: 12px;
+		background: url(/images/common/arrow-right-blue.png) no-repeat center center / contain;
+		position: absolute;
+		top: 50%;
+		right: .86em;
+		transform: translate(-50%, -50%);
+		transition: all 0.3s ease 0s;
+	}
+
+	&:hover::after,
+	&:focus::after {
+		background: url(/images/common/arrow-right-white.png) no-repeat center center /contain;
+		right: -1%;
+	}
+}
