@@ -13,9 +13,7 @@
 	justify-content: center;
 	
 	@include mq('md') {
-        min-width: 220px;
-        padding: .83em 2.98em;
-		font-size: rem(16);
+        
 	}
 }
 
@@ -24,7 +22,8 @@
 }
 
 /* 白いボタン */
-.cta_footer_white {
+.cta_footer_white,
+.cta_submit {
 	background-color: $color-bg-base;
 	border: 1px solid currentColor;
 	color: $color-main;
@@ -79,20 +78,9 @@
 .cta_submit {
 	display: inline-block;
 	min-width: 273px;
-	background-color: $color-bg-base;
-	border: 1px solid currentColor;
-	color: $color-main;
 	text-align: center;
 	letter-spacing: 1.2em;
 	text-indent: 1.2em;
-
-	&:focus,
-	&:hover {
-		background-color: $color-main;
-		border-color: transparent;
-		color: $color-text-secondary;
-        opacity: 1;
-	}
 
 	@include mq('md') {
 		min-width: 360px;

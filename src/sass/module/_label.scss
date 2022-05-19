@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.label {
+	display: inline-block;
+	color: #FFF;
+    letter-spacing: .08em;
+    background-color: $color-main;
+}
+
+.label_md {
+    padding: .043em .64em;
+    font-size: rem(10);
+    border-radius: rem(10);
+    
+    @include mq('md') {
+        padding: .42em 0.97em;
+        font-size: rem(11);
+        border-radius: rem(14);        
+    }
+}
+
+.label_lg,
+.label_lg_pink {
+    padding: .394em .84em;
+    font-weight: $font-bold;
+    border-radius: rem(24);
+}
+
+.label_lg_pink {
+    background-color: $color-accent;
+}

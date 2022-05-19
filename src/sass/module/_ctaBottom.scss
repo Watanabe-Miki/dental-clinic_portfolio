@@ -1,0 +1,41 @@
+@use "global" as *;
+@use "sass:math";
+.ctaBottom {
+    display: inline-block;
+	min-width: 157px; 
+	padding: .607em 1.53em .607em 1.17em;
+	border-radius: rem(8);
+    background-color: $color-main;
+    color: $color-text-secondary;
+	transition: all 0.3s ease 0s;
+	display: inline-flex; // iconと横並べ
+    align-items: center;
+    justify-content: center;
+
+    &:focus,
+    &:hover {
+        background: #0060A0;
+        opacity: 1;
+    }
+}
+
+.ctaIcon_04_size {
+    width: rem(43.49);
+    height: rem(25.47);
+}
+
+.ctaBottom__textWrap {
+    line-height: $leading-none;
+    text-align: center;
+    margin-left: math.div( 10, 14 ) + em;
+}
+
+.ctaBottom__text_lg {
+    font-size: rem(16);
+    font-weight: $font-bold;
+}
+
+.ctaBottom__text_md {
+    font-size: rem(12);
+    font-weight: $font-bold;
+}
