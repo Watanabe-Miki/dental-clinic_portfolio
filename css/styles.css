@@ -256,6 +256,69 @@ select::-ms-expand {
   right: -1%;
 }
 
+.contentLink {
+  display: inline-block;
+  max-width: 335px;
+  width: 100%;
+  padding: 0.543em 1em;
+  border-radius: 0.75rem;
+  background-color: #FFF;
+  color: #1391E6;
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-align: center;
+  border: 2px solid currentColor;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  position: relative;
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  .contentLink {
+    padding: 0.56em 1.214em;
+    font-size: 1.5rem;
+    width: auto;
+    max-width: none;
+  }
+}
+.contentLink::after {
+  content: "";
+  position: absolute;
+  background: url(/src/images/common/arrow-down.png) no-repeat center center/contain;
+  width: 20px;
+  width: 1.25rem;
+  height: 20px;
+  height: 1.25rem;
+  right: 50%;
+  left: 50%;
+  bottom: 5%;
+  -webkit-transform: translate(-50%, 110%);
+          transform: translate(-50%, 110%);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.contentLink:focus, .contentLink:hover {
+  background-color: #DFF1FD;
+  opacity: 1;
+}
+.contentLink:focus::after, .contentLink:hover::after {
+  -webkit-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+}
+
+.contentLink__text {
+  display: inline-block;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.contentLink:hover .contentLink__text {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+}
+
 .cta {
   display: inline-block;
   min-width: 150px;
@@ -480,6 +543,15 @@ select::-ms-expand {
   border-radius: 1.5rem;
 }
 
+.label_require {
+  padding: 0.102em 0.42em;
+  font-size: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 0.25rem;
+}
+
+.label_require,
 .label_lg_pink {
   background-color: #EE5A6D;
 }

@@ -26,6 +26,14 @@
     border-radius: rem(24);
 }
 
+.label_require {
+    padding: .102em .42em;
+    font-size: rem(12);
+    font-weight: $font-bold;
+    border-radius: rem(4);
+}
+
+.label_require,
 .label_lg_pink {
     background-color: $color-accent;
 }
