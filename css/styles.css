@@ -184,10 +184,28 @@ select::-ms-expand {
   width: 2.5rem;
   height: 40px;
   height: 2.5rem;
+  border-radius: 50%;
   background-color: #EE5A6D;
   font-size: 10px;
   font-size: 0.625rem;
+  font-weight: 700;
   color: #FFF;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 768px) {
+  .badgeNew {
+    width: 3.75rem;
+    height: 3.75rem;
+    font-size: 1rem;
+  }
 }
 
 .btn {
@@ -224,7 +242,7 @@ select::-ms-expand {
   content: "";
   width: 12px;
   height: 12px;
-  background: url(/images/common/arrow-right-blue.png) no-repeat center center/contain;
+  background: url(/src/images/common/arrow-right-blue.png) no-repeat center center/contain;
   position: absolute;
   top: 50%;
   right: 0.86em;
@@ -234,11 +252,11 @@ select::-ms-expand {
   transition: all 0.3s ease 0s;
 }
 .btn_arrow_right:hover::after, .btn_arrow_right:focus::after {
-  background: url(/images/common/arrow-right-white.png) no-repeat center center/contain;
+  background: url(/src/images/common/arrow-right-white.png) no-repeat center center/contain;
   right: -1%;
 }
 
-.ctaFooter {
+.cta {
   display: inline-block;
   min-width: 150px;
   max-width: 100%;
@@ -257,31 +275,31 @@ select::-ms-expand {
           justify-content: center;
 }
 @media screen and (min-width: 768px) {
-  .ctaFooter {
+  .cta {
     min-width: 220px;
     padding: 0.83em 2.98em;
     font-size: 1rem;
   }
 }
 
-.ctaFooter__text {
+.cta_footer_text {
   margin-left: 0.57em;
 }
 
 /* 白いボタン */
-.ctaFooter_white {
+.cta_footer_white {
   background-color: #FFF;
   border: 1px solid currentColor;
   color: #1391E6;
 }
-.ctaFooter_white:focus, .ctaFooter_white:hover {
+.cta_footer_white:focus, .cta_footer_white:hover {
   background-color: #1391E6;
   border-color: transparent;
   color: #FFF;
   opacity: 1;
 }
 
-.ctaFooter_white:hover .ctaIcon_01_fill {
+.cta_footer_white:hover .ctaIcon_01_fill {
   fill: #FFF;
 }
 
@@ -292,25 +310,48 @@ select::-ms-expand {
 }
 
 /* 青いボタン */
-.ctaFooter_blue {
+.cta_footer_blue {
   background-color: #1391E6;
   border: 1px solid transparent;
   color: #FFF;
 }
-.ctaFooter_blue:focus, .ctaFooter_blue:hover {
+.cta_footer_blue:focus, .cta_footer_blue:hover {
   background-color: #FFF;
   border-color: currentColor;
   color: #1391E6;
   opacity: 1;
 }
 
-.ctaFooter_blue:hover .ctaIcon_02_fill {
+.cta_footer_blue:hover .ctaIcon_02_fill {
   fill: #1391E6;
 }
 
 @media screen and (max-width: 767px) {
   .ctaIcon_02_size {
     width: 25.05px;
+  }
+}
+
+/* 送信ボタン */
+.cta_submit {
+  display: inline-block;
+  min-width: 273px;
+  background-color: #FFF;
+  border: 1px solid currentColor;
+  color: #1391E6;
+  text-align: center;
+  letter-spacing: 1.2em;
+  text-indent: 1.2em;
+}
+.cta_submit:focus, .cta_submit:hover {
+  background-color: #1391E6;
+  border-color: transparent;
+  color: #FFF;
+  opacity: 1;
+}
+@media screen and (min-width: 768px) {
+  .cta_submit {
+    min-width: 360px;
   }
 }
 
