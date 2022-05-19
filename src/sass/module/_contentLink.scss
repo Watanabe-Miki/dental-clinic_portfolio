@@ -1,0 +1,56 @@
+@use "global" as *;
+
+.contentLink {
+	display: inline-block;
+    max-width: 335px;
+    width: 100%;
+	padding: .543em 1em;
+    border-radius: rem(12);
+	background-color: $color-bg-base;
+	color: $color-main;
+	font-size: rem(20);
+	font-weight: $font-bold;
+    @include l_spacing( 80 );
+    text-align: center;
+	border: 2px solid currentColor; 
+    transition: all 0.3s ease 0s;
+    position: relative;
+    overflow: hidden;
+    
+    @include mq('md') {
+        padding: .56em 1.214em;        
+        font-size: rem(24);
+        width: auto;
+        max-width: none;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        background: url(/src/images/common/arrow-down.png) no-repeat center center / contain;
+        width: rem(20);
+        height: rem(20);
+        right: 50%;
+        left: 50%;
+        bottom: 5%;
+        transform: translate(-50%, 110%);
+        transition: 0.3s ease-in-out;
+    }
+    &:focus,
+    &:hover {
+        background-color: #DFF1FD;
+        opacity: 1;
+        
+        &::after {
+            transform: translate(-50%, 0%);
+        }
+    }
+}
+
+.contentLink__text {
+    display: inline-block;
+    transition: 0.3s ease-in-out;
+}
+.contentLink:hover .contentLink__text {
+    transform: translateY(-10px);
+}
