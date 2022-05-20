@@ -1,0 +1,17 @@
+@use "global" as *;
+.heading04 {
+    font-size: rem(14);
+    font-weight: $font-bold;
+    color: $color-main;
+    letter-spacing: $l-space-normal;
+    @include l_height( 14 , 32 );
+    @include lineHeightCrop(2.2857142857);
+    margin-bottom: rem(16);
+    
+    @include mq('md') {
+        font-size: rem(16);
+        @include l_height( 16 , 32 );
+        @include lineHeightCrop(2);
+        
+    }
+}

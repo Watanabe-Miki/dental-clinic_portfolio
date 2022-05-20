@@ -10,7 +10,7 @@
 	color: $color-main;
 	font-size: rem(20);
 	font-weight: $font-bold;
-    @include l_spacing( 80 );
+    letter-spacing: $l-space-normal;
     text-align: center;
 	border: 2px solid currentColor; 
     transition: all 0.3s ease 0s;

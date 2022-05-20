@@ -1,0 +1,41 @@
+@use "global" as *;
+@use "sass:math";
+.lead {
+    margin-bottom: rem(32);
+
+    @include mq('md') {
+        margin-bottom: rem(40);
+    }
+}
+
+.lead__tag {
+    display: inline-block;
+    font-size: rem(11);
+    font-weight: $font-bold;
+    @include l_spacing( 100 );
+    @include l_height( 11 , 36 );
+    @include lineHeightCrop(3.2727272727);
+    color: $color-main;
+    margin-bottom: rem(16);
+
+    @include mq('md') {
+        font-size: rem(14);
+        @include l_height( 14 , 36 );
+        @include lineHeightCrop(2.5714285714);
+        margin-bottom: rem(28);        
+    }
+}
+
+.lead__text {
+    font-size: rem(20);
+    font-weight: $font-bold;
+    letter-spacing: $l-space-normal;
+    @include l_height( 20 , 32 );
+    @include lineHeightCrop(1.6);
+    
+    @include mq('md') {
+        font-size: rem(28);
+        @include l_height( 28 , 44 );
+        @include lineHeightCrop(1.5714285714);        
+    }
+}
