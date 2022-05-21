@@ -39,7 +39,6 @@
     &:focus,
     &:hover {
         background-color: #DFF1FD;
-        opacity: 1;
         
         &::after {
             transform: translate(-50%, 0%);
@@ -51,6 +50,7 @@
     display: inline-block;
     transition: 0.3s ease-in-out;
 }
-.contentLink:hover .contentLink__text {
+.contentLink:hover .contentLink__text,
+.contentLink:focus .contentLink__text {
     transform: translateY(-10px);
 }

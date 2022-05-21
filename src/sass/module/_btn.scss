@@ -18,7 +18,6 @@
 		background-color: $color-main;
 		border-color: transparent;
 		color: $color-text-secondary;
-        opacity: 1;
 	}
 	
 	@include mq('md') {

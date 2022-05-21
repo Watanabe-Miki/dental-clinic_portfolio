@@ -33,11 +33,11 @@
 		background-color: $color-main;
 		border-color: transparent;
 		color: $color-text-secondary;
-        opacity: 1;
 	}
 }
 
-.cta_footer_white:hover .ctaIcon_01_fill {
+.cta_footer_white:hover .ctaIcon_01_fill,
+.cta_footer_white:focus .ctaIcon_01_fill {
 	fill: $color-bg-base;
 } 
 
@@ -59,11 +59,11 @@
 		background-color: $color-bg-base;
 		border-color: currentColor;
 		color: $color-main;
-        opacity: 1;
 	}
 }
 
-.cta_footer_blue:hover .ctaIcon_02_fill {
+.cta_footer_blue:hover .ctaIcon_02_fill,
+.cta_footer_blue:focus .ctaIcon_02_fill {
 	fill: $color-main;
 } 
 

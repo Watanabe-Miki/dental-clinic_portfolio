@@ -19,6 +19,8 @@
   <link rel="”icon”" href="" />
   <!-- css -->
   <link rel="stylesheet" href="./css/styles.css">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script defer src="./js/script.js"></script>
@@ -120,10 +122,10 @@
       <br>
       <a class="contentLink" href="#"><span class="contentLink__text">一般歯科</span></a>
     </div>
-    <div class="title">
-      <span class="title__deco"><img src="./src/images/common/title-deco.png" alt="タイトルの装飾"></span>
-      <h2 class="title__text">診療案内</h2>
-      <span class="title__deco"><img src="./src/images/common/title-deco.png" alt="タイトルの装飾"></span>
+    <div class="sectionTitle">
+      <span class="sectionTitle__deco"><img src="./src/images/common/title-deco.png" alt="タイトルの装飾"></span>
+      <h2 class="sectionTitle__text">診療案内</h2>
+      <span class="sectionTitle__deco"><img src="./src/images/common/title-deco.png" alt="タイトルの装飾"></span>
     </div>
     <div class="lead">
       <span class="lead__tag">CONCEPT</span>
@@ -140,14 +142,20 @@
     </h2>
     <h3 class="heading03">見出し3見出し3見出し3見出し3</h3>
     <h4 class="heading04">見出し4見出し4見出し4見出し4</h4>
-    <div>
-      <span class="before-icon before-icon--pdf"><a href="#">ファイル名.pdf</a></span> 
-   </div>
-   <div class="content__meta">
-     <span class="content__meta_icon"><time class="content__meta_date" datetime="2021-01-01">2021.01.01</time></span>
-   </div>
-  </div>
+
+    <ul class="news__items verticalPosts">
+      <li class="news__item verticalPosts__item">
+        <a class="verticalPosts__link" href="#">  
+          <div class="verticalPosts__wrap">
+            <div class="news__header verticalPosts__header">
+                <time class="news__date verticalPosts__date" datetime="2021-01-01">2021.01.01</time>
+            </div><!-- /.verticalPosts__header -->
+            <div class="news__title verticalPosts__title">年末年始の営業時間のお知らせ営業時間のお知らせ</div>
+          </div>
+        </a>
+      </li><!-- /.verticalPosts__item -->
+    </ul><!-- /.verticalPosts -->
+    <br>
   </div>
 </body>
 </html>
-
