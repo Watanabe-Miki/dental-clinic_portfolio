@@ -1,0 +1,69 @@
+@use "global" as *;
+@use "sass:math";
+
+.media {
+	display: flex;
+	align-items: center;
+}
+
+.media__img-wrapper {
+	flex: 0 1 39.70149%;
+	margin-right: 2.98507%;
+	
+	@include mq('md') {
+		flex: 0 1 36.41791%;
+		margin-right: 2.98507%;		
+	}
+}
+
+.media__img {
+	width: 100%;
+}
+
+.media__body {
+	flex: 1;
+
+	> :last-child {
+		margin-bottom: 0; //最後の要素の余白をリセット
+	}
+}
+
+.media__label {
+	margin-bottom: rem(6);
+	
+	@include mq('md') {
+		margin-bottom: rem(16);		
+	}
+}
+
+.media__title {
+	font-size: rem(14);
+	line-height: math.div( 20, 14 );
+	@include lineHeightCrop(1.4285714286);
+	text-align: justify;
+	margin-bottom: rem(6);
+
+	@include mq('md') {
+		font-size: rem(16);
+		line-height: $leading-tight;
+		@include lineHeightCrop(1.5);
+		margin-bottom: rem(16);
+	}
+}
+
+.media__date {
+	font-size: rem(11);
+    line-height: math.div( 38, 11 );
+    @include lineHeightCrop(3.4545454545);
+    color: #888;
+	
+	@include mq('md') {
+		font-size: rem(12);
+		line-height: math.div( 36, 12 );
+		@include lineHeightCrop(3);
+	}
+}
+
+.media__date_text {
+
+}

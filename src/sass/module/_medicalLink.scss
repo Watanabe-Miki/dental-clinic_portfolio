@@ -1,0 +1,137 @@
+@use "global" as *;
+.medicalLink {
+    width: 100%;
+    max-width: rem(500);
+    position: relative;
+    height: rem(210); // カンプのｈ
+    border-radius: rem(20);
+    display: block;
+    overflow: hidden; 
+    
+    @include mq('md') {
+        width: 46%;
+        height: rem(288);
+    }
+
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        background-size: cover; // containだとscaleがうまく行かない
+        background-repeat: no-repeat;
+
+        /* ホバー用 */
+        transform: scale(1);
+        transition: .4s ease-out;
+    }
+
+    &:nth-child(1)::before {
+        background-image: url(./../../images/front-page/medical_01.jpg);
+    }
+
+    &:nth-child(2)::before {
+        background-image: url(./../../images/front-page/medical_02.jpg);
+    }
+
+    /* オーバーレイ */
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .2);
+        position: absolute;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        transition: .4s ease-out;
+    }
+    
+    &:hover::before,
+    &:hover::after {
+        transform: scale(1.2); // 拡大
+        background-color: rgba(0, 0, 0, .4); // 色が濃くなる
+    }
+}
+
+/* 二重線 */
+.medicalLink__line {
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    margin: 10px;  // カンプは6.7はにわさん10px
+    border-radius: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.medicalLink:hover .medicalLink__line {
+    border: 2px solid $color-bg-base;
+}
+
+.medicalLink__content {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    z-index: map-get( $layer ,layerUp );
+    text-align: center;
+}
+
+.medicalLink__heading {
+    font-size: rem(20);
+    font-weight: $font-bold;
+    color: $color-text-secondary;
+    @include l_spacing( 80 );
+    @include l_height( 20 , 23 );
+    @include lineHeightCrop(1.15);
+    padding-bottom: rem(20);
+    margin-bottom: rem(20);
+    position: relative;
+
+    &::after {
+        content: "";
+        width: rem(30);
+        height: rem(2);
+        background-color: $color-bg-base;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    @include mq('md') {
+        font-size: rem(28);
+        @include l_height( 28 , 32 );
+        @include lineHeightCrop(1.1428571429);
+
+        &::after {
+            content: "";
+            width: rem(40);
+            height: rem(2);
+            background-color: $color-bg-base;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+.medicalLink__text {
+    font-size: rem(12);
+    font-weight: $font-bold;
+    color: $color-text-secondary;
+    @include l_spacing( 80 );
+    @include l_height( 12 , 19 );
+    @include lineHeightCrop(1.5833333333);
+    
+    @include mq('md') {
+        font-size: rem(16);
+        @include l_height( 16 , 28 );
+        @include lineHeightCrop(1.75);
+    }
+}

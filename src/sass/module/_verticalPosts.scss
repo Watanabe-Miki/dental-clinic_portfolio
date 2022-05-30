@@ -1,7 +1,7 @@
 @use "global" as *;
-// ポストリスト
 .verticalPosts {
-
+	max-width: rem(538);
+	width: 100%;
 }
 
 .verticalPosts__item {
@@ -10,14 +10,17 @@
 	padding-right: 1.5em;
 	padding-left: .82em;
 	border-bottom: 1px solid $color-text-main;
-	border-top: 1px solid $color-text-main;
     position: relative;
+	
+	&:first-child {
+		border-top: 1px solid $color-text-main; // 行が追加された時用
+	}
 
 	&::after {
 		content: "";
 		width: rem(14);
 		height: rem(14);
-		background: url(/src/images/common/arrow-right-black.png) no-repeat center center / contain;
+		background: url(./../../images/common/arrow-right-black.png) no-repeat center center / contain;
 		position: absolute;
 		top: 50%;
 		right: 0;
@@ -27,7 +30,7 @@
 
 	&:hover::after,
     &:focus::after {
-        background: url(/src/images/common/arrow-right-blue.png) no-repeat center center /contain;
+        background: url(./../../images/common/arrow-right-black.png) no-repeat center center /contain;
         right: -.5em;
     }
 }
@@ -54,14 +57,14 @@
 	transition: all 0.3s ease 0s;
 }
 
+/* ホバー時 */
 .verticalPosts__item:hover .verticalPosts__date,
 .verticalPosts__item:hover .verticalPosts__title {
 	color: $color-main;
 } 
 
+/* フォーカス時 */
 .verticalPosts__link:focus .verticalPosts__date,
 .verticalPosts__link:focus .verticalPosts__title {
 	color: $color-main; // a要素にしかfocusがあたらない為の指定
 }
-
-//  https://zenn.dev/tak_dcxi/articles/f958e96888ee47

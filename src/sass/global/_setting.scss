@@ -83,6 +83,7 @@ $breakpoints: (
 
 //メディアクエリー
 $mediaquerys: (
+  sm-down: "screen and (max-width: #{map-get($breakpoints,'sm') - 1}px)",
   md-down: "screen and (max-width: #{map-get($breakpoints,'md') - 1}px)",
   sm: "screen and (min-width: #{map-get($breakpoints,'sm')}px)",
   md: "screen and (min-width: #{map-get($breakpoints,'md')}px)",
