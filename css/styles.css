@@ -644,6 +644,67 @@ select::-ms-expand {
   }
 }
 
+.global-nav {
+  background: transparent;
+}
+
+.global-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.global-nav__item {
+  padding-left: 12px;
+  padding-left: 0.75rem;
+  padding-right: 12px;
+  padding-right: 0.75rem;
+}
+.global-nav__item:first-child {
+  padding-left: 0;
+}
+.global-nav__item:last-child {
+  padding-right: 0;
+}
+
+.global-nav__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.global-nav__icon {
+  fill: #393939;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.global-nav__link-text {
+  font-size: 11px;
+  font-size: 0.6875rem;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+/* ホバー */
+.global-nav__item:hover .global-nav__icon {
+  fill: #1391E6;
+}
+
+.global-nav__item:hover .global-nav__link-text {
+  color: #1391E6;
+}
+
 .heading01 {
   font-size: 20px;
   font-size: 1.25rem;
@@ -1452,6 +1513,32 @@ select::-ms-expand {
     width: 4.2225rem;
     height: 1.25rem;
   }
+}
+
+.global-nav__link {
+  position: relative;
+  /* 横線 */
+  /* ホバーで幅20pxに */
+}
+.global-nav__link::after {
+  content: "";
+  position: absolute;
+  bottom: -8px;
+  bottom: -0.5rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  height: 0.125rem;
+  border-radius: 100vh;
+  background: #1391E6;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.global-nav__link:hover::after, .global-nav__link:focus::after {
+  width: 20px;
+  width: 1.25rem;
 }
 
 .vertical-Posts {

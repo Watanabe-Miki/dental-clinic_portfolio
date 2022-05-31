@@ -1,0 +1,47 @@
+@use "global" as *;
+.global-nav {
+    background: transparent;
+}
+
+.global-nav__list {
+    display: flex;
+    align-items: center;
+}
+
+.global-nav__item {
+    padding-left: rem(12);
+    padding-right: rem(12);        
+    
+    &:first-child {
+        padding-left: 0;
+    }
+    
+    &:last-child {
+        padding-right: 0;        
+    }
+}
+
+.global-nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.global-nav__icon{
+    fill: $color-text-main;
+    transition: all 0.3s ease 0s;
+}
+
+.global-nav__link-text {
+    font-size: rem(11); 
+    transition: all 0.3s ease 0s;   
+}
+
+/* ホバー */
+.global-nav__item:hover .global-nav__icon {
+    fill: $color-main;
+}
+
+.global-nav__item:hover .global-nav__link-text {
+    color: $color-main;
+}

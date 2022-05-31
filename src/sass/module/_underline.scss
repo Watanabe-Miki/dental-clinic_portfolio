@@ -1,0 +1,28 @@
+@use "global" as *;
+.global-nav__link {
+    position: relative;
+    
+    /* 横線 */
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: rem(-8);
+      left: 50%;
+      transform: translateX(-50%);
+      width: 0;
+      height: rem(2);
+      border-radius: 100vh;
+      background: $color-main;
+      transition: all 0.3s ease 0s;
+    }
+      
+    /* ホバーで幅20pxに */
+    &:hover,
+    &:focus {
+      &::after {
+        width: rem(20);
+      }
+    }
+  }
+  
+  
