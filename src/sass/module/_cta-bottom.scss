@@ -1,6 +1,6 @@
 @use "global" as *;
 @use "sass:math";
-.ctaBottom {
+.cta-bottom {
     display: inline-block;
 	min-width: 157px; 
 	padding: .607em 1.53em .607em 1.17em;
@@ -18,23 +18,23 @@
     }
 }
 
-.ctaIcon_04_size {
+.cta-icon_04_size {
     width: rem(43.49);
     height: rem(25.47);
 }
 
-.ctaBottom__textWrap {
+.cta-bottom__text-wrap {
     line-height: $leading-none;
     text-align: center;
     margin-left: math.div( 10, 14 ) + em;
 }
 
-.ctaBottom__text_lg {
+.cta-bottom__text_lg {
     font-size: rem(16);
     font-weight: $font-bold;
 }
 
-.ctaBottom__text_md {
+.cta-bottom__text_md {
     font-size: rem(12);
     font-weight: $font-bold;
 }

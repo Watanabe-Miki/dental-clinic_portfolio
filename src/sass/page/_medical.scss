@@ -1,5 +1,5 @@
 @use "global" as *;
-.medicalLink__items {
+.medical__link-items {
     margin-bottom: rem(-20);
     @include mq('md') {
         display: flex;
@@ -7,7 +7,7 @@
     }
 }
 
-.medicalLink__item {
+.medical__link-item {
     margin-bottom: rem(20);
     @include mq('md') {
         margin-right: 8%;

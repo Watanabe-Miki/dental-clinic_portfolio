@@ -1,7 +1,7 @@
 @use "global" as *;
 @use "sass:math";
 
-.ctaSide {
+.cta-side {
     width: rem(92);
     height: rem(120);
     background-color: $color-main;
@@ -19,16 +19,16 @@
     }
 }
 
-.ctaIcon_03_size {
+.cta-icon_03_size {
     width: rem(48.86);
     height: rem(28.61);
 }
 
-.ctaSide__textWrap {
+.cta-side__text-wrap {
     line-height: $leading-x-tight;
     margin-top: math.div( 12, 14 ) + em;
 }
 
-.ctaSide__text {
+.cta-side__text {
     color: $color-text-secondary;
 }

@@ -1,10 +1,10 @@
 @use "global" as *;
-.verticalPosts {
+.vertical-Posts {
 	max-width: rem(538);
 	width: 100%;
 }
 
-.verticalPosts__item {
+.vertical-Posts__item {
 	padding-top: rem(9);
 	padding-bottom: rem(9);
 	padding-right: 1.5em;
@@ -30,41 +30,41 @@
 
 	&:hover::after,
     &:focus::after {
-        background: url(./../../images/common/arrow-right-black.png) no-repeat center center /contain;
+        background: url(./../../images/common/arrow-right-blue.png) no-repeat center center /contain;
         right: -.5em;
     }
 }
 
-.verticalPosts__link {
+.vertical-Posts__link {
 
 }
 
-.verticalPosts__wrap {
+.vertical-Posts__wrap {
 	display: flex;
 	align-items: center;
 }
 
-.verticalPosts__header {
+.vertical-Posts__header {
 }
 
-.verticalPosts__date {
+.vertical-Posts__date {
 	font-size: rem(12);
 	margin-right: rem(24);
 	transition: all 0.3s ease 0s;
 }
 
-.verticalPosts__title {
+.vertical-Posts__title {
 	transition: all 0.3s ease 0s;
 }
 
 /* ホバー時 */
-.verticalPosts__item:hover .verticalPosts__date,
-.verticalPosts__item:hover .verticalPosts__title {
+.vertical-Posts__item:hover .vertical-Posts__date,
+.vertical-Posts__item:hover .vertical-Posts__title {
 	color: $color-main;
 } 
 
 /* フォーカス時 */
-.verticalPosts__link:focus .verticalPosts__date,
-.verticalPosts__link:focus .verticalPosts__title {
+.vertical-Posts__link:focus .vertical-Posts__date,
+.vertical-Posts__link:focus .vertical-Posts__title {
 	color: $color-main; // a要素にしかfocusがあたらない為の指定
 }

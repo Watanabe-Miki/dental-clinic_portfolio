@@ -17,7 +17,7 @@
 	}
 }
 
-.cta_footer_text {
+.cta_footer-text {
 	margin-left: .57em;
 }
 
@@ -36,12 +36,12 @@
 	}
 }
 
-.cta_footer_white:hover .ctaIcon_01_fill,
-.cta_footer_white:focus .ctaIcon_01_fill {
+.cta_footer_white:hover .cta-icon_01_fill,
+.cta_footer_white:focus .cta-icon_01_fill {
 	fill: $color-bg-base;
 } 
 
-.ctaIcon_01_size {
+.cta-icon_01_size {
 
 	@include mq('md-down') {
 		width: 17.48px;
@@ -62,12 +62,12 @@
 	}
 }
 
-.cta_footer_blue:hover .ctaIcon_02_fill,
-.cta_footer_blue:focus .ctaIcon_02_fill {
+.cta_footer_blue:hover .cta-icon_02_fill,
+.cta_footer_blue:focus .cta-icon_02_fill {
 	fill: $color-main;
 } 
 
-.ctaIcon_02_size {
+.cta-icon_02_size {
 
 	@include mq('md-down') {
 		width: 25.05px;

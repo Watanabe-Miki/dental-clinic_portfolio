@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.contentLink {
+.content-link {
 	display: inline-block;
     max-width: 335px;
     width: 100%;
@@ -46,11 +46,11 @@
     }
 }
 
-.contentLink__text {
+.content-link__text {
     display: inline-block;
     transition: 0.3s ease-in-out;
 }
-.contentLink:hover .contentLink__text,
-.contentLink:focus .contentLink__text {
+.content-link:hover .content-link__text,
+.content-link:focus .content-link__text {
     transform: translateY(-10px);
 }

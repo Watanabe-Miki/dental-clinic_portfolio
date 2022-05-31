@@ -1,16 +1,16 @@
 @use "global" as *;
-.pageLink {
+.page-link {
     display: inline-flex;
     align-items: center;
 }
 
-.pageLink__icon {
+.page-link__icon {
     display: inline-block;
     width: rem(6);
     height: rem(12);
     margin-right: rem(6);
 }
 
-.pageLink__text {
+.page-link__text {
     font-size: rem(16);
 }
