@@ -705,6 +705,86 @@ select::-ms-expand {
   color: #1391E6;
 }
 
+.header {
+  background: #FFF;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+  height: 60px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 20;
+  -webkit-transition: all 0.5s ease 0s;
+  transition: all 0.5s ease 0s;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    height: 80px;
+  }
+}
+
+.header__inner {
+  width: 100%;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .header__inner {
+    max-width: 75rem;
+    padding-right: 25px;
+    padding-left: 25px;
+  }
+}
+
+.header__logo {
+  width: 270px;
+  width: 16.875rem;
+  margin: 0;
+  line-height: 1;
+  /*     @include mq('md') {
+          display: none; //最初消えている
+      }
+   */
+}
+
+.header-nav {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .header-nav {
+    margin-left: auto;
+    margin-right: 2rem;
+    display: block;
+  }
+}
+
+.header__meta {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .header__meta {
+    text-align: right;
+    width: 16.25rem;
+    display: block;
+  }
+}
+
+.header__address {
+  font-size: 12px;
+  font-size: 0.75rem;
+}
+
 .heading01 {
   font-size: 20px;
   font-size: 1.25rem;
@@ -1517,7 +1597,7 @@ select::-ms-expand {
 
 .fa-phone {
   color: currentColor;
-  font-size: 0.9em;
+  font-size: 0.85em;
   margin-right: 4px;
   margin-right: 0.25rem;
 }

@@ -1,56 +1,71 @@
 @use "global" as *;
 .header {
-    background: greenyellow;
+    background: $color-bg-base;
     box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
     height: $header-height-sp;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    width: 100%;
     z-index: map-get($layer, header);
     transition: all 0.5s ease 0s;
     
     @include mq('md') {
-        background: greenyellow;
         height: $header-height-pc;
     }    
 }
 
-
 .header__inner {
-    max-width: rem(748);
+    width: 100%;
     padding-right: $padding-sp;
     padding-left: $padding-sp;
     margin-right: auto;
     margin-left: auto;
+    height: inherit;
     display: flex;
     align-items: center;
-    height: inherit;
-
+    
     @include mq("md") {
-      padding-right: $padding-pc;
-      padding-left: $padding-pc;
+        max-width: rem(1200);
+        padding-right: $padding-pc;
+        padding-left: $padding-pc;
     }
-}
-
-.logo {
-    @include _logo
 }
 
 .header__logo {
-    font-size: rem(23);
-    font-weight: $bold;
-    line-height: (77 / 23);
-    color: $text;
-
-    @include mq('md') {
+    width: rem(270);
+    margin: 0;
+    line-height: 1;
+/*     @include mq('md') {
         display: none; //最初消えている
+    }
+ */}
+
+.header-nav {
+    display: none; //スマホ時非表示
+    
+    @media screen and (min-width:1200px) {
+        margin-left: auto;
+        margin-right: rem(32);
+        display: block; 
+    }
+    
+}
+
+.header__meta {
+    display: none; //スマホ時非表示
+    
+    @media screen and (min-width:1200px) {
+        text-align: right;
+        width: rem(260);
+        display: block; 
     }
 }
 
-.header-nav {
-    display: none;
-    @include mq('md') {
-        display: block; //スマホ時表示
-    }
+.header__address {
+    font-size: rem(12);
+}
+
+.header__tel-number {
 }
