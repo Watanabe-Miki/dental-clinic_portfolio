@@ -1,0 +1,30 @@
+@use "global" as *;
+@use "sass:math";
+
+.tel-number {
+}
+
+.fa-phone {
+    color: currentColor;
+    font-size: .9em;  
+    margin-right: rem(4);  
+}
+
+.tel-number__text {
+    font-weight: $font-bold;
+    color: $color-main;
+}
+
+.tel-number__text_md {
+    font-size: rem(32);
+    line-height: math.div( 36, 32 );
+    @include lineHeightCrop(1.125);
+    letter-spacing: -0.02em;
+}
+
+.tel-number__text_sm {
+    font-size: rem(20);
+    line-height: math.div( 23, 20 );
+    @include lineHeightCrop(1.15);
+}
+

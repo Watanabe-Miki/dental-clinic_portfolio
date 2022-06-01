@@ -1515,6 +1515,59 @@ select::-ms-expand {
   }
 }
 
+.fa-phone {
+  color: currentColor;
+  font-size: 0.9em;
+  margin-right: 4px;
+  margin-right: 0.25rem;
+}
+
+.tel-number__text {
+  font-weight: 700;
+  color: #1391E6;
+}
+
+.tel-number__text_md {
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.125;
+  letter-spacing: -0.02em;
+}
+.tel-number__text_md::before {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: -0.0625em;
+  content: "";
+}
+.tel-number__text_md::after {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-bottom: -0.0625em;
+  content: "";
+}
+
+.tel-number__text_sm {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.15;
+}
+.tel-number__text_sm::before {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: -0.075em;
+  content: "";
+}
+.tel-number__text_sm::after {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-bottom: -0.075em;
+  content: "";
+}
+
 .global-nav__link {
   position: relative;
   /* 横線 */
