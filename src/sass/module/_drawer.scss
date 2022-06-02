@@ -1,0 +1,206 @@
+@use "global" as *;
+
+.js-drawer-icon {
+    position: fixed;
+    top: 22px;
+    right: 20px;
+    z-index: map-get($layer, drawer);
+    transition: transform ease 0.5s 0s;
+    display: block;
+    
+    @include mq('md') {
+        top: 32.125px;
+        right: 25px;        
+    }
+
+    @media screen and (min-width:1200px) {
+        display: none;
+    }
+
+     &.is-active {
+        .js-drawer-icon__bar1 {
+            top: 9px;
+            transform: rotate(45deg);
+        }
+        
+        .js-drawer-icon__bar2 {
+            top: 9px;
+            display: none;
+        }
+        
+        .js-drawer-icon__bar3 {
+            top: 9px;
+            transform: rotate(-45deg);
+        }
+
+        .js-drawer-icon__bar1,
+        .js-drawer-icon__bar2,
+        .js-drawer-icon__bar3 {
+            background: #fff;
+        }
+    }
+}
+
+/* barがはいる箱 */
+.js-drawer-icon__bars {
+    width: 27px;
+    height: 15.75px;
+    display: block;
+    position: relative; //bar1~3の起点
+}
+
+/* それぞれのbarの線分を作る */
+.js-drawer-icon__bar1,
+.js-drawer-icon__bar2,
+.js-drawer-icon__bar3 {
+    width: 27px;
+    height: 2.25px;
+    border-radius: 100vh;
+    background: $color-main;
+    position: absolute;
+    top: 0; //一旦初期化のための配置（後で個別に位置指定）
+    left: 0;
+}
+
+.js-drawer-icon__bar1 {
+    top: 0;
+}
+
+.js-drawer-icon__bar2 {
+    top: 6.75px;
+}
+
+.js-drawer-icon__bar3 {
+    top: 13.5px;
+}
+
+/* ドロワーメニュー全体の箱 */
+.js-drawer-content {
+    width: 100%;
+    height: 100%; //下まで伸びる
+    position: fixed; //浮かせる
+    right: 0;
+    top: 0;
+    background: #0060A0;
+    z-index: 39; //三ボタンより下、ヘッダーより上
+    transform: translateX(105%); //右側にしまっておく
+    transition: transform ease 0.5s 0s;
+    display: flex; //メニュー文字部分の上下左右中央
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+        background: url(./../../images/common/logo-drawer.png) no-repeat center center / contain;
+        content: "";
+        position: absolute;
+        width: rem(270);
+        height: rem(31);
+        top: rem(15);
+        left: rem(20);
+        z-index: 39;
+    }
+    
+    &.is-active {
+        transform: translateX(0);
+    }
+}
+
+.js-drawer-content__items {
+    width: rem(255);
+
+    @include mq('md') {
+        width: rem(400);
+        max-width: rem(600);
+    }
+}
+
+/* メニューの点線 */
+.js-drawer-content__item {
+    position: relative;
+
+    &:first-child {
+
+        &::before {
+            background: radial-gradient(circle farthest-side, $color-bg-base, $color-bg-base 30%, transparent 30%, transparent);
+            background-size: 4px 4px;
+            display: inline-block;
+            height: 4px;
+            width: 100%;
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%, -2px);
+        }
+    }
+
+    &::after {
+        background: radial-gradient(circle farthest-side, $color-bg-base, $color-bg-base 30%, transparent 30%, transparent);
+        background-size: 4px 4px;
+        display: inline-block;
+        height: 4px;
+        width: 100%;
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%, 2px);
+    }
+}
+
+.js-drawer-content__link {
+    display: flex;
+    align-items: center;
+    padding: 1.07em 0;
+    transition: all 0.3s ease 0s;
+
+    span {
+        color: $color-text-secondary;
+        font-size: rem(14);
+        margin-left: rem(14);
+        margin-right: auto;
+
+        @include mq('md') {
+            font-size: rem(16);
+            margin-left: rem(20);        
+        }
+    }
+
+    &:focus,
+    &:hover {
+        opacity: .6;
+    }
+}
+
+/* svg */
+.js-drawer__icon_fill {
+    fill: $color-bg-base;
+}
+.js-drawer-icon_box {
+    margin-right: rem(14);
+}
+
+.js-drawer-content__link_arrow {
+    width: rem(14);
+    height: rem(14);
+    
+    @include mq('md') {
+        width: rem(16);
+        height: rem(16);        
+    }
+}
+
+.js-drawer-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(#3E3E3E, 0.7);
+    z-index: 38;
+    display: none; //最初は消えている
+
+    &.is-active {
+        display: block;
+    }
+}

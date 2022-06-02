@@ -37,10 +37,22 @@
     width: rem(270);
     margin: 0;
     line-height: 1;
-/*     @include mq('md') {
-        display: none; //最初消えている
+    height: inherit;
+    
+    a {
+        display: block;
+        padding: rem(12.54) 0;
+    
+    
     }
- */}
+    
+    @include mq('md') {
+
+        a {
+            padding: rem(22.54) 0;
+        }
+    }
+}
 
 .header-nav {
     display: none; //スマホ時非表示
@@ -50,7 +62,6 @@
         margin-right: rem(32);
         display: block; 
     }
-    
 }
 
 .header__meta {
