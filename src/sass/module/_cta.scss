@@ -11,18 +11,24 @@
 	display: inline-flex; // iconと横並べ
 	align-items: center; 
 	justify-content: center;
-	
-	@include mq('md') {
-        
-	}
 }
 
-.cta_footer-text {
+.cta_info-text {
 	margin-left: .57em;
 }
 
+/* PC時大きく */
+.cta_info_blue,
+.cta_info_white {
+	@include mq('md') {
+		width: rem(220);
+		font-size: rem(16);
+		padding: .8305em 1.4em;
+	}
+}
+
 /* 白いボタン */
-.cta_footer_white,
+.cta_info_white,
 .cta_submit {
 	background-color: $color-bg-base;
 	border: 1px solid currentColor;
@@ -36,20 +42,20 @@
 	}
 }
 
-.cta_footer_white:hover .cta-icon_01_fill,
-.cta_footer_white:focus .cta-icon_01_fill {
+.cta_info_white:hover .cta-icon_01_fill,
+.cta_info_white:focus .cta-icon_01_fill {
 	fill: $color-bg-base;
 } 
 
 .cta-icon_01_size {
-
+	
 	@include mq('md-down') {
 		width: 17.48px;
 	}
 }
 
 /* 青いボタン */
-.cta_footer_blue {
+.cta_info_blue {
 	background-color: $color-main;
 	border: 1px solid transparent;
 	color: $color-text-secondary;
@@ -62,8 +68,8 @@
 	}
 }
 
-.cta_footer_blue:hover .cta-icon_02_fill,
-.cta_footer_blue:focus .cta-icon_02_fill {
+.cta_info_blue:hover .cta-icon_02_fill,
+.cta_info_blue:focus .cta-icon_02_fill {
 	fill: $color-main;
 } 
 
