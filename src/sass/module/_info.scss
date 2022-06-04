@@ -1,28 +1,30 @@
 @use "global" as *;
 
 .info {
-    width: 100%;
+    width: calc(100% + 20px);
+    margin: 0 -10px;
     background-color: pink;
     border-radius: rem(8);
     padding: rem(32) rem(10) rem(20);
-    margin: rem(46) auto 0;   
+    margin-top: rem(46);   
     
     @include mq('md') {
+        width: 100%;
         border-radius: rem(20);
         padding: rem(40) rem(49);
         display: grid;
-        grid-template-columns: rem(477) 1fr;
-        grid-column-gap: 3.125%;   
-        grid-template-rows: 1fr;
+        grid-template-columns: rem(477) 1fr; // 横2列
+        grid-column-gap: 3.125%; // 40px/1280
+        grid-template-rows: 1fr; // 縦1行
         align-items: center;  
-        margin: rem(88) auto 0;   
+        margin: rem(88) 0 rem(40);   
     }
 }
 
 .info__body {
 
     @include mq('md') {
-        grid-area: 1 / 1 / 2 / 2;
+        grid-area: 1 / 1 / 2 / 2; // 自分の場所を定義
 
         > *:last-child {
             margin-bottom: 0;
@@ -30,10 +32,9 @@
     }
 }
 
-
 .info__logo {
     width: rem(311);
-    margin: 0 auto;
+    margin: 0 auto; // 右側の謎のmargin回避
     margin-bottom: rem(8);
     
     img {
@@ -86,10 +87,10 @@
 }   
 
 .cta_info_row {
-    margin-right: 4%;
-
+    margin-right: 4.47761%; // ボタン同士の隙間
+    
     @include mq('md') {
-        margin-right: 1.5625%;
+        margin-right: 4.19287%;
     }
 }
 
@@ -99,12 +100,13 @@
 }
 
 .info__map {
-    width: 100%;
-    height: rem(315);
+    width: calc(100% - 20px);
+    margin: 0 10px;
+    height: rem(315); 
     
     @include mq('md') {
-        flex: 0 1 30.07812%;
-        grid-area: 1 / 2 / 2 / 3;
+        flex: 0 1 30.07812%; // 385/1280
+        grid-area: 1 / 2 / 2 / 3; // 自分の場所を定義
         height: rem(385);
     }
 
