@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.copyright {
+    background-color: $color-main;
+    width: 100%;
+    height: rem(115);
+    padding-top: rem(17);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    @include mq('md') {
+        height: rem(55);
+        align-items: center;
+    }
+}
+
+.copyright__text {
+    color: $color-text-secondary;
+}

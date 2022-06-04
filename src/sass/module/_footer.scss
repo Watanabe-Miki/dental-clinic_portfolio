@@ -2,12 +2,10 @@
 .footer {
     background-color: $color-secondary;
     padding-top: rem(14);
-    padding-bottom: rem(60);
     position: relative;
     
     @include mq('md') {
         padding-top: rem(56);
-        padding-bottom: rem(60);        
     }
 
     &::before {
@@ -27,4 +25,19 @@
     @include mq('md-down') {
         max-width: rem(600);
     }
+}
+
+.footer__info {
+    width: calc(100% + 20px);
+    margin: 0 -10px;
+    margin-bottom: rem(60);
+
+    @include mq('md') {
+        margin: 0;
+        margin-bottom: rem(60);   
+    }
+}
+
+.footer-nav {
+    margin-bottom: rem(60);
 }

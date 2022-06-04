@@ -1,12 +1,9 @@
 @use "global" as *;
 
 .info {
-    width: calc(100% + 20px);
-    margin: 0 -10px;
     background-color: $color-bg-base;
     border-radius: rem(8);
     padding: rem(32) rem(10) rem(20);
-    margin-bottom: rem(60);
     
     @include mq('md') {
         width: 100%;
@@ -18,8 +15,6 @@
         grid-column-gap: 3.125%; // 40px/1280
         grid-template-rows: 1fr; // 縦1行
         align-items: center;  
-        margin: 0;
-        margin-bottom: rem(60);   
     }
 }
 
