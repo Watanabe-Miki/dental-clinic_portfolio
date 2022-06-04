@@ -1,57 +1,30 @@
 @use "global" as *;
 .footer {
+    background-color: $color-secondary;
+    padding-top: rem(14);
+    padding-bottom: rem(60);
+    position: relative;
+    
+    @include mq('md') {
+        padding-top: rem(56);
+        padding-bottom: rem(60);        
+    }
 
+    &::before {
+        content: "";
+        background: url(../../../src/images/common/wave.png) no-repeat center center / cover;
+        width: 100%;
+        height: rem(32);
+        position: absolute;
+        top: rem(-32);
+        left: 50%;
+        transform: translateX(-50%);
+    }
 }
 
 .footer__inner {
 
+    @include mq('md-down') {
+        max-width: rem(600);
+    }
 }
-
-.footer__head {
-
-}
-
-.footer__body {
-
-}
-
-.footer__logo {
-
-}
-
-.footer__access {
-
-}
-
-.footer__access-row {
-
-}
-
-.footer__tel-number {
-
-}
-
-.footer__time-text {
-
-}
-
-.footer__cta-wrap {
-
-}
-
-.footer__info-table {
-
-}
-
-.footer__map {
-
-}
-
-.iframe-wrap {
-
-}
-
-.footer__foot {
-
-}
-

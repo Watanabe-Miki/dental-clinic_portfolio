@@ -3,13 +3,14 @@
 .info {
     width: calc(100% + 20px);
     margin: 0 -10px;
-    background-color: pink;
+    background-color: $color-bg-base;
     border-radius: rem(8);
     padding: rem(32) rem(10) rem(20);
-    margin-top: rem(46);   
+    margin-bottom: rem(60);
     
     @include mq('md') {
         width: 100%;
+        max-width: 100%;
         border-radius: rem(20);
         padding: rem(40) rem(49);
         display: grid;
@@ -17,7 +18,8 @@
         grid-column-gap: 3.125%; // 40px/1280
         grid-template-rows: 1fr; // 縦1行
         align-items: center;  
-        margin: rem(88) 0 rem(40);   
+        margin: 0;
+        margin-bottom: rem(60);   
     }
 }
 
@@ -97,6 +99,11 @@
 .info__table {
     width: 100%;
     margin-bottom: rem(20);
+
+    img {
+        box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+        border-radius: rem(20);
+    }
 }
 
 .info__map {

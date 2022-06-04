@@ -41,15 +41,13 @@
     
     a {
         display: block;
-        padding: rem(12.54) 0;
-    
-    
+        padding: rem(14.765) 0;
     }
     
     @include mq('md') {
 
         a {
-            padding: rem(22.54) 0;
+            padding: rem(24.765) 0;
         }
     }
 }
