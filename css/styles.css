@@ -288,7 +288,7 @@ select::-ms-expand {
   content: "";
   width: 12px;
   height: 12px;
-  background: url(./../../images/common/arrow-right-blue.png) no-repeat center center/contain;
+  background: url(../../../images/common/arrow-right-blue.png) no-repeat center center/contain;
   position: absolute;
   top: 50%;
   right: 0.86em;
@@ -298,7 +298,7 @@ select::-ms-expand {
   transition: all 0.3s ease 0s;
 }
 .btn_arrow_right:hover::after, .btn_arrow_right:focus::after {
-  background: url(./../../images/common/arrow-right-white.png) no-repeat center center/contain;
+  background: url(../../../images/common/arrow-right-white.png) no-repeat center center/contain;
   right: -1%;
 }
 
@@ -432,7 +432,7 @@ select::-ms-expand {
 .content-link::after {
   content: "";
   position: absolute;
-  background: url(./../../images/common/arrow-down.png) no-repeat center center/contain;
+  background: url(../../../images/common/arrow-down.png) no-repeat center center/contain;
   width: 20px;
   width: 1.25rem;
   height: 20px;
@@ -695,6 +695,7 @@ select::-ms-expand {
   transition: transform ease 0.5s 0s;
   transition: transform ease 0.5s 0s, -webkit-transform ease 0.5s 0s;
   display: block;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .js-drawer-icon {
@@ -711,15 +712,27 @@ select::-ms-expand {
   top: 9px;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  -webkit-transition: -webkit-transform ease 0.5s 0s;
+  transition: -webkit-transform ease 0.5s 0s;
+  transition: transform ease 0.5s 0s;
+  transition: transform ease 0.5s 0s, -webkit-transform ease 0.5s 0s;
 }
 .js-drawer-icon.is-active .js-drawer-icon__bar2 {
   top: 9px;
   display: none;
+  -webkit-transition: -webkit-transform ease 0.5s 0s;
+  transition: -webkit-transform ease 0.5s 0s;
+  transition: transform ease 0.5s 0s;
+  transition: transform ease 0.5s 0s, -webkit-transform ease 0.5s 0s;
 }
 .js-drawer-icon.is-active .js-drawer-icon__bar3 {
   top: 9px;
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  -webkit-transition: -webkit-transform ease 0.5s 0s;
+  transition: -webkit-transform ease 0.5s 0s;
+  transition: transform ease 0.5s 0s;
+  transition: transform ease 0.5s 0s, -webkit-transform ease 0.5s 0s;
 }
 .js-drawer-icon.is-active .js-drawer-icon__bar1,
 .js-drawer-icon.is-active .js-drawer-icon__bar2,
@@ -786,7 +799,7 @@ select::-ms-expand {
           justify-content: center;
 }
 .js-drawer-content::before {
-  background: url(./../../images/common/logo-drawer.png) no-repeat center center/contain;
+  background: url(../../../images/common/logo-drawer.png) no-repeat center center/contain;
   content: "";
   position: absolute;
   width: 270px;
@@ -800,6 +813,10 @@ select::-ms-expand {
   z-index: 39;
 }
 .js-drawer-content.is-active {
+  -webkit-transition: -webkit-transform ease 0.5s 0s;
+  transition: -webkit-transform ease 0.5s 0s;
+  transition: transform ease 0.5s 0s;
+  transition: transform ease 0.5s 0s, -webkit-transform ease 0.5s 0s;
   -webkit-transform: translateX(0);
           transform: translateX(0);
 }
@@ -912,6 +929,31 @@ select::-ms-expand {
   display: block;
 }
 
+.floating {
+  width: 52px;
+  width: 3.25rem;
+  height: 52px;
+  height: 3.25rem;
+  position: fixed;
+  right: 10px;
+  right: 0.625rem;
+  bottom: 100px;
+  bottom: 6.25rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  z-index: 30;
+}
+@media screen and (min-width: 768px) {
+  .floating {
+    right: 1.25rem;
+    bottom: 2.5rem;
+  }
+}
+.floating:focus, .floating:hover {
+  opacity: 0.6;
+}
+
 .footer-nav__inner {
   /* 幅600以上 */
 }
@@ -1002,7 +1044,7 @@ select::-ms-expand {
 }
 .footer::before {
   content: "";
-  background: url(../../../src/images/common/wave.png) no-repeat center center/cover;
+  background: url(../../../images/common/wave.png) no-repeat center center/cover;
   width: 100%;
   height: 32px;
   height: 2rem;
@@ -1147,6 +1189,8 @@ select::-ms-expand {
   margin: 0;
   line-height: 1;
   height: inherit;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
 }
 .header__logo a {
   display: block;
@@ -1157,6 +1201,9 @@ select::-ms-expand {
   .header__logo a {
     padding: 1.5478125rem 0;
   }
+}
+.header__logo:focus, .header__logo:hover {
+  opacity: 0.6;
 }
 
 .header-nav {
@@ -1882,10 +1929,10 @@ select::-ms-expand {
   transition: 0.4s ease-out;
 }
 .medical-link:nth-child(1)::before {
-  background-image: url(./../../images/front-page/medical_01.jpg);
+  background-image: url(../../../images/front-page/medical_01.jpg);
 }
 .medical-link:nth-child(2)::before {
-  background-image: url(./../../images/front-page/medical_02.jpg);
+  background-image: url(../../../images/front-page/medical_02.jpg);
 }
 .medical-link::after {
   content: "";
@@ -2252,7 +2299,7 @@ select::-ms-expand {
   width: 0.875rem;
   height: 14px;
   height: 0.875rem;
-  background: url(./../../images/common/arrow-right-black.png) no-repeat center center/contain;
+  background: url(../../../images/common/arrow-right-black.png) no-repeat center center/contain;
   position: absolute;
   top: 50%;
   right: 0;
@@ -2262,7 +2309,7 @@ select::-ms-expand {
   transition: all 0.3s ease 0s;
 }
 .vertical-Posts__item:hover::after, .vertical-Posts__item:focus::after {
-  background: url(./../../images/common/arrow-right-blue.png) no-repeat center center/contain;
+  background: url(../../../images/common/arrow-right-blue.png) no-repeat center center/contain;
   right: -0.5em;
 }
 

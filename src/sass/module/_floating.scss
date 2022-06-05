@@ -1,0 +1,22 @@
+@use "global" as *;
+
+.floating {
+    width: rem(52);
+    height: rem(52);
+    position: fixed;
+    right: rem(10);
+    bottom: rem(100);
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    z-index: map-get($layer, floating);
+    
+    @include mq('md') {
+        right: rem(20);
+        bottom: rem(40);        
+    }
+
+    &:focus,
+    &:hover {
+        opacity: .6;
+    }
+}

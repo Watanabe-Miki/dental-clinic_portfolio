@@ -7,38 +7,42 @@
     z-index: map-get($layer, drawer);
     transition: transform ease 0.5s 0s;
     display: block;
+    cursor: pointer;
     
     @include mq('md') {
         top: 32.125px;
         right: 25px;        
     }
-
+    
     @media screen and (min-width:1200px) {
-        display: none;
+        display: none; //最初消えている
     }
-
-     &.is-active {
+    
+    &.is-active {
         .js-drawer-icon__bar1 {
             top: 9px;
             transform: rotate(45deg);
+            transition: transform ease 0.5s 0s;
         }
         
         .js-drawer-icon__bar2 {
             top: 9px;
             display: none;
+            transition: transform ease 0.5s 0s;
         }
         
         .js-drawer-icon__bar3 {
             top: 9px;
             transform: rotate(-45deg);
-        }
-
-        .js-drawer-icon__bar1,
-        .js-drawer-icon__bar2,
-        .js-drawer-icon__bar3 {
-            background: #fff;
-        }
+            transition: transform ease 0.5s 0s;
     }
+
+    .js-drawer-icon__bar1,
+    .js-drawer-icon__bar2,
+    .js-drawer-icon__bar3 {
+        background: #fff;
+    }
+}
 }
 
 /* barがはいる箱 */
@@ -88,9 +92,9 @@
     display: flex; //メニュー文字部分の上下左右中央
     align-items: center;
     justify-content: center;
-
+    
     &::before {
-        background: url(./../../images/common/logo-drawer.png) no-repeat center center / contain;
+        background: url(../../../images/common/logo-drawer.png) no-repeat center center / contain;
         content: "";
         position: absolute;
         width: rem(270);
@@ -101,6 +105,7 @@
     }
     
     &.is-active {
+        transition: transform ease 0.5s 0s;
         transform: translateX(0);
     }
 }

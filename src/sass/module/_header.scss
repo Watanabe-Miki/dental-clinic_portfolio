@@ -38,6 +38,7 @@
     margin: 0;
     line-height: 1;
     height: inherit;
+    transition: all 0.3s ease 0s;
     
     a {
         display: block;
@@ -49,6 +50,11 @@
         a {
             padding: rem(24.765) 0;
         }
+    }
+
+    &:focus,
+    &:hover {
+        opacity: .6;
     }
 }
 

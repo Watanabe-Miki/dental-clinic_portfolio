@@ -33,7 +33,7 @@
 		content: "";
 		width: 12px;
 		height: 12px;
-		background: url(./../../images/common/arrow-right-blue.png) no-repeat center center / contain;
+		background: url(../../../images/common/arrow-right-blue.png) no-repeat center center / contain;
 		position: absolute;
 		top: 50%;
 		right: .86em;
@@ -43,7 +43,7 @@
 
 	&:hover::after,
 	&:focus::after {
-		background: url(./../../images/common/arrow-right-white.png) no-repeat center center /contain;
+		background: url(../../../images/common/arrow-right-white.png) no-repeat center center /contain;
 		right: -1%;
 	}
 }

@@ -1,7 +1,7 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-  var topBtn = $('.pagetop');
+  var topBtn = $('.floating');
   topBtn.hide();
 
   // ボタンの表示設定
@@ -23,17 +23,15 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     return false;
   });
 
-  //ドロワーメニュー
-  $("#MenuButton").click(function () {
-    // $(".l-drawer-menu").toggleClass("is-show");
-    // $(".p-drawer-menu").toggleClass("is-show");
-    $(".js-drawer-open").toggleClass("open");
-    $(".drawer-menu").toggleClass("open");
-    $("html").toggleClass("is-fixed");
+  /* ドロワー */
+  $("#MenuButton").on("click", function(e){
+      e.preventDefault();
+      $(this).toggleClass("is-active"); 
+      $(".js-drawer-content").toggleClass("is-active"); 
+      $(".js-drawer-background").toggleClass("is-active"); 
 
+      return false;
   });
-
-
 
   // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
 

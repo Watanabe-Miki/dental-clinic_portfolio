@@ -20,7 +20,7 @@
 		content: "";
 		width: rem(14);
 		height: rem(14);
-		background: url(./../../images/common/arrow-right-black.png) no-repeat center center / contain;
+		background: url(../../../images/common/arrow-right-black.png) no-repeat center center / contain;
 		position: absolute;
 		top: 50%;
 		right: 0;
@@ -30,7 +30,7 @@
 
 	&:hover::after,
     &:focus::after {
-        background: url(./../../images/common/arrow-right-blue.png) no-repeat center center /contain;
+        background: url(../../../images/common/arrow-right-blue.png) no-repeat center center /contain;
         right: -.5em;
     }
 }
