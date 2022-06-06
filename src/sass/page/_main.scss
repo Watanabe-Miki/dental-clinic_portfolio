@@ -1,0 +1,77 @@
+@use "global" as *;
+
+.main {
+    margin-top: rem(60);
+
+    @include mq('md') {
+        margin-top: rem(80);
+    }
+}
+
+.main__inner {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+    padding: rem(20) $padding-sp 0;
+    position: relative;
+    overflow: hidden;
+
+    @include mq('md') {
+        width: rem(1214);
+        max-width: 100%;
+        padding: rem(40) rem(27) 0;
+    }
+}
+
+.slide-img {
+    width: 100%;
+    height: 100%;
+    border-radius: rem(8);
+    overflow: hidden;
+    line-height: 0;
+    position: relative;
+    
+    @include mq('md') {
+        height: rem(520);
+        border-radius: rem(20);
+    }
+
+    img {
+        width: 100%;
+        height: 100%;
+        vertical-align: bottom;
+    }
+
+    /* オーバーレイ */
+    &::after {
+        background: rgba(0, 0, 0, 0.1);
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.main__content {
+    position: absolute;
+    bottom: 8.56531%;
+    left: 10.66666%;
+    
+    @include mq('md') {
+        position: absolute;
+        bottom: 9.28571%;
+        left: 7.16639%;
+    }
+}
+
+.main__title {
+    width: rem(265);
+
+    @include mq('md') {
+        width: rem(412);
+    }
+}
+

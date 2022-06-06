@@ -1,6 +1,10 @@
 @use "global" as *;
 
 .logo {
+
+    img {
+        display: block;
+    }
 }
 
 .logo__data {

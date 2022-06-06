@@ -1,0 +1,63 @@
+@use "global" as *;
+
+.swiper-button-prev {
+    width: rem(40);
+    height: rem(40);
+    background: transparent url(../../../images/slider/arrow-left.png) no-repeat center center / contain;
+    margin-top: 0;
+    left: 0;
+    transition: all 0.3s ease 0s;
+    
+    @include mq('md') {
+        width: rem(50);
+        height: rem(50);
+        left: rem(4);
+    }
+    
+    &::after {
+        display: none;
+    }
+    
+    &:focus,
+    &:hover {
+        background: transparent url(../../../images/slider/arrow-left-hover.png) no-repeat center center / contain;
+    }
+}
+
+.swiper-button-next {
+    width: rem(40);
+    height: rem(40);
+    background: transparent url(../../../images/slider/arrow-right.png) no-repeat center center / contain;
+    margin-top: 0;
+    right: 0;
+    transition: all 0.3s ease 0s;
+
+    @include mq('md') {
+        width: rem(50);
+        height: rem(50);
+        right: rem(4);
+    }
+
+    &::after {
+        display: none;
+    }
+
+    &:focus,
+    &:hover {
+        background: transparent url(../../../images/slider/arrow-right-hover.png) no-repeat center center / contain;
+    }
+} 
+
+.swiper-pagination {
+    transform: rotate(90deg);
+}
+
+.swiper-container-horizontal>.swiper-pagination-bullets {
+    left: -47%;
+    bottom: 43px;
+
+    @include mq('md') {
+        left: -49%;
+        bottom: 15px;        
+    }
+}
