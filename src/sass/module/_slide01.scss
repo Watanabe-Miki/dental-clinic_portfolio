@@ -56,6 +56,10 @@
     left: -47%;
     bottom: 43px;
 
+    @include mq('sm') {
+        left: -48.5%;
+    }
+
     @include mq('md') {
         left: -49%;
         bottom: 15px;        
