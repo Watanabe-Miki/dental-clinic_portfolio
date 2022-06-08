@@ -1,10 +1,10 @@
 @use "global" as *;
 
-.news {
+.top-news {
     margin-bottom: rem(60);
 }
 
-.news__inner {
+.top-news__inner {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
@@ -22,7 +22,7 @@
     }
 }
 
-.news__table {
+.top-news__table {
     box-shadow: 0 3px 6px rgba(0, 0, 0, .16); 
     border-radius: rem(12);  
     margin-bottom: rem(40);
@@ -35,7 +35,7 @@
     }
 }
 
-.news__body {
+.top-news__body {
 
     & >*:last-child {
         margin-bottom: 0; //記事の増減用
@@ -48,19 +48,19 @@
     }
 }
 
-.news__lead-wrap {
+.top-news__lead-wrap {
     display: flex; // 各テキスト横並べ
     align-items: flex-end;
     margin-bottom: rem(10);
 }
 
-.news__lead {
+.top-news__lead {
     display: inline-flex;
     align-items: flex-end;
     margin-bottom: 0;
 }
 
-.news__text {
+.top-news__text {
     font-size: rem(20);
     font-weight: $font-bold;
     letter-spacing: $l-space-normal;
@@ -73,11 +73,11 @@
 
 }
 
-.news__tag {
+.top-news__tag {
     margin-bottom: 0;
 }
 
-.news__more-link {
+.top-news__more-link {
     font-size: rem(11);
     color: #888888;
     text-decoration:underline;
@@ -90,22 +90,22 @@
     }
 }
 
-.news__items {
+.top-news__items {
 
 }
 
-.news__item {
+.top-news__item {
 
 }
 
-.news__header {
+.top-news__header {
 
 }
 
-.news__date {
+.top-news__date {
 
 }
 
-.news__title {
+.top-news__title {
 
 }

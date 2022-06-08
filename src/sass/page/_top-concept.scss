@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.top-concept {
+    margin-bottom: rem(100);
+}
+
+.top-concept__inner {
+    padding-top: rem(110);
+
+    @include mq('md') {
+        padding-top: rem(180);
+    }
+}
