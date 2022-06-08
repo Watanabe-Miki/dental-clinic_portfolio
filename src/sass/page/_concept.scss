@@ -1,0 +1,79 @@
+@use "global" as *;
+
+.concept {
+    margin-bottom: rem(100);
+    overflow: hidden;
+    background: url(../../../images/common/concept-bg_sp.png) no-repeat rem(10) 0 / 148.4% auto;
+    
+    @include mq('md') {
+       background: url(../../../images/common/concept-bg.png) no-repeat rem(249.6) 0 / 102.44406% 100%;
+       height: rem(726);
+    }
+
+    @include mq('lg') {
+       background: url(../../../images/common/concept-bg.png) no-repeat rem(416) 0 / 102.44406% 100%;
+       height: rem(726);
+    }
+}
+
+.concept__inner {
+    padding-top: rem(110);
+
+    @include mq('md') {
+        padding-top: rem(180);
+    }
+}
+
+.concept__wrap {
+
+    @include mq('md') {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-left: calc(50% - 50vw);
+    }
+}
+
+.concept__body {
+
+    @include mq('md') {
+        flex: 1 1 31.79687%;
+        margin-left: 7.21875%;
+    }
+}
+
+.concept__lead {
+
+}
+
+.concept__content {
+    margin-bottom: rem(40);
+    
+}
+
+.concept__btn {
+    text-align: center;
+    margin-bottom: rem(40);
+
+    @include mq('md') {
+        text-align: left;
+        margin-bottom: 0;
+    }
+}
+
+.concept__feature {
+    margin-left: calc(50% - 50vw);
+    margin-right: 20px;
+    
+    @include mq('md') {
+        margin: 0;
+        flex: 2 1 50%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
