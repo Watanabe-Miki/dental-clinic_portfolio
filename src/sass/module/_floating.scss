@@ -1,22 +1,64 @@
 @use "global" as *;
 
+/* リンクの形状 */
 .floating {
     width: rem(52);
     height: rem(52);
-    position: fixed;
-    right: rem(10);
-    bottom: rem(100);
     cursor: pointer;
     transition: all 0.3s ease 0s;
-    z-index: map-get($layer, floating);
-    
-    @include mq('md') {
-        right: rem(20);
-        bottom: rem(40);        
-    }
 
     &:focus,
     &:hover {
         opacity: .6;
+    }
+}
+
+/* レイアウト */
+.floating {
+    position: fixed;
+    right: rem(10);
+    bottom: rem(100);
+    z-index: map-get($layer, floating);
+
+    /* はじめは非表示 */
+    opacity: 0;
+    transform: translateY(100px);
+
+    @include mq('md') {
+        right: rem(20);
+        bottom: rem(40);        
+    }
+}
+
+/* 上に上がる動き */
+#page-top.UpMove {
+    animation: UpAnime 0.5s forwards;
+}
+
+@keyframes UpAnime {
+    from {
+        opacity: 0;
+        transform: translateY(100px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* 下に下がる動き */
+#page-top.DownMove {
+    animation: DownAnime 0.5s forwards;
+}
+
+@keyframes DownAnime {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    to {
+        opacity: 0;
+        transform: translateY(100px);
     }
 }

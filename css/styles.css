@@ -929,20 +929,32 @@ select::-ms-expand {
   display: block;
 }
 
+/* リンクの形状 */
 .floating {
   width: 52px;
   width: 3.25rem;
   height: 52px;
   height: 3.25rem;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+.floating:focus, .floating:hover {
+  opacity: 0.6;
+}
+
+/* レイアウト */
+.floating {
   position: fixed;
   right: 10px;
   right: 0.625rem;
   bottom: 100px;
   bottom: 6.25rem;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
   z-index: 30;
+  /* はじめは非表示 */
+  opacity: 0;
+  -webkit-transform: translateY(100px);
+          transform: translateY(100px);
 }
 @media screen and (min-width: 768px) {
   .floating {
@@ -950,10 +962,69 @@ select::-ms-expand {
     bottom: 2.5rem;
   }
 }
-.floating:focus, .floating:hover {
-  opacity: 0.6;
+
+/* 上に上がる動き */
+#page-top.UpMove {
+  -webkit-animation: UpAnime 0.5s forwards;
+          animation: UpAnime 0.5s forwards;
 }
 
+@-webkit-keyframes UpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes UpAnime {
+  from {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+/* 下に下がる動き */
+#page-top.DownMove {
+  -webkit-animation: DownAnime 0.5s forwards;
+          animation: DownAnime 0.5s forwards;
+}
+
+@-webkit-keyframes DownAnime {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
+
+@keyframes DownAnime {
+  from {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    -webkit-transform: translateY(100px);
+            transform: translateY(100px);
+  }
+}
 .footer-nav__inner {
   /* 幅600以上 */
 }
@@ -2003,8 +2074,6 @@ select::-ms-expand {
 
 .medical-link {
   width: 100%;
-  max-width: 500px;
-  max-width: 31.25rem;
   position: relative;
   height: 210px;
   height: 13.125rem;
@@ -2279,19 +2348,142 @@ select::-ms-expand {
 
 .section-bg01 {
   overflow: hidden;
-  background: url(../../../images/common/concept-bg_sp.png) no-repeat 10px 0/148.4% auto;
-  background: url(../../../images/common/concept-bg_sp.png) no-repeat 0.625rem 0/148.4% auto;
+  background: url(../../../images/common/section-bg01_sp.png) no-repeat 10px 0/148.4% auto;
+  background: url(../../../images/common/section-bg01_sp.png) no-repeat 0.625rem 0/148.4% auto;
 }
 @media screen and (min-width: 768px) {
   .section-bg01 {
-    background: url(../../../images/common/concept-bg.png) no-repeat 15.6rem 0/102.44406% 100%;
+    background: url(../../../images/common/section-bg01.png) no-repeat 15.6rem 0/102.44406% 100%;
     height: 45.375rem;
   }
 }
 @media screen and (min-width: 1024px) {
   .section-bg01 {
-    background: url(../../../images/common/concept-bg.png) no-repeat 26rem 0/102.44406% 100%;
+    background: url(../../../images/common/section-bg01.png) no-repeat 26rem 0/102.44406% 100%;
     height: 45.375rem;
+  }
+}
+
+/* 上部の背景 */
+.section-bg02__top {
+  width: 100%;
+  height: 22.66667vw;
+  position: relative;
+}
+.section-bg02__top::before {
+  background: url(../../../images/common/section-bgTop02_sp.png) no-repeat top center/cover;
+  content: "";
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 768px) {
+  .section-bg02__top {
+    height: 15.78125vw;
+  }
+  .section-bg02__top::before {
+    background: url(../../../images/common/section-bgTop02.png) no-repeat top center/cover;
+    content: "";
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+}
+
+/* 中央の背景 */
+.section-bg02__center {
+  background: #DFF1FD;
+  padding-top: 29px;
+  padding-top: 1.8125rem;
+  padding-bottom: 98.3px;
+  padding-bottom: 6.14375rem;
+  position: relative;
+  /* キラキラ左側 */
+  /* キラキラ右側 */
+}
+.section-bg02__center::before {
+  background: url(../../../images/common/deco-kirakira2-w.png) no-repeat top center/contain;
+  content: "";
+  width: 6.76267vw;
+  height: 6.76267vw;
+  position: absolute;
+  bottom: 4.42667vw;
+  left: 3.2vw;
+}
+.section-bg02__center::after {
+  background: url(../../../images/common/deco-kirakira-w.png) no-repeat top center/contain;
+  content: "";
+  width: 14.25867vw;
+  height: 15.61867vw;
+  position: absolute;
+  bottom: 0;
+  right: 1.6vw;
+}
+@media screen and (min-width: 768px) {
+  .section-bg02__center {
+    padding-top: 0.25rem;
+    padding-bottom: 5.875rem;
+  }
+  .section-bg02__center::before {
+    background: url(../../../images/common/deco-kirakira2-w.png) no-repeat top center/contain;
+    content: "";
+    width: 4.48125vw;
+    height: 4.48125vw;
+    position: absolute;
+    bottom: 0;
+    left: 3.28125vw;
+  }
+  .section-bg02__center::after {
+    background: url(../../../images/common/deco-kirakira-w.png) no-repeat top center/contain;
+    content: "";
+    width: 9.82422vw;
+    height: 10.7625vw;
+    position: absolute;
+    bottom: -1.59062vw;
+    right: 1.40625vw;
+    z-index: 1;
+  }
+}
+
+/* 下部の背景 */
+.section-bg02__bottom {
+  width: 100%;
+  height: 7.57867vw;
+  position: relative;
+}
+.section-bg02__bottom::before {
+  background: url(../../../images/common/section-bgBottom02_sp.png) no-repeat bottom center/cover;
+  content: "";
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 768px) {
+  .section-bg02__bottom {
+    height: 7.57813vw;
+  }
+  .section-bg02__bottom::before {
+    background: url(../../../images/common/section-bgBottom02.png) no-repeat bottom center/cover;
+    content: "";
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
   }
 }
 
@@ -2699,33 +2891,6 @@ select::-ms-expand {
   }
 }
 
-.medical__link-items {
-  margin-bottom: -20px;
-  margin-bottom: -1.25rem;
-}
-@media screen and (min-width: 768px) {
-  .medical__link-items {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-  }
-}
-
-.medical__link-item {
-  margin-bottom: 20px;
-  margin-bottom: 1.25rem;
-}
-@media screen and (min-width: 768px) {
-  .medical__link-item {
-    margin-right: 8%;
-  }
-  .medical__link-item:nth-of-type(2n) {
-    margin-right: 0;
-  }
-}
-
 .top-concept {
   margin-bottom: 100px;
   margin-bottom: 6.25rem;
@@ -2739,6 +2904,89 @@ select::-ms-expand {
   .top-concept__inner {
     padding-top: 11.25rem;
   }
+}
+
+.top-medical {
+  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
+}
+@media screen and (min-width: 768px) {
+  .top-medical {
+    margin-bottom: 10rem;
+  }
+}
+
+.top-medical__inner {
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .top-medical__inner {
+    width: 37.5rem;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}
+
+.top-medical__links {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 768px) {
+  .top-medical__links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.top-medical__link-item {
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .top-medical__link-item {
+    margin-bottom: 3.75rem;
+    margin-right: 8%;
+  }
+  .top-medical__link-item:nth-child(2n) {
+    margin-right: 0;
+  }
+}
+
+.top-medical__content {
+  background: #FFF;
+  padding: 20px;
+  padding: 1.25rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .top-medical__content {
+    padding: 2.5rem;
+  }
+}
+
+.top-medical__text {
+  font-size: 14px;
+  line-height: 1.7142857143;
+  text-align: justify;
+}
+.top-medical__text::before {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: -0.35714em;
+  content: "";
+}
+.top-medical__text::after {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-bottom: -0.35714em;
+  content: "";
+}
+.top-medical__text span.text-color_notice {
+  color: #EE5A6D;
 }
 
 .top-news {

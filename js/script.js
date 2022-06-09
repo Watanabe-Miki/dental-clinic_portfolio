@@ -1,28 +1,34 @@
 
 jQuery(function ($) { // この中であればWordpressでも「$」が使用可能になる
 
-  var topBtn = $('.floating');
-  topBtn.hide();
-
-  // ボタンの表示設定
-  $(window).scroll(function () {
-    if ($(this).scrollTop() > 70) {
-      // 指定px以上のスクロールでボタンを表示
-      topBtn.fadeIn();
-    } else {
-      // 画面が指定pxより上ならボタンを非表示
-      topBtn.fadeOut();
+  /* floating */
+  function PageTopAnime() {
+    var scroll = $(window).scrollTop();
+    if (scroll >= 200){
+      $('#page-top').removeClass('DownMove');
+      $('#page-top').addClass('UpMove');
+    }else{
+      if($('#page-top').hasClass('UpMove')){
+        $('#page-top').removeClass('UpMove');
+        $('#page-top').addClass('DownMove');
+      }
     }
+  }
+  
+  // スクロールした際の動きの関数を呼ぶ
+  $(window).scroll(function () {
+    PageTopAnime();
   });
 
-  // ボタンをクリックしたらスクロールして上に戻る
-  topBtn.click(function () {
+  // #page-topをクリックした際の設定
+  $('#page-top a').click(function () {
     $('body,html').animate({
-      scrollTop: 0
-    }, 300, 'swing');
+        scrollTop: 0
+    }, 500);
     return false;
   });
 
+  
   /* ドロワー */
   $("#MenuButton").on("click", function(e){
       e.preventDefault();

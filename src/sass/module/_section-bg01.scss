@@ -2,15 +2,15 @@
 
 .section-bg01 {
     overflow: hidden;
-    background: url(../../../images/common/concept-bg_sp.png) no-repeat rem(10) 0 / 148.4% auto;
+    background: url(../../../images/common/section-bg01_sp.png) no-repeat rem(10) 0 / 148.4% auto;
     
     @include mq('md') {
-       background: url(../../../images/common/concept-bg.png) no-repeat rem(249.6) 0 / 102.44406% 100%;
+       background: url(../../../images/common/section-bg01.png) no-repeat rem(249.6) 0 / 102.44406% 100%;
        height: rem(726);
     }
 
     @include mq('lg') {
-       background: url(../../../images/common/concept-bg.png) no-repeat rem(416) 0 / 102.44406% 100%;
+       background: url(../../../images/common/section-bg01.png) no-repeat rem(416) 0 / 102.44406% 100%;
        height: rem(726);
     }
 }

@@ -1,0 +1,123 @@
+@use "global" as *;
+
+/* 上部の背景 */
+.section-bg02__top {
+    width: 100%;
+    height: 22.66667vw; // カンプの高さ/375px
+    position: relative;
+
+    &::before {
+        background: url(../../../images/common/section-bgTop02_sp.png) no-repeat top center / cover; // bg-positionも上に合わせて
+        content: "";
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }      
+    
+    @include mq('md') {
+        height: 15.78125vw;// カンプの高さ/1280px
+        
+        &::before {
+            background: url(../../../images/common/section-bgTop02.png) no-repeat top center / cover;
+            content: "";
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
+
+/* 中央の背景 */
+.section-bg02__center {
+    background: $color-secondary;
+    padding-top: rem(29);
+    padding-bottom: rem(98.3);
+    position: relative;
+
+    /* キラキラ左側 */
+    &::before {
+        background: url(../../../images/common/deco-kirakira2-w.png) no-repeat top center / contain;
+        content: "";
+        width: 6.76267vw; // カンプの幅/375px
+        height: 6.76267vw; // カンプの高さ/375px
+        position: absolute;
+        bottom: 4.42667vw; // カンプの高さ/375px
+        left: 3.2vw; // カンプの幅/375px
+    }
+    
+    /* キラキラ右側 */
+    &::after {
+        background: url(../../../images/common/deco-kirakira-w.png) no-repeat top center / contain;
+        content: "";
+        width: 14.25867vw;
+        height: 15.61867vw;
+        position: absolute;
+        bottom: 0;
+        right: 1.6vw;
+    }
+    
+    @include mq('md') {
+        padding-top: rem(4); // innerに指定しないように！
+        padding-bottom: rem(94);
+
+        &::before {
+            background: url(../../../images/common/deco-kirakira2-w.png) no-repeat top center / contain;
+            content: "";
+            width: 4.48125vw; // カンプの高さ/1280px
+            height: 4.48125vw; // カンプの高さ/1280px
+            position: absolute;
+            bottom: 0;
+            left: 3.28125vw; // カンプの幅/1280px
+        }
+    
+        &::after {
+            background: url(../../../images/common/deco-kirakira-w.png) no-repeat top center / contain;
+            content: "";
+            width: 9.82422vw;
+            height: 10.7625vw;
+            position: absolute;
+            bottom: -1.59062vw;
+            right: 1.40625vw;
+            z-index: map-get($layer, default); // マイナスマージン分隠れる為
+        }        
+    }
+}
+
+/* 下部の背景 */
+.section-bg02__bottom {
+    width: 100%;
+    height: 7.57867vw;
+    position: relative;
+
+    &::before {
+        background: url(../../../images/common/section-bgBottom02_sp.png) no-repeat bottom center / cover;// bg-positionも下に合わせて
+        content: "";
+        width: inherit;
+        height: inherit;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }      
+    
+    @include mq('md') {
+        height: 7.57813vw;
+
+        &::before {
+            background: url(../../../images/common/section-bgBottom02.png) no-repeat bottom center / cover;
+            content: "";
+            width: inherit;
+            height: inherit;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+}
