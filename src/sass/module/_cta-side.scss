@@ -19,6 +19,19 @@
     }
 }
 
+/* レイアウトの指定 */
+.cta-side {
+    position: fixed;
+    top: rem(176);
+    right: 0;
+    z-index: 30;
+
+    @media screen and (max-width: 1200px) {
+       display: none; 
+    }
+    
+}
+
 .cta-icon_03_size {
     width: rem(48.86);
     height: rem(28.61);

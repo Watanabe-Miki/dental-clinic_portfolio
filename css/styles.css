@@ -584,6 +584,20 @@ select::-ms-expand {
   background: #0060A0;
 }
 
+/* レイアウトの指定 */
+.cta-side {
+  position: fixed;
+  top: 176px;
+  top: 11rem;
+  right: 0;
+  z-index: 30;
+}
+@media screen and (max-width: 1200px) {
+  .cta-side {
+    display: none;
+  }
+}
+
 .cta-icon_03_size {
   width: 48.86px;
   width: 3.05375rem;
@@ -1052,7 +1066,7 @@ select::-ms-expand {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 11;
+  z-index: 41;
 }
 
 .footer-cta__inner {

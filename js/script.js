@@ -35,7 +35,6 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
       $(this).toggleClass("is-active"); 
       $(".js-drawer-content").toggleClass("is-active"); 
       $(".js-drawer-background").toggleClass("is-active"); 
-
       return false;
   });
 
