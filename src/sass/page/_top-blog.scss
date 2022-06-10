@@ -1,0 +1,39 @@
+@use "global" as *;
+
+.top-blog {
+    margin-bottom: rem(100);
+
+    @include mq('md') {
+        margin-bottom: rem(160);
+    }
+}
+
+.top-blog__inner {
+    text-align: center;
+}
+
+.top-blog-cards {
+    margin-bottom: rem(40);
+
+    @include mq('md') {
+        margin-bottom: rem(66);
+    }
+}
+
+/* sm以下で非表示 */
+.top-blog-cards__item-wrap {
+    
+    @include mq('sm-down') {
+        display: none;
+    }
+}
+
+/* sm以上で非表示 */
+.top-blog__media {
+    margin-bottom: rem(20);
+
+    @include mq('sm') {
+        display: none;
+        margin-bottom: 0;
+    }
+}

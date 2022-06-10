@@ -1,22 +1,32 @@
 @use "global" as *;
 .footer {
-    background-color: $color-secondary;
-    padding-top: rem(14);
+
+}
+
+.footer__bg-top {
     position: relative;
-    
-    @include mq('md') {
-        padding-top: rem(56);
-    }
+    width: 100%;
+    height: rem(32);
 
     &::before {
         content: "";
-        background: url(../../../images/common/wave.png) no-repeat center center / cover;
-        width: 100%;
-        height: rem(32);
+        background: url(../../../images/common/wave.png) no-repeat top center / cover;
+        width: inherit;
+        height: inherit;
         position: absolute;
-        top: rem(-32);
+        bottom: 0;
         left: 50%;
         transform: translateX(-50%);
+    }
+}
+
+.footer__content-wrap {
+    background-color: $color-secondary;
+    padding-top: rem(14);
+    padding-bottom: rem(60);
+    
+    @include mq('md') {
+        padding-top: rem(56);
     }
 }
 
@@ -39,5 +49,4 @@
 }
 
 .footer-nav {
-    margin-bottom: rem(60);
 }

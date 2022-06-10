@@ -44,6 +44,7 @@
     padding: rem(16) rem(16) rem(13) rem(16);
     background: $color-bg-base;
     transition: all 0.3s ease 0s;
+    text-align: left;
     position: relative;
     
 	> :last-child {
@@ -68,8 +69,5 @@
     line-height: math.div( 38, 11 );
     @include lineHeightCrop(3.4545454545);
     color: #888;
+    text-align: left;
 }
-
-.card__date-text {
-}
-

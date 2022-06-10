@@ -1,9 +1,12 @@
 @use "global" as *;
 /* ラッパーモジュールの指定 */
 .blog-cards {
-    display: flex;
-    flex-wrap: wrap;
     margin-bottom: rem(-30);
+    
+    @include mq('sm') {
+        display: flex;
+        flex-wrap: wrap;
+    }
 
     @include mq('md') {
         margin-bottom: rem(-50);
@@ -12,13 +15,17 @@
 
 .blog-cards__item-wrap {
     position: relative;
-    width: calc(50% - 4.76% / 2);
-    max-width: rem(300);
-    margin-right: 4.76%; // 30px
+    width: 100%;
+    max-width: 100%;
     margin-bottom: rem(30);
 
-    &:nth-child(2n) {
-        margin-right: 0;
+    @include mq('sm') {
+        width: calc(50% - 4.76% / 2);
+        margin-right: 4.76%; // 30px
+    
+        &:nth-child(2n) {
+            margin-right: 0;
+        }
     }
     
     @include mq('md') {

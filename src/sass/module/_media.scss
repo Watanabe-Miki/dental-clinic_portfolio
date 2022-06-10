@@ -21,6 +21,7 @@
 }
 
 .media__body {
+	text-align: left;
 	flex: 1;
 
 	> :last-child {
@@ -62,8 +63,4 @@
 		line-height: math.div( 36, 12 );
 		@include lineHeightCrop(3);
 	}
-}
-
-.media__date-text {
-
 }
