@@ -2,12 +2,21 @@
 
 .top-concept {
     margin-bottom: rem(100);
+
+    @include mq('md') {
+        margin-bottom: rem(120);
+    }
 }
 
 .top-concept__inner {
     padding-top: rem(110);
-
+    padding-left: $padding-sp;
+    padding-right: $padding-sp;
+    
     @include mq('md') {
-        padding-top: rem(180);
+        padding-top: 14.0625vw;
+        padding-bottom: 8.98438vw;
+        padding-left: 0;
+        padding-right: 0;
     }
 }

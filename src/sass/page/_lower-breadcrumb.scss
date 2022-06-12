@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.lower-breadcrumb {
+    margin-bottom: rem(60);
+    padding-left: $padding-sp;
+
+    @include mq('md') {
+        margin-left: 7.03125%;
+        margin-right: auto;
+        margin-bottom: rem(80);
+    }
+}

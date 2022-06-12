@@ -1,0 +1,11 @@
+@use "global" as *;
+
+.link-space {
+    padding-top: 60px;
+    margin-top: -60px;
+    
+    @include mq('md') {
+        padding-top: 80px;
+        margin-top: -80px;
+    }
+}

@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.breadcrumb {
+    display: flex;
+}
+
+.breadcrumb__link,
+.breadcrumb__text {
+    list-style: none;
+    font-size: rem(12);
+}
+
+.breadcrumb__link {
+    
+    a {
+        transition: all 0.3s ease 0s;
+        &:focus,
+        &:hover {
+            color: #C2C2C2;
+        }
+    }
+}
+
+.breadcrumb__next {
+    font-size: rem(12);
+    margin: 0 rem(8);
+}

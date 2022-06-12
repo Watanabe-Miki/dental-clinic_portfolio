@@ -1,16 +1,46 @@
 @use "global" as *;
 
 .section-bg01 {
-    overflow: hidden;
-    background: url(../../../images/common/section-bg01_sp.png) no-repeat rem(10) 0 / 148.4% auto;
-    
-    @include mq('md') {
-       background: url(../../../images/common/section-bg01.png) no-repeat rem(249.6) 0 / 102.44406% 100%;
-       height: rem(726);
-    }
+   position: relative;
+   overflow: hidden;
 
-    @include mq('lg') {
-       background: url(../../../images/common/section-bg01.png) no-repeat rem(416) 0 / 102.44406% 100%;
-       height: rem(726);
-    }
+   &::before {
+      background: url(../../../images/common/section-bg01_sp.png) no-repeat center center / contain;
+      content: "";
+      position: absolute;
+      width: 148.4vw;
+      height: 82.13333vw;
+      top: 0;
+      left: 2.66667vw;
+      z-index: map-get($layer, layerDown);
+   }
+
+   @include mq('md') {
+
+      &::before {
+         background: url(../../../images/common/section-bg01.png) no-repeat center center / contain;
+         content: "";
+         position: absolute;
+         width: 102.44062vw;
+         height: 56.68281vw;
+         top: 0;
+         left: 32.5vw;
+         z-index: map-get($layer, layerDown);
+      }
+   }
+
+   @media screen and (min-width: 1300px) {
+
+      &::before {
+         background: url(../../../images/common/section-bg01.png) no-repeat center center / contain;
+         content: "";
+         position: absolute;
+         width: 90%;
+         height: 90%;
+         top: 0;
+         left: 32.5vw;
+         z-index: map-get($layer, layerDown);
+      }
+   }
 }
+
