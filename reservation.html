@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>  
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <!-- meta情報 -->
+  <title>WEB予約 | tokyo-clinic</title>
+  <meta name="description" content="お名前 必須 フリガナ 必須 電話番号 必須 メールアドレス 必須 初診/再診 必須 初診再診 診療内容必須 ※(複数選択可) 虫歯被せ物がとれた歯科矯正咬み合わせ歯周病小児歯科入れ歯インプラントその他 ご連絡方法必須 メールメール１メール" />
+  <link rel="canonical" href="./reservation.html">
+  <!-- ogp -->
+  <meta property="og:title" content="WEB予約 | tokyo-clinic" />
+  <meta property="og:locale" content="ja_JP">
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="./reservation.html" />
+  <meta property="og:image" content="" />
+  <meta property="og:site_name" content="tokyo-clinic" />
+  <meta property="og:description" content="" />
+  <meta name="twitter:card" content="summary">
+  <!-- ファビコン -->
+  <link rel="icon" href="./images/common/favicon.ico" id="favicon">
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/common/apple-touch-icon-180x180.png">
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- Swiper css -->
+  <link rel="stylesheet" href="./css/swiper-bundle.min.css">
+  <!-- css -->
+  <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+  <header class="header js-header">
+    <div class="header__inner">
+      <h1 class="header__logo logo">
+        <a href="./index.html"><img src="./images/common/logo.png" alt="みなみ歯科クリニック"></a>
+      </h1>
+      <nav class="header-nav global-nav" aria-label="header">
+        <ul class="global-nav__list">
+          <li class="global-nav__item">
+            <a class="global-nav__link js-global-nav__link" href="./index.html">
+              <svg id="home" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <rect id="長方形_23351" data-name="長方形 23351" width="24" height="24" fill="#1391e6" opacity="0"/>
+                <path class="global-nav__icon" id="パス_43759" data-name="パス 43759" d="M20.42,10.18,12.71,2.3a1,1,0,0,0-1.42,0L3.58,10.19A2,2,0,0,0,3,11.62V20a2,2,0,0,0,1.89,2H19.11A2,2,0,0,0,21,20V11.62a2.07,2.07,0,0,0-.58-1.44ZM10,20V14h4v6Zm9,0H16V13a1,1,0,0,0-1-1H9a1,1,0,0,0-1,1v7H5V11.58l7-7.15,7,7.19Z" fill="#1391e6"/>
+              </svg>
+              <span class="global-nav__link-text">ホーム</span>  
+            </a>
+          </li>
+          <li class="global-nav__item">
+            <a class="global-nav__link js-global-nav__link" href="./about.html">
+              <svg id="icon-02" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <rect id="長方形_23373" data-name="長方形 23373" width="24" height="24" fill="#393939" opacity="0"/>
+                <path class="global-nav__icon" id="hospital" d="M5.368,10.232V8.555a.5.5,0,0,1,.5-.5H7.548a.5.5,0,0,1,.5.5v1.677a.5.5,0,0,1-.5.5H5.871A.5.5,0,0,1,5.368,10.232Zm5.871.5h1.677a.5.5,0,0,0,.5-.5V8.555a.5.5,0,0,0-.5-.5H11.238a.5.5,0,0,0-.5.5v1.677A.5.5,0,0,0,11.238,10.735ZM8.051,14.258V12.58a.5.5,0,0,0-.5-.5H5.871a.5.5,0,0,0-.5.5v1.677a.5.5,0,0,0,.5.5H7.548A.5.5,0,0,0,8.051,14.258Zm3.187.5h1.677a.5.5,0,0,0,.5-.5V12.58a.5.5,0,0,0-.5-.5H11.238a.5.5,0,0,0-.5.5v1.677A.5.5,0,0,0,11.238,14.761Zm7.548,5.2v1.51H0v-1.51a.5.5,0,0,1,.5-.5h.818V3.566a.95.95,0,0,1,1.006-.882H6.039V1.006A1.006,1.006,0,0,1,7.045,0h4.7a1.006,1.006,0,0,1,1.006,1.006V2.684h3.711a.95.95,0,0,1,1.006.882V19.458h.818A.5.5,0,0,1,18.787,19.961ZM3.334,19.416H8.051v-2.81a.5.5,0,0,1,.5-.5h1.677a.5.5,0,0,1,.5.5v2.81h4.718V4.7h-2.7V5.7A1.006,1.006,0,0,1,11.742,6.71h-4.7A1.006,1.006,0,0,1,6.039,5.7V4.7h-2.7ZM11.155,2.684h-1.09V1.594a.252.252,0,0,0-.252-.252H8.974a.252.252,0,0,0-.252.252v1.09H7.632a.252.252,0,0,0-.252.252v.839a.252.252,0,0,0,.252.252h1.09v1.09a.252.252,0,0,0,.252.252h.839a.252.252,0,0,0,.252-.252V4.026h1.09a.252.252,0,0,0,.252-.252V2.935A.252.252,0,0,0,11.155,2.684Z" transform="translate(3 1)" fill="#393939"/>
+              </svg>                
+              <span class="global-nav__link-text">当院について</span>
+            </a>
+          </li>
+          <li class="global-nav__item">
+            <a class="global-nav__link js-global-nav__link" href="./medical.html">
+              <svg id="file-text" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <rect id="長方形_23355" data-name="長方形 23355" width="24" height="24" fill="#393939" opacity="0"/>
+                <path class="global-nav__icon" id="パス_43765" data-name="パス 43765" d="M15,16H9a1,1,0,0,0,0,2h6a1,1,0,0,0,0-2Z" fill="#393939"/>
+                <path class="global-nav__icon" id="パス_43766" data-name="パス 43766" d="M9,14h3a1,1,0,0,0,0-2H9a1,1,0,0,0,0,2Z" fill="#393939"/>
+                <path class="global-nav__icon" id="パス_43767" data-name="パス 43767" d="M19.74,8.33l-5.44-6A1,1,0,0,0,13.56,2h-7A2.53,2.53,0,0,0,4,4.5v15A2.53,2.53,0,0,0,6.56,22H17.44A2.53,2.53,0,0,0,20,19.5V9a1,1,0,0,0-.26-.67ZM14,5l2.74,3h-2A.79.79,0,0,1,14,7.15Zm3.44,15H6.56A.53.53,0,0,1,6,19.5V4.5A.53.53,0,0,1,6.56,4H12V7.15A2.79,2.79,0,0,0,14.71,10H18v9.5a.53.53,0,0,1-.56.5Z" fill="#393939"/>
+              </svg>                
+              <span class="global-nav__link-text">診療案内</span>
+            </a>
+          </li>
+          <li class="global-nav__item">
+            <a class="global-nav__link js-global-nav__link" href="./staff.html">
+              <svg id="people" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <rect id="長方形_23354" data-name="長方形 23354" width="24" height="24" fill="#393939" opacity="0"/>
+                <path class="global-nav__icon" id="パス_43762" data-name="パス 43762" d="M9,11A4,4,0,1,0,5,7a4,4,0,0,0,4,4ZM9,5A2,2,0,1,1,7,7,2,2,0,0,1,9,5Z" fill="#393939"/>
+                <path class="global-nav__icon" id="パス_43763" data-name="パス 43763" d="M17,13a3,3,0,1,0-3-3A3,3,0,0,0,17,13Zm0-4a1,1,0,1,1-1,1A1,1,0,0,1,17,9Z" fill="#393939"/>
+                <path class="global-nav__icon" id="パス_43764" data-name="パス 43764" d="M17,14a5,5,0,0,0-3.06,1.05A7,7,0,0,0,2,20a1,1,0,1,0,2,0,5,5,0,0,1,10,0,1,1,0,0,0,2,0,6.9,6.9,0,0,0-.86-3.35A3,3,0,0,1,20,19a1,1,0,1,0,2,0A5,5,0,0,0,17,14Z" fill="#393939"/>
+              </svg>                
+              <span class="global-nav__link-text">スタッフ紹介</span>
+            </a>
+          </li>
+          <li class="global-nav__item">
+            <a class="global-nav__link js-global-nav__link" href="./blog.html">
+              <svg id="edit" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <rect id="長方形_23353" data-name="長方形 23353" width="24" height="24" fill="#393939" opacity="0"/>
+                <path class="global-nav__icon" id="パス_43761" data-name="パス 43761" d="M19.4,7.34,16.66,4.6A2,2,0,0,0,14,4.53l-9,9a2,2,0,0,0-.57,1.21L4,18.91A1,1,0,0,0,5,20h.09l4.17-.38a2,2,0,0,0,1.21-.57l9-9a1.92,1.92,0,0,0-.07-2.71ZM9.08,17.62l-3,.28.27-3L12,9.32l2.7,2.7ZM16,10.68,13.32,8l1.95-2L18,8.73Z" fill="#393939"/>
+              </svg>
+              <span class="global-nav__link-text">スタッフブログ</span>
+            </a>
+          </li>
+          <li class="global-nav__item">
+            <a class="global-nav__link js-global-nav__link" href="./contact.html">
+              <svg id="email" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                <rect id="長方形_23352" data-name="長方形 23352" width="24" height="24" fill="#393939" opacity="0"/>
+                <path class="global-nav__icon" id="パス_43760" data-name="パス 43760" d="M19,4H5A3,3,0,0,0,2,7V17a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7a3,3,0,0,0-3-3Zm-.67,2L12,10.75,5.67,6ZM19,18H5a1,1,0,0,1-1-1V7.25l7.4,5.55a1,1,0,0,0,1.2,0L20,7.25V17A1,1,0,0,1,19,18Z" fill="#393939"/>
+              </svg>
+              <span class="global-nav__link-text">お問い合わせ</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="header__meta">
+        <span class="header__address">〒166-0001 東京都杉並区阿佐谷北7-3-1</span>
+        <div class="header__tel-number tel-number">
+          <p class="tel-number__text tel-number__text_md"><i class="fa-solid fa-phone"></i>03-1234-5678</p>
+        </div>
+      </div>
+    </div>
+  </header>
+  
+  <!-- ドロワーのバー部分 -->
+  <div id="MenuButton" class="js-drawer-icon">
+    <div class="js-drawer-icon__bars">
+      <div class="js-drawer-icon__bar1"></div>
+      <div class="js-drawer-icon__bar2"></div>
+      <div class="js-drawer-icon__bar3"></div>
+    </div>
+  </div>
+  <!-- ドロワーメニュー部分 -->    
+  <div class="js-drawer-content">
+    <div class="js-drawer-content__items">
+      <div class="js-drawer-content__item">
+        <a class="js-drawer-content__link" href="./index.html">
+          <svg class="js-drawer__icon_box" id="home" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <rect id="長方形_23351" data-name="長方形 23351" width="24" height="24" fill="#1391e6" opacity="0"/>
+            <path class="js-drawer__icon_fill" id="パス_43759" data-name="パス 43759" d="M20.42,10.18,12.71,2.3a1,1,0,0,0-1.42,0L3.58,10.19A2,2,0,0,0,3,11.62V20a2,2,0,0,0,1.89,2H19.11A2,2,0,0,0,21,20V11.62a2.07,2.07,0,0,0-.58-1.44ZM10,20V14h4v6Zm9,0H16V13a1,1,0,0,0-1-1H9a1,1,0,0,0-1,1v7H5V11.58l7-7.15,7,7.19Z" fill="#1391e6"/>
+          </svg>
+          <span>ホーム</span>
+          <img class="js-drawer-content__link_arrow" src="./images/common/arrow-right-white.png" alt="ホームへ">  
+        </a>
+      </div>
+      <div class="js-drawer-content__item">
+        <a class="js-drawer-content__link" href="./about.html">
+          <svg class="js-drawer__icon_box" id="icon-02" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <rect id="長方形_23373" data-name="長方形 23373" width="24" height="24" fill="#393939" opacity="0"/>
+            <path class="js-drawer__icon_fill" id="hospital" d="M5.368,10.232V8.555a.5.5,0,0,1,.5-.5H7.548a.5.5,0,0,1,.5.5v1.677a.5.5,0,0,1-.5.5H5.871A.5.5,0,0,1,5.368,10.232Zm5.871.5h1.677a.5.5,0,0,0,.5-.5V8.555a.5.5,0,0,0-.5-.5H11.238a.5.5,0,0,0-.5.5v1.677A.5.5,0,0,0,11.238,10.735ZM8.051,14.258V12.58a.5.5,0,0,0-.5-.5H5.871a.5.5,0,0,0-.5.5v1.677a.5.5,0,0,0,.5.5H7.548A.5.5,0,0,0,8.051,14.258Zm3.187.5h1.677a.5.5,0,0,0,.5-.5V12.58a.5.5,0,0,0-.5-.5H11.238a.5.5,0,0,0-.5.5v1.677A.5.5,0,0,0,11.238,14.761Zm7.548,5.2v1.51H0v-1.51a.5.5,0,0,1,.5-.5h.818V3.566a.95.95,0,0,1,1.006-.882H6.039V1.006A1.006,1.006,0,0,1,7.045,0h4.7a1.006,1.006,0,0,1,1.006,1.006V2.684h3.711a.95.95,0,0,1,1.006.882V19.458h.818A.5.5,0,0,1,18.787,19.961ZM3.334,19.416H8.051v-2.81a.5.5,0,0,1,.5-.5h1.677a.5.5,0,0,1,.5.5v2.81h4.718V4.7h-2.7V5.7A1.006,1.006,0,0,1,11.742,6.71h-4.7A1.006,1.006,0,0,1,6.039,5.7V4.7h-2.7ZM11.155,2.684h-1.09V1.594a.252.252,0,0,0-.252-.252H8.974a.252.252,0,0,0-.252.252v1.09H7.632a.252.252,0,0,0-.252.252v.839a.252.252,0,0,0,.252.252h1.09v1.09a.252.252,0,0,0,.252.252h.839a.252.252,0,0,0,.252-.252V4.026h1.09a.252.252,0,0,0,.252-.252V2.935A.252.252,0,0,0,11.155,2.684Z" transform="translate(3 1)" fill="#393939"/>
+          </svg>                
+          <span>当院について</span>
+          <img class="js-drawer-content__link_arrow" src="./images/common/arrow-right-white.png" alt="当院についてへ">  
+        </a>
+      </div>
+      <div class="js-drawer-content__item">
+        <a class="js-drawer-content__link" href="./medical.html">
+          <svg class="js-drawer__icon_box" id="file-text" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <rect id="長方形_23355" data-name="長方形 23355" width="24" height="24" fill="#393939" opacity="0"/>
+            <path class="js-drawer__icon_fill" id="パス_43765" data-name="パス 43765" d="M15,16H9a1,1,0,0,0,0,2h6a1,1,0,0,0,0-2Z" fill="#393939"/>
+            <path class="js-drawer__icon_fill" id="パス_43766" data-name="パス 43766" d="M9,14h3a1,1,0,0,0,0-2H9a1,1,0,0,0,0,2Z" fill="#393939"/>
+            <path class="js-drawer__icon_fill" id="パス_43767" data-name="パス 43767" d="M19.74,8.33l-5.44-6A1,1,0,0,0,13.56,2h-7A2.53,2.53,0,0,0,4,4.5v15A2.53,2.53,0,0,0,6.56,22H17.44A2.53,2.53,0,0,0,20,19.5V9a1,1,0,0,0-.26-.67ZM14,5l2.74,3h-2A.79.79,0,0,1,14,7.15Zm3.44,15H6.56A.53.53,0,0,1,6,19.5V4.5A.53.53,0,0,1,6.56,4H12V7.15A2.79,2.79,0,0,0,14.71,10H18v9.5a.53.53,0,0,1-.56.5Z" fill="#393939"/>
+          </svg>                
+          <span>診療案内</span>
+          <img class="js-drawer-content__link_arrow" src="./images/common/arrow-right-white.png" alt="診療案内へ">  
+        </a>
+      </div>
+      <div class="js-drawer-content__item">
+        <a class="js-drawer-content__link" href="./staff.html">
+          <svg class="js-drawer__icon_box" id="people" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <rect id="長方形_23354" data-name="長方形 23354" width="24" height="24" fill="#393939" opacity="0"/>
+            <path class="js-drawer__icon_fill" id="パス_43762" data-name="パス 43762" d="M9,11A4,4,0,1,0,5,7a4,4,0,0,0,4,4ZM9,5A2,2,0,1,1,7,7,2,2,0,0,1,9,5Z" fill="#393939"/>
+            <path class="js-drawer__icon_fill" id="パス_43763" data-name="パス 43763" d="M17,13a3,3,0,1,0-3-3A3,3,0,0,0,17,13Zm0-4a1,1,0,1,1-1,1A1,1,0,0,1,17,9Z" fill="#393939"/>
+            <path class="js-drawer__icon_fill" id="パス_43764" data-name="パス 43764" d="M17,14a5,5,0,0,0-3.06,1.05A7,7,0,0,0,2,20a1,1,0,1,0,2,0,5,5,0,0,1,10,0,1,1,0,0,0,2,0,6.9,6.9,0,0,0-.86-3.35A3,3,0,0,1,20,19a1,1,0,1,0,2,0A5,5,0,0,0,17,14Z" fill="#393939"/>
+          </svg>                
+          <span>スタッフ紹介</span>
+          <img class="js-drawer-content__link_arrow" src="./images/common/arrow-right-white.png" alt="スタッフ紹介へ">  
+        </a>
+      </div>
+      <div class="js-drawer-content__item">
+        <a class="js-drawer-content__link" href="./blog.html">
+          <svg class="js-drawer__icon_box" id="edit" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <rect id="長方形_23353" data-name="長方形 23353" width="24" height="24" fill="#393939" opacity="0"/>
+            <path class="js-drawer__icon_fill" id="パス_43761" data-name="パス 43761" d="M19.4,7.34,16.66,4.6A2,2,0,0,0,14,4.53l-9,9a2,2,0,0,0-.57,1.21L4,18.91A1,1,0,0,0,5,20h.09l4.17-.38a2,2,0,0,0,1.21-.57l9-9a1.92,1.92,0,0,0-.07-2.71ZM9.08,17.62l-3,.28.27-3L12,9.32l2.7,2.7ZM16,10.68,13.32,8l1.95-2L18,8.73Z" fill="#393939"/>
+          </svg>
+          <span>スタッフブログ</span>
+          <img class="js-drawer-content__link_arrow" src="./images/common/arrow-right-white.png" alt="スタッフブログへ">  
+        </a>
+      </div>
+      <div class="js-drawer-content__item">
+        <a class="js-drawer-content__link" href="./contact.html">
+          <svg class="js-drawer__icon_box" id="email" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <rect id="長方形_23352" data-name="長方形 23352" width="24" height="24" fill="#393939" opacity="0"/>
+            <path class="js-drawer__icon_fill" id="パス_43760" data-name="パス 43760" d="M19,4H5A3,3,0,0,0,2,7V17a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7a3,3,0,0,0-3-3Zm-.67,2L12,10.75,5.67,6ZM19,18H5a1,1,0,0,1-1-1V7.25l7.4,5.55a1,1,0,0,0,1.2,0L20,7.25V17A1,1,0,0,1,19,18Z" fill="#393939"/>
+          </svg>
+          <span>お問い合わせ</span>
+          <img class="js-drawer-content__link_arrow" src="./images/common/arrow-right-white.png" alt="お問い合わせへ">  
+        </a>
+      </div>
+    </div><!-- /.js-drawer-content__items -->
+  </div><!-- /.js-drawer-content -->
+  <!-- 背景部分 -->
+  <div class="js-drawer-background"></div>
+  
+  <!-- サイドCTA -->
+  <a href="./reservation.html" class="cta-side">
+    <svg class="cta-icon_03_size" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25.048" height="14.669" viewBox="0 0 25.048 14.669">
+      <defs>
+        <clipPath id="clip-path">
+          <rect width="25.048" height="14.669" fill="none"/>
+        </clipPath>
+      </defs>
+      <g id="icon-pc" clip-path="url(#clip-path)">
+        <g id="icon-pc-2" data-name="icon-pc" transform="translate(-865.527)">
+          <path class="cta-icon_03_fill" id="mobile-alt" d="M6.007,0H1.06A1.06,1.06,0,0,0,0,1.06v9.187a1.06,1.06,0,0,0,1.06,1.06H6.007a1.06,1.06,0,0,0,1.06-1.06V1.06A1.06,1.06,0,0,0,6.007,0ZM3.533,10.6a.707.707,0,1,1,.707-.707A.706.706,0,0,1,3.533,10.6ZM6.007,8.215a.266.266,0,0,1-.265.265H1.325a.266.266,0,0,1-.265-.265V1.325a.266.266,0,0,1,.265-.265H5.742a.266.266,0,0,1,.265.265Z" transform="translate(883.508 3.362)" fill="#fff"/>
+          <path class="cta-icon_03_fill" id="desktop" d="M15.127,0H1.375A1.376,1.376,0,0,0,0,1.375v9.168a1.376,1.376,0,0,0,1.375,1.375h5.5l-.458,1.375H4.355a.688.688,0,1,0,0,1.375h7.793a.688.688,0,1,0,0-1.375H10.085l-.458-1.375h5.5A1.376,1.376,0,0,0,16.5,10.543V1.375A1.376,1.376,0,0,0,15.127,0Zm-.458,10.085H1.834V1.834H14.669Z" transform="translate(865.527)" fill="#fff"/>
+        </g>
+      </g>
+    </svg>        
+    <div class="cta-side__text-wrap">
+      <span class="cta-side__text">WEB予約<br>はこちら</span>
+    </div>
+  </a><!-- /.cta-side -->
+
+
+  <footer class="footer">
+    <div class="footer__bg-top"></div>
+    <div class="footer__content-wrap">
+      <div class="footer__inner inner">
+        <div class="footer__info info">
+          <div class="info__body">
+            <h3 class="info__logo logo"><img src="./images/common/logo.png" alt="みなみ歯科クリニック" loading="lazy"></h3>
+            <dl class="info__access">
+              <div class="info__access-row">  
+                <dt>〒166-0001</dt>
+                <dd>東京都杉並区阿佐谷北7-3-1</dd>
+              </div>
+            </dl>
+            <div class="info__tel-number tel-number">
+              <p class="tel-number__text tel-number__text_md"><i class="fa-solid fa-phone"></i>03-1234-5678</p>
+            </div>
+            <div class="info__text-wrap">
+              <p class="info__time-text">(年中無休 AM9:00〜PM22:00)</p>  
+            </div>
+            <div class="info__cta-wrap">
+              <a href="./reservation.html" class="cta cta_info_blue cta_info_row">
+                <svg class="cta-icon_02_size" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25.048" height="14.669" viewBox="0 0 25.048 14.669">
+                  <defs>
+                    <clipPath id="clip-path">
+                      <rect width="25.048" height="14.669" fill="none"/>
+                    </clipPath>
+                  </defs>
+                  <g id="icon-pc" clip-path="url(#clip-path)">
+                    <g id="icon-pc-2" data-name="icon-pc" transform="translate(-865.527)">
+                      <path class="cta-icon_02_fill" id="mobile-alt" d="M6.007,0H1.06A1.06,1.06,0,0,0,0,1.06v9.187a1.06,1.06,0,0,0,1.06,1.06H6.007a1.06,1.06,0,0,0,1.06-1.06V1.06A1.06,1.06,0,0,0,6.007,0ZM3.533,10.6a.707.707,0,1,1,.707-.707A.706.706,0,0,1,3.533,10.6ZM6.007,8.215a.266.266,0,0,1-.265.265H1.325a.266.266,0,0,1-.265-.265V1.325a.266.266,0,0,1,.265-.265H5.742a.266.266,0,0,1,.265.265Z" transform="translate(883.508 3.362)" fill="#fff"/>
+                      <path class="cta-icon_02_fill" id="desktop" d="M15.127,0H1.375A1.376,1.376,0,0,0,0,1.375v9.168a1.376,1.376,0,0,0,1.375,1.375h5.5l-.458,1.375H4.355a.688.688,0,1,0,0,1.375h7.793a.688.688,0,1,0,0-1.375H10.085l-.458-1.375h5.5A1.376,1.376,0,0,0,16.5,10.543V1.375A1.376,1.376,0,0,0,15.127,0Zm-.458,10.085H1.834V1.834H14.669Z" transform="translate(865.527)" fill="#fff"/>
+                    </g>
+                  </g>
+                </svg>        
+                <span class="cta_info-text">WEB予約</span>
+              </a>
+              <a href="./contact.html" class="cta cta_info_white">
+                <svg class="cta-icon_01_size" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <g id="icon-mail" transform="translate(-49)">
+                    <rect id="長方形_23052" data-name="長方形 23052" width="24" height="24" transform="translate(49)" fill="none"/>
+                    <g id="icon-contact" transform="translate(51 4)">
+                      <path class="cta-icon_01_fill" id="パス_43721" data-name="パス 43721" d="M5,6H21a2.006,2.006,0,0,1,2,2V20a2.006,2.006,0,0,1-2,2H5a2.006,2.006,0,0,1-2-2V8A2.006,2.006,0,0,1,5,6Z" transform="translate(-3 -6)" fill="none" stroke="#1391e6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                      <path id="パス_43722" data-name="パス 43722" d="M23,9,13,16.476,3,9" transform="translate(-3 -6.864)" fill="none" stroke="#1391e6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+                    </g>
+                  </g>
+                </svg>        
+                <span class="cta_info-text">お問い合わせ</span>
+              </a>
+            </div><!-- /.info__cta-wrap -->
+            <div class="info__table"><img src="./images/common/medicalTimeSheet.png" alt="診療時間" loading="lazy"></div>
+          </div><!-- /.info__body -->
+          <div class="info__map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.865606084967!2d139.63393441568488!3d35.70492468018875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f2767eb9e92b%3A0xc2d0573363890acc!2z6Zi_5L2Q44O26LC36aeF!5e0!3m2!1sja!2sjp!4v1654159074573!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div><!-- /.footer__info -->
+        <div class="footer-nav">
+          <ul class="footer-nav__inner">
+            <li class="footer-nav__to-top"><a href="./index.html">TOP</a></li>
+            <li class="footer-nav__unit">
+              <div class="footer-nav__unit-title">当院について</div>
+              <ul class="footer-nav__items">
+                <li class="footer-nav__item">
+                  <a href="./about.html#about-01" class="page-link">
+                    <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
+                    <div class="page-link__text">ポリシーと特徴</div>
+                  </a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="./about.html#about-02" class="page-link">
+                    <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
+                    <div class="page-link__text">当院の様子</div>
+                  </a>
+                </li>
+              </ul><!-- /.footer-nav__items -->
+            </li><!-- /.footer-nav__unit -->
+            <li class="footer-nav__unit">
+              <div class="footer-nav__unit-title">スタッフ紹介</div>
+              <ul class="footer-nav__items">
+                <li class="footer-nav__item">
+                  <a href="#greeting" class="page-link">
+                    <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
+                    <div class="page-link__text">院長のあいさつ</div>
+                  </a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="#staff-01" class="page-link">
+                    <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
+                    <div class="page-link__text">スタッフ</div>
+                  </a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="./blog.html" class="page-link">
+                    <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
+                    <div class="page-link__text">スタッフブログ</div>
+                  </a>
+                </li>
+              </ul><!-- /.footer-nav__items -->
+            </li><!-- /.footer-nav__unit -->
+            <li class="footer-nav__unit">
+              <div class="footer-nav__unit-title">診療内容</div>
+              <div class="footer-nav__items-wrap">
+                <ul class="footer-nav__items_left">
+                  <li class="footer-nav__item">
+                    <a href="#medical-01" class="page-link">
+                      <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
+                      <div class="page-link__text">一般歯科</div>
+                    </a>
+                  </li>
+                  <li class="footer-nav__item">
+                    <a href="#medical-02" class="page-link">
+                      <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
+                      <div class="page-link__text">小児歯科</div>
+                    </a>
+                  </li>
+                  <li class="footer-nav__item">
+                    <a href="#medical-03" class="page-link">
+                      <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
+                      <div class="page-link__text">予防歯科</div>
+                    </a>
+                  </li>
+                  <li class="footer-nav__item">
+                    <a href="#medical-04" class="page-link">
+                      <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
+                      <div class="page-link__text">入れ歯</div>
+                    </a>
+                  </li>
+                </ul><!-- /.footer-nav__items_left -->
+                <ul class="footer-nav__items_right">
+                  <li class="footer-nav__item">
+                    <a href="#medical-05" class="page-link">
+                      <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
+                      <div class="page-link__text">矯正歯科</div>
+                    </a>
+                  </li>
+                  <li class="footer-nav__item">
+                    <a href="#medical-06" class="page-link">
+                      <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
+                      <div class="page-link__text">ホワイトニング</div>
+                    </a>
+                  </li>
+                  <li class="footer-nav__item">
+                    <a href="#medical-07" class="page-link">
+                      <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
+                      <div class="page-link__text">口腔外科</div>
+                    </a>
+                  </li>
+                  <li class="footer-nav__item">
+                    <a href="#medical-08" class="page-link">
+                      <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
+                      <div class="page-link__text">レーザー治療</div>
+                    </a>
+                  </li>
+                </ul><!-- /.footer-nav__items_right -->
+              </div><!-- /.footer-nav__items-wrap -->
+            </li><!-- /.footer-nav__unit -->
+            <li class="footer-nav__unit">
+              <div class="footer-nav__unit-title">お問い合わせ</div>
+              <ul class="footer-nav__items">
+                <li class="footer-nav__item">
+                  <a href="./contact.html" class="page-link">
+                    <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
+                    <div class="page-link__text">お問い合わせフォーム</div>
+                  </a>
+                </li>
+                <li class="footer-nav__item">
+                  <a href="./reservation.html" class="page-link">
+                    <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
+                    <div class="page-link__text">WEB予約</div>
+                  </a>
+                </li>
+              </ul><!-- /.footer-nav__items -->
+            </li><!-- /.footer-nav__unit -->
+          </ul><!-- /.footer-nav__inner -->
+        </div><!-- /.footer-nav -->
+      </div><!-- /.footer__inner -->
+    </div><!-- /.footer__content-wrap -->
+    <div class="footer__copyright copyright"><p class="copyright__text" lang="en">©︎2020-2021 みなみ歯科クリニック</p></div>
+  </footer>
+
+  <div class="footer-cta u-mobile">
+    <div class="footer-cta__inner">
+      <div class="footer-cta__wrap">
+        <div class="footer-cta__tel">
+          <div class="footer-cta__tel-number tel-number">
+            <p class="tel-number__text tel-number__text_sm"><i class="fa-solid fa-phone"></i>03-1234-5678</p>
+          </div>
+          <div class="footer-cta__text-wrap">
+            <p class="footer-cta__time-text">(年中無休 AM9:00〜PM22:00)</p>  
+          </div>
+        </div><!-- /.footer-cta__tel -->
+        <div class="footer-cta__btn">
+          <a href="./reservation.html" class="cta-bottom">
+            <svg class="cta-icon_04_size" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="25.048" height="14.669" viewBox="0 0 25.048 14.669">
+              <defs>
+                <clipPath id="clip-path">
+                  <rect width="25.048" height="14.669" fill="none"/>
+                </clipPath>
+              </defs>
+              <g id="icon-pc" clip-path="url(#clip-path)">
+                <g id="icon-pc-2" data-name="icon-pc" transform="translate(-865.527)">
+                  <path class="cta-icon_02_fill" id="mobile-alt" d="M6.007,0H1.06A1.06,1.06,0,0,0,0,1.06v9.187a1.06,1.06,0,0,0,1.06,1.06H6.007a1.06,1.06,0,0,0,1.06-1.06V1.06A1.06,1.06,0,0,0,6.007,0ZM3.533,10.6a.707.707,0,1,1,.707-.707A.706.706,0,0,1,3.533,10.6ZM6.007,8.215a.266.266,0,0,1-.265.265H1.325a.266.266,0,0,1-.265-.265V1.325a.266.266,0,0,1,.265-.265H5.742a.266.266,0,0,1,.265.265Z" transform="translate(883.508 3.362)" fill="#fff"/>
+                  <path class="cta-icon_02_fill" id="desktop" d="M15.127,0H1.375A1.376,1.376,0,0,0,0,1.375v9.168a1.376,1.376,0,0,0,1.375,1.375h5.5l-.458,1.375H4.355a.688.688,0,1,0,0,1.375h7.793a.688.688,0,1,0,0-1.375H10.085l-.458-1.375h5.5A1.376,1.376,0,0,0,16.5,10.543V1.375A1.376,1.376,0,0,0,15.127,0Zm-.458,10.085H1.834V1.834H14.669Z" transform="translate(865.527)" fill="#fff"/>
+                </g>
+              </g>
+            </svg>
+            <div class="cta-bottom__text-wrap">
+              <span class="cta-bottom__text_lg">WEB予約</span><br><span class="cta-bottom__text_md">はこちら</span>
+            </div>      
+          </a>      
+        </div><!-- /.footer-cta__btn -->
+      </div><!-- /.footer-cta__wrap -->
+    </div><!-- /.footer-cta__inner -->
+  </div><!-- /.footer-cta -->
+
+  <div id="page-top" class="floating js-floating"><a class="floating__link" href="#"><img src="./images/common/floating.png" alt="topへ戻るボタン" loading="lazy"></a></div>
+
+  <!-- Swiper -->
+  <script src="./js/swiper-bundle.min.js"></script>
+  <script src="./js/swiper.js"></script>
+  <!-- JavaScript -->
+  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+  <script src="./js/script.js"></script>
+</body>
+</html>

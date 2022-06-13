@@ -276,11 +276,7 @@ select::-ms-expand {
   font-size: 0.75rem;
 }
 
-.breadcrumb__link a {
-  -webkit-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-.breadcrumb__link a:focus, .breadcrumb__link a:hover {
+.breadcrumb__link {
   color: #C2C2C2;
 }
 
@@ -2003,6 +1999,100 @@ select::-ms-expand {
   }
 }
 
+.link-group__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 32px;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .link-group__head {
+    margin-bottom: 2.1875rem;
+  }
+}
+
+.link-group__title {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  font-size: 20px;
+  line-height: 1.4;
+  margin-right: 24px;
+  margin-right: 1.5rem;
+}
+.link-group__title::before {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-top: -0.2em;
+  content: "";
+}
+.link-group__title::after {
+  display: block;
+  width: 0;
+  height: 0;
+  margin-bottom: -0.2em;
+  content: "";
+}
+@media screen and (min-width: 768px) {
+  .link-group__title {
+    font-size: 1.75rem;
+    font-size: 28px;
+    line-height: 1.4285714286;
+  }
+  .link-group__title::before {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-top: -0.21429em;
+    content: "";
+  }
+  .link-group__title::after {
+    display: block;
+    width: 0;
+    height: 0;
+    margin-bottom: -0.21429em;
+    content: "";
+  }
+}
+
+.link-group__items {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .link-group__items {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    text-align: start;
+  }
+}
+
+.link-group__item {
+  height: 60px;
+  height: 3.75rem;
+}
+.link-group__item:not(:last-child) {
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .link-group__item {
+    margin-bottom: 0;
+    height: 4.5rem;
+  }
+  .link-group__item:not(:last-child) {
+    margin-right: 1.6%;
+  }
+}
+
 .link-space {
   padding-top: 60px;
   margin-top: -60px;
@@ -3223,6 +3313,21 @@ select::-ms-expand {
     margin-right: auto;
     margin-bottom: 5rem;
   }
+}
+
+.lower-medical__link-group {
+  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
+}
+@media screen and (min-width: 768px) {
+  .lower-medical__link-group {
+    margin-bottom: 10rem;
+  }
+}
+
+.medical__link-group {
+  margin-bottom: 80px;
+  margin-bottom: 5rem;
 }
 
 .main {

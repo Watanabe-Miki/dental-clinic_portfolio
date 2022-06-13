@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.lower-medical__link-group {
+    margin-bottom: rem(100);
+
+    @include mq('md') {
+        margin-bottom: rem(160);
+    }
+}
+
+.medical__link-group {
+    margin-bottom: rem(80);
+}
