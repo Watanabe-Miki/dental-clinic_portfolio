@@ -1,0 +1,42 @@
+@use "global" as *;
+
+.media-util {
+    
+    @include mq('lg') {
+        display: flex;
+	}
+}
+
+.media-util__img-wrapper {
+    
+    @include mq('lg') {
+		flex: 0 1 47.72727%;
+	}
+}
+
+.media-util__img {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+	border-radius: rem(20);
+	overflow: hidden;
+}
+
+.media-util__body {
+	flex: 1;
+	margin-bottom: 20px;
+	
+	> :last-child {
+		margin-bottom: 0;
+	}
+	
+	@include mq('lg') {
+		margin-right: 4.54545%;		
+	}
+}
+
+.media-util__text {
+	@include l_height( 14 , 24 );
+    @include lineHeightCrop(1.7142857143);
+	margin-bottom: rem(20);
+}
