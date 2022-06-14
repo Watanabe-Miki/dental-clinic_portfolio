@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.gallery-row {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 100%;
+    overflow: hidden;
+    margin-bottom: rem(100);
+
+    @include mq('md') {
+        margin-bottom: rem(170);
+    }
+}

@@ -1,4 +1,5 @@
-const swiper = new Swiper('.slider01', {
+/* slider01 */
+const slider01 = new Swiper('.slider01', {
     // Optional parameters
    // スライドの間隔ー単位はpx
 	spaceBetween: 30,
@@ -35,4 +36,30 @@ const swiper = new Swiper('.slider01', {
 	}
 });
 
+/* slider02 */
+const slider02 = new Swiper('.slider02', {
+	spaceBetween: 10,
+	centeredSlides: true, // 両端見切れにする
+	slidesPerView: 1.8,
+	autoHeight: true, // スライドの高さに合わせてSwiperの高さを変える
+	loop: true,	// ループする
+	speed: 6000,
+	allowTouchMove: false, // スワイプ無効
+	autoplay: {
+		delay: 0
+	},
+	breakpoints: {
+		768: {
+			slidesPerView: 3,
+		},
+		1024: {
+			spaceBetween: 20,
+			slidesPerView: 4,
+		},
+		1440: {
+			spaceBetween: 20,
+		  	slidesPerView: 5,
+		}
+	  },
+});
   

@@ -334,6 +334,92 @@ select::-ms-expand {
   right: -1%;
 }
 
+.card-table {
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
+}
+
+.card-table__img-wrapper {
+  position: relative;
+  padding-top: 56.25%;
+  overflow: hidden;
+}
+
+.card-table__img {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  /* 画像の微調整時記述 css設計 p314参照*/
+}
+
+.card-table__header {
+  padding: 15px;
+}
+.card-table__header > :last-child {
+  margin-bottom: 0;
+}
+
+.card-table__title {
+  margin-bottom: 5px;
+  font-size: 18px;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.horizontal-table {
+  border: 1px solid #ddd;
+}
+
+.horizontal-table__inner {
+  width: 100%;
+}
+
+.horizontal-table__row {
+  /* 最下段の外枠と被る線を消す */
+}
+.horizontal-table__row:last-child > .horizontal-table__header {
+  border-bottom-width: 0;
+}
+.horizontal-table__row:last-child > .horizontal-table__text {
+  border-bottom-width: 0;
+}
+
+.horizontal-table__header {
+  width: 20%;
+  padding: 15px;
+  background-color: #efefef;
+  border-bottom: 1px solid #ddd;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.horizontal-table__text {
+  padding: 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* スマホ時scroll */
+@media screen and (max-width: 767px) {
+  .horizontal-table_md_scroll {
+    border-right-width: 0;
+    overflow-x: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .horizontal-table_md_scroll .horizontal-table__header {
+    white-space: nowrap;
+  }
+}
+@media screen and (max-width: 767px) {
+  .horizontal-table_md_scroll .horizontal-table__text {
+    white-space: nowrap;
+    border-right: 1px solid #ddd;
+  }
+}
+
 .card {
   display: block;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
@@ -1247,6 +1333,20 @@ select::-ms-expand {
   .footer__info {
     margin: 0;
     margin-bottom: 3.75rem;
+  }
+}
+
+.gallery-row {
+  width: 100%;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
+}
+@media screen and (min-width: 768px) {
+  .gallery-row {
+    margin-bottom: 10.625rem;
   }
 }
 
@@ -3273,6 +3373,21 @@ select::-ms-expand {
     left: -49%;
     bottom: 15px;
   }
+}
+
+/* 等速で流れ続ける指定 */
+.swiper-wrapper {
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.swiper-slide {
+  border-radius: 1.25rem;
+  overflow: hidden;
+}
+.swiper-slide img {
+  border-radius: 1.25rem;
+  overflow: hidden;
 }
 
 .staff-greeting__media {

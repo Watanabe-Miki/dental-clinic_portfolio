@@ -1,0 +1,17 @@
+@use "global" as *;
+
+/* 等速で流れ続ける指定 */
+.swiper-wrapper {
+    transition-timing-function: linear;
+}
+
+
+.swiper-slide {
+    border-radius: rem(20);
+    overflow: hidden;
+    
+    img {
+        border-radius: rem(20);
+        overflow: hidden;
+    }
+}
