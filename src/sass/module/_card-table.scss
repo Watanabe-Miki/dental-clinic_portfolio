@@ -1,29 +1,29 @@
 @use "global" as *;
 
-// カード
 .card-table {
-	box-shadow: 0 3px 6px rgba(0, 0, 0, .16);
 }
 
 .card-table__img-wrapper {
 	position: relative;
-	padding-top: 56.25%; // aspect-ratio: 16/9;でもok
+	aspect-ratio: 1 / 1;
+	border-radius: rem(20);
 	overflow: hidden;
 }
 
 .card-table__img {
 	position: absolute;
 	top: 50%;
-	width: 100%;
 	transform: translateY(-50%);
-
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
 	/* 画像の微調整時記述 css設計 p314参照*/
 	//height: 100%;
 	//object-fit: cover;
 }
 
 .card-table__header {
-	padding: 15px;
+	padding: rem(16);
 
 	> :last-child {
 		margin-bottom: 0;
@@ -36,65 +36,22 @@
     font-weight: 700;
 }
 
+.card-table__title-row {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	dt {
+		font-size: rem(12);
+		margin-right: rem(12);
+	}
+
+	dd {
+		font-size: rem(18);
+		font-weight: $font-bold;
+	}
+}
+
 .card-table__body {
 }
 
-.horizontal-table {
-	border: 1px solid #ddd;
-}
-
-.horizontal-table__inner {
-	width: 100%; //親要素いっぱいに拡げる
-}
-
-.horizontal-table__body {
-}
-
-.horizontal-table__row {
-	/* 最下段の外枠と被る線を消す */
-	&:last-child > .horizontal-table__header {
-		border-bottom-width: 0;
-	}
-	&:last-child > .horizontal-table__text {
-		border-bottom-width: 0;
-	}
-}
-
-.horizontal-table__header {
-	width: 20%;
-	padding: 15px;
-	background-color: #efefef;
-	border-bottom: 1px solid #ddd;
-	font-weight: 700;
-	text-align: center;
-	vertical-align: middle;
-}
-
-.horizontal-table__text {
-	padding: 15px;
-	border-bottom: 1px solid #ddd;
-}
-
-/* スマホ時scroll */
-.horizontal-table_md_scroll {
-
-	@include mq('md-down') {
-		border-right-width: 0;
-		overflow-x: auto;
-	}
-
-	.horizontal-table__header {
-
-		@include mq('md-down') {
-			white-space: nowrap;
-		}
-	}
-
-	.horizontal-table__text {
-
-		@include mq('md-down') {
-			white-space: nowrap;
-			border-right: 1px solid #ddd; //表右端の線
-		}
-	}
-}

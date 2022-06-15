@@ -1,0 +1,47 @@
+@use "global" as *;
+
+.horizontal-table {
+}
+
+.horizontal-table__inner {
+	width: 100%; //親要素いっぱいに拡げる
+}
+
+.horizontal-table__body {
+}
+
+
+.horizontal-table__header {
+	width: 41.79104%;
+	padding: rem(20) rem(16);
+	background-color: #DFF1FD;
+	text-align: left;
+	vertical-align: middle;
+}
+
+.horizontal-table__text {
+	padding: rem(20) rem(16);
+}
+
+/* スマホ時scroll */
+.horizontal-table_md_scroll {
+
+	@include mq('md-down') {
+		border-right-width: 0;
+		overflow-x: auto;
+	}
+
+	.horizontal-table__header {
+
+		@include mq('md-down') {
+			white-space: nowrap;
+		}
+	}
+
+	.horizontal-table__text {
+
+		@include mq('md-down') {
+			white-space: nowrap;
+		}
+	}
+}

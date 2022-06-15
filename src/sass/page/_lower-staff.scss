@@ -2,11 +2,11 @@
 
 /* lower-staff-greeting */
 .lower-staff-greeting {
-
+    
 }
 
 .lower-staff-greeting__inner {
-
+    
     @include mq('md-down') {
         max-width: rem(600);
         width: 100%;
@@ -17,4 +17,14 @@
 .lower-staff-greeting__title {
     display: flex;
     justify-content: center; //タイトル中央配置
+}
+
+/* lower-staff */
+
+.lower-staff {
+    margin-bottom: rem(100);
+
+    @include mq('md') {
+        margin-bottom: rem(160);
+    }
 }

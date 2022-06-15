@@ -57,12 +57,11 @@
 .staff-greeting-summary__heading {
     font-size: rem(16);
     padding-bottom: rem(6);
-    margin-bottom: rem(16);
     border-bottom: 1px solid $color-text-main;
 }
 
 .staff-greeting-summary__content {
-
+    padding-top: rem(16);
     > :last-child {
         margin-bottom: 0;
     }
