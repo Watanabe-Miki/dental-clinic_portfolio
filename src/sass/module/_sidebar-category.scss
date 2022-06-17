@@ -1,0 +1,16 @@
+@use "global" as *;
+
+.sidebar-category {
+
+}
+
+.sidebar-category__lists {
+    padding-left: rem(20);
+}
+
+.sidebar-category__list {
+
+    &:not(:last-child) {
+        margin-bottom: rem(20);
+    }
+}

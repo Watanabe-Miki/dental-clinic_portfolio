@@ -12,7 +12,6 @@
 	
 	@include mq('md') {
 		flex: 0 1 36.41791%;
-		margin-right: 2.98507%;		
 	}
 }
 
@@ -64,3 +63,29 @@
 		@include lineHeightCrop(3);
 	}
 }
+
+/* sidebar */
+.media__img-wrapper_sidebar {
+	flex: 0 1 39.70149%;
+	margin-right: 2.98507%;
+}
+
+.media__label_sidebar {
+	margin-bottom: rem(6);
+}
+
+.media__title_sidebar {
+	font-size: rem(14);
+	line-height: math.div( 20, 14 );
+	@include lineHeightCrop(1.4285714286);
+	text-align: justify;
+	margin-bottom: rem(6);
+}
+
+.media__date_sidebar {
+	font-size: rem(11);
+    line-height: math.div( 38, 11 );
+    @include lineHeightCrop(3.4545454545);
+    color: #888;
+}
+

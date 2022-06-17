@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.blog-archives {
+    
+}
+
+.blog-archives__link {
+    position: relative;
+    display: block;
+    margin-bottom: rem(20);
+}
+
+/* badge */
+.blog-archives__item_badge-new {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    z-index: map-get($layer, default);
+}

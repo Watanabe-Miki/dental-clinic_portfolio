@@ -41,7 +41,6 @@ const sourcemaps = require("gulp-sourcemaps");
 const browsers = [
     'last 2 versions',
     '> 5%',
-    'ie = 11',
     'not ie <= 10',
     'ios >= 8',
     'and_chr >= 5',

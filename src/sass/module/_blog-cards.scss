@@ -1,4 +1,6 @@
 @use "global" as *;
+@use "sass:math";
+
 /* ラッパーモジュールの指定 */
 .blog-cards {
     margin-bottom: rem(-30);
@@ -43,11 +45,77 @@
     }
 }
 
+/* カードパーツの指定 */
 .blog-cards__item {
     width: 100%;
     height: auto;
+    border-radius: rem(20);
+    display: block; // 角丸の為
+    overflow: hidden; // 角丸の為
 }
 
+.blog-cards__img {
+    height: rem(188); // 画像拡大の為
+    overflow: hidden; // 画像拡大の為
+    transition: .4s;
+
+}
+
+.blog-cards__label {
+    position: absolute;
+    bottom: 0;
+    left: 8%;
+    transform: translateY(50%);
+    z-index: map-get($layer, default);
+}
+
+.blog-cards__body {
+    padding: rem(16) rem(16) rem(13) rem(16);
+    background: $color-bg-base;
+    transition: all 0.3s ease 0s;
+    text-align: left;
+    position: relative;
+    
+	> :last-child {
+        margin-bottom: 0;
+	}
+    
+    @include mq('md') {
+        padding: rem(24) rem(24) rem(13) rem(24);        
+    }
+}
+
+.blog-cards__title {
+    font-size: rem(16);
+    line-height: $leading-tight;
+    @include lineHeightCrop(1.5);
+    text-align: justify;
+    margin-bottom: rem(3); 
+    transition: all 0.3s ease 0s;
+}
+
+
+.blog-cards__date {
+    font-size: rem(11);
+    line-height: math.div( 38, 11 );
+    @include lineHeightCrop(3.4545454545);
+    color: #888;
+    text-align: left;
+}
+
+/* hover,focus */
+.blog-cards__item:hover .blog-cards__img,
+.blog-cards__item:focus .blog-cards__img {
+    transform: scale(1.1, 1.1);
+    transform-origin: center;
+}
+
+.blog-cards__item:hover .blog-cards__title,
+.blog-cards__item:focus .blog-cards__title {
+    color: $color-main;
+}
+
+/* badge */
 .blog-cards__item_badge-new {
     position: absolute;
     top: -20px;

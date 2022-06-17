@@ -1,17 +1,26 @@
 @use "global" as *;
 
 .badge-new {
-    width: rem(40);
-    height: rem(40);
     border-radius: 50%;
     background-color: $color-accent;
-    font-size: rem(10);
     font-weight: $font-bold;
     color: $color-text-secondary;
     display: flex;
     align-items: center;
     justify-content: center;
+}
 
+.badge-new_md {
+    width: rem(40);
+    height: rem(40);
+    font-size: rem(10);
+}
+
+.badge-new_lg {
+    width: rem(40);
+    height: rem(40);
+    font-size: rem(10);
+    
     @include mq('md') {
         width: rem(60);
         height: rem(60);

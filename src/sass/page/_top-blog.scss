@@ -28,12 +28,20 @@
     }
 }
 
-/* sm以上で非表示 */
 .top-blog__media {
     margin-bottom: rem(20);
+    position: relative;
 
     @include mq('sm') {
         display: none;
         margin-bottom: 0;
     }
+}
+
+/* badge */
+.top-blog__media_badge-new {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    z-index: map-get($layer, default);
 }

@@ -1,0 +1,75 @@
+@use "global" as *;
+
+.pager {
+    display: flex;
+    overflow-x: auto;
+  }
+  
+  .pager__inner {
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    list-style-type: none;
+  }
+  
+  .pager__inner > *:last-child {
+    margin-right: 0;
+  }
+  
+  .pager__item {
+    margin-right: 7px;
+  }
+  
+  .pager__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: rem(30);
+    height: rem(30);
+    border-radius: rem(4);
+    border: 1px solid currentColor;
+    color: $color-main;
+    font-size: rem(12);
+    text-decoration: none;
+    transition: .25s;
+    box-sizing: border-box;
+    line-height: 1;
+    
+    @include mq('md') {
+      width: rem(34);
+      height: rem(36);
+      font-size: rem(14);
+    }
+  }
+  
+  .pager__link:focus,
+  .pager__link:hover {
+    background-color: $color-main;
+    color: #fff;
+    opacity: .75;
+  }
+  
+  .pager__link_active {
+    background-color: $color-main;
+    color: #fff;
+    pointer-events: none;
+  }
+  
+  .pager__item_prev .pager__link, 
+  .pager__item_next .pager__link {
+    width: rem(71);
+    height: rem(30);
+    background-color: $color-main;
+    border: 1px solid currentColor;
+    color: $color-text-secondary;
+    font-size: rem(11);
+    
+    @include mq('md') {
+      width: rem(82);
+      height: rem(36);
+      font-size: rem(14);
+    }
+  }
