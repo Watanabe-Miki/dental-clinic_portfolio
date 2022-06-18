@@ -1,11 +1,11 @@
 @use "global" as *;
 
-.pager {
+.content-nav {
     display: flex;
     overflow-x: auto;
   }
   
-  .pager__inner {
+  .content-nav__inner {
     display: flex;
     margin-right: auto;
     margin-left: auto;
@@ -15,65 +15,58 @@
     list-style-type: none;
   }
   
-  .pager__inner > *:last-child {
+  .content-nav__inner > *:last-child {
     margin-right: 0;
   }
   
-  .pager__item {
-    margin-right: rem(7);
+  .content-nav__item {
+    margin-right: rem(12);
 
     @include mq('md') {
-      margin-right: rem(10);
+      margin-right: rem(20);
     }
   }
   
-  .pager__link {
+  .content-nav__link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: rem(30);
-    height: rem(30);
     border-radius: rem(4);
-    border: 1px solid currentColor;
-    color: $color-main;
-    font-size: rem(12);
     text-decoration: none;
     transition: .25s;
     box-sizing: border-box;
     line-height: 1;
-    
-    @include mq('md') {
-      width: rem(34);
-      height: rem(36);
-      font-size: rem(14);
-    }
   }
   
-  .pager__link:focus,
-  .pager__link:hover {
+  .content-nav__link:focus,
+  .content-nav__link:hover {
     background-color: $color-main;
     color: #fff;
     opacity: .75;
   }
-  
-  .pager__link_active {
-    background-color: $color-main;
-    color: #fff;
-    pointer-events: none;
-  }
-  
-  .pager__prev .pager__link, 
-  .pager__next .pager__link {
-    width: rem(71);
-    height: rem(30);
+    
+  .content-nav__prev .content-nav__link, 
+  .content-nav__next .content-nav__link {
+    width: rem(108);
+    height: rem(39);
     background-color: $color-main;
     border: 1px solid currentColor;
     color: $color-text-secondary;
-    font-size: rem(11);
     
     @include mq('md') {
-      width: rem(82);
+      width: rem(124);
       height: rem(36);
-      font-size: rem(14);
+    }
+  }
+
+  .content-nav__list .content-nav__link {
+    width: rem(95);
+    height: rem(41);
+    border: 1px solid currentColor;
+    color: $color-main;
+
+    @include mq('md') {
+      width: rem(90);
+      height: rem(36);
     }
   }
