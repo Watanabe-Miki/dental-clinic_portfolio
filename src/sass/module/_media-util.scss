@@ -36,7 +36,5 @@
 }
 
 .media-util__text {
-	@include l_height( 14 , 24 );
-    @include lineHeightCrop(1.7142857143);
 	margin-bottom: rem(20);
 }

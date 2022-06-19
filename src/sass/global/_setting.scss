@@ -53,6 +53,7 @@ $leading-normal: 1.7;
 $leading-relaxed: 1.8;
 $leading-loose: 2;
 
+
 ////////////////////
 // 色の指定
 ////////////////////
@@ -170,3 +171,14 @@ $layer: (
   layerDown: -1,
 );
 
+////////////////////
+// ベースの文章
+////////////////////
+.text-base {
+  @include lineHeightCrop(1.7142857143);
+  text-align: justify;
+
+  & span.text-color_notice {
+      color: #EE5A6D;
+  }
+}

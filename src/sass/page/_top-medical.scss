@@ -8,7 +8,6 @@
     }
 }   
 .top-medical__inner {
-    text-align: center;
 
     @include mq('md-down') {
         width: rem(600);
@@ -48,15 +47,4 @@
         padding: rem(40);
     }
 }
-
-.top-medical__text {
-    @include l_height( 14 , 24 );
-    @include lineHeightCrop(1.7142857143);
-    text-align: justify;
-
-    & span.text-color_notice {
-        color: #EE5A6D;
-    }
-}
-
 

@@ -25,13 +25,3 @@
         width: 100%;
     }
 }
-
-.recommend__content {
-    @include l_height( 14 , 24 );
-    @include lineHeightCrop(1.7142857143);
-    text-align: justify;
-
-    & span.text-color_notice {
-        color: #EE5A6D;
-    }
-}

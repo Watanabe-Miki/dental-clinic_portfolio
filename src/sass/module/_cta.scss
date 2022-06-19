@@ -90,5 +90,8 @@
 
 	@include mq('md') {
 		min-width: 360px;
+		font-size: rem(16);
+		padding: .8305em 1.4em;
+
 	}
 }
