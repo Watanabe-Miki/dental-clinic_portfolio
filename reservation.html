@@ -85,7 +85,7 @@
             </a>
           </li>
           <li class="global-nav__item">
-            <a class="global-nav__link js-global-nav__link" href="./contact.html">
+            <a class="global-nav__link js-global-nav__link" href="./reservation.html">
               <svg id="email" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                 <rect id="長方形_23352" data-name="長方形 23352" width="24" height="24" fill="#393939" opacity="0"/>
                 <path class="global-nav__icon" id="パス_43760" data-name="パス 43760" d="M19,4H5A3,3,0,0,0,2,7V17a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7a3,3,0,0,0-3-3Zm-.67,2L12,10.75,5.67,6ZM19,18H5a1,1,0,0,1-1-1V7.25l7.4,5.55a1,1,0,0,0,1.2,0L20,7.25V17A1,1,0,0,1,19,18Z" fill="#393939"/>
@@ -170,7 +170,7 @@
         </a>
       </div>
       <div class="js-drawer-content__item">
-        <a class="js-drawer-content__link" href="./contact.html">
+        <a class="js-drawer-content__link" href="./reservation.html">
           <svg class="js-drawer__icon_box" id="email" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
             <rect id="長方形_23352" data-name="長方形 23352" width="24" height="24" fill="#393939" opacity="0"/>
             <path class="js-drawer__icon_fill" id="パス_43760" data-name="パス 43760" d="M19,4H5A3,3,0,0,0,2,7V17a3,3,0,0,0,3,3H19a3,3,0,0,0,3-3V7a3,3,0,0,0-3-3Zm-.67,2L12,10.75,5.67,6ZM19,18H5a1,1,0,0,1-1-1V7.25l7.4,5.55a1,1,0,0,0,1.2,0L20,7.25V17A1,1,0,0,1,19,18Z" fill="#393939"/>
@@ -204,6 +204,150 @@
     </div>
   </a><!-- /.cta-side -->
 
+  <div class="lower-top">
+    <div class="lower-top__inner">
+      <div class="lower-top__wrap">
+        <div class="lower-top__feature u-desktop"><img src="./images/lower-page/lowerTop-contact.jpg" alt="診療案内"></div>
+        <div class="lower-top__feature u-mobile"><img src="./images/lower-page/lowerTop-contact_sp.jpg" alt="診療案内"></div>
+        <div class="lower-top__content">
+          <div class="lower-top__title">WEB予約</div>
+          <div class="lower-top__sub-title">RESERVE</div>
+      </div>
+      </div><!-- /.lower-top__content -->
+    </div><!-- /.lower-top__inner -->
+  </div><!-- /.lower-top -->
+
+  <nav class="breadcrumb lower-breadcrumb" typeof="BreadcrumbList">
+    <li class="breadcrumb__link"><a href="./index.html">ホーム</a></li>
+    <span class="breadcrumb__next">&gt;</span>
+    <li class="breadcrumb__text">WEB予約</li>
+  </nav><!-- /.lower-breadcrumb -->
+
+  <section class="reservation"> 
+    <div class="reservation__inner inner">
+      <div class="reservation__desc">
+        <h3 class="reservation__desc-heading">お電話でのご予約/ご相談</h3>
+        <div class="reservation-cta__tel tel-number">
+          <p class="tel-number__text tel-number__text_md"><i class="fa-solid fa-phone"></i>03-1234-5678</p>
+          <p class="reservation-cta__time-text">(年中無休 AM9:00〜PM22:00)</p>  
+        </div>
+        <p class="text-base">お急ぎの方は電話での連絡がスムーズです。<br>混雑状況によっては当日受診をご利用いただけない場合がございます。<br>あらかじめご了承ください。</p>
+      </div><!-- /.reservation__desc -->
+      <div class="reservation__desc">
+        <h3 class="reservation__desc-heading">メールでのご予約/ご相談</h3>
+        <p class="text-base">【ご予約に関しての注意点】<br>メールアドレスの入力間違いにより送信できない事が発生しておりますので、メールアドレスは正しくご入力下さい。<br>※24時間以内に当院からの返信がない場合には、お電話(TEL 03-1234-5678)にてお問い合わせ下さい。</p>
+      </div><!-- /.reservation__desc -->
+      <div class="section-title section-title_center">
+        <span class="section-title__deco"><img src="./src/images/common/title-deco.png" alt="タイトルの装飾"></span>
+        <h2 class="section-title__text">予約フォーム</h2>
+        <span class="section-title__deco"><img src="./src/images/common/title-deco.png" alt="タイトルの装飾"></span>
+      </div>
+      <div class="reservation__form">
+        <form action="post" class="reservation-form">
+          <dl class="reservation-form__dl">
+            <div class="reservation-form__row">
+              <dt class="reservation-form__label">
+                <label for="your-name" class="reservation-form__label_text">お名前</label>
+                <span class="label label_require">必須</span>
+              </dt>
+              <dd class="reservation-form__input">
+                <input id="your-name" type="text" placeholder="山田 太郎" autocomplete="name">
+              </dd>
+            </div><!-- /.reservation-form__row -->
+            <div class="reservation-form__row">
+              <dt class="reservation-form__label">
+                <label for="your-name_furigana" class="reservation-form__label_text">フリガナ</label>
+                <span class="label label_require">必須</span>
+              </dt>
+              <dd class="reservation-form__input">
+                <input id="your-name_furigana" type="text" placeholder="ヤマダ タロウ" autocomplete="name">
+              </dd>
+            </div><!-- /.reservation-form__row -->
+            <div class="reservation-form__row">
+              <dt class="reservation-form__label">
+                <label for="your-tel" class="reservation-form__label_text">電話番号</label>
+                <span class="label label_require">必須</span>
+              </dt>
+              <dd class="reservation-form__input">
+                <input id="your-tel" type="tel" placeholder="000-0000-0000" autocomplete="tel">
+              </dd>
+            </div><!-- /.reservation-form__row -->
+            <div class="reservation-form__row">
+              <dt class="reservation-form__label">
+                <label for="your-email" class="reservation-form__label_text">メールアドレス</label>
+                <span class="label label_require">必須</span>
+              </dt>
+              <dd class="reservation-form__input">
+                <input id="your-email" type="email" placeholder="xxx@example.com" autocomplete="email">
+              </dd>
+            </div><!-- /.reservation-form__row -->
+            <div class="reservation-form__row">
+              <dt class="reservation-form__label">
+                <label for="your-kind" class="reservation-form__label_text">初診/再診</label>
+                <span class="label label_require">必須</span>
+              </dt>
+              <dd class="reservation-form__radio">
+                <label><input name="your-radio" type="radio" checked><span>初診</span></label>
+                <label><input name="your-radio" type="radio"><span>再診</span></label>
+              </dd>
+            </div><!-- /.reservation-form__row -->
+            <div class="reservation-form__row">
+              <dt class="reservation-form__label">
+                <label for="your-kind" class="reservation-form__label_text">診療内容<br><span>※(複数選択可)</span></label>
+                <span class="label label_require">必須</span>
+              </dt>
+              <dd class="reservation-form__check">
+                <label><input name="your-check" type="checkbox"><span>虫歯</span></label>
+                <label><input name="your-check" type="checkbox"><span>被せ物がとれた</span></label>
+                <label><input name="your-check" type="checkbox"><span>矯正歯科</span></label>
+                <label><input name="your-check" type="checkbox"><span>咬み合わせ</span></label>
+                <label><input name="your-check" type="checkbox"><span>歯周病</span></label>
+                <label><input name="your-check" type="checkbox"><span>小児歯科</span></label>
+                <label><input name="your-check" type="checkbox"><span>入れ歯</span></label>
+                <label><input name="your-check" type="checkbox"><span class="checkbox-text">インプラント</span></label>
+                <label><input name="your-check" type="checkbox"><span class="checkbox-text">その他</span></label>
+              </dd>
+            </div><!-- /.reservation-form__row -->
+            <div class="reservation-form__row">
+              <dt class="reservation-form__label">
+                <label for="your-kind" class="reservation-form__label_text">ご連絡方法</label>
+                <span class="label label_require">必須</span>
+              </dt>
+              <dd class="reservation-form__input">
+                <select name="contact-type" id="your-kind">
+                  <option value="email" selected>メール</option>
+                  <option value="email01">メール1</option>
+                  <option value="email02">メール2</option>
+                </select>
+              </dd>
+            </div><!-- /.reservation-form__row -->
+            <div class="reservation-form__row">
+              <dt class="reservation-form__label">
+                <label class="reservation-form__label_text">希望日</label>
+              </dt>
+              <dd class="reservation-form__input">
+                <label for="your-day" class="reservation-form__date">
+                  <input id="your-day" type="date" placeholder="年 / 月 / 日">
+                </label>
+              </dd>
+            </div><!-- /.reservation-form__row -->
+            <div class="reservation-form__row">
+              <dt class="reservation-form__label">
+                <label for="message" class="reservation-form__label_text">お問い合わせ内容</label>
+                <span class="label label_require">必須</span>
+              </dt>
+              <dd class="reservation-form__input">
+                <textarea name="message" id="message" placeholder="ご自由にご記入ください。" cols="30" rows="10"></textarea>
+              </dd>
+            </div><!-- /.reservation-form__row -->
+          </dl>
+          <div class="reservation-form__cta">
+            <input type="submit" value="送信" class="cta cta_submit">  
+          </div><!-- /.reservation__cta -->
+        </form>
+      </div><!-- /.reservation__form -->
+    </div><!-- /.inner -->
+  </section>
 
   <footer class="footer">
     <div class="footer__bg-top"></div>
@@ -241,11 +385,11 @@
                 </svg>        
                 <span class="cta_info-text">WEB予約</span>
               </a>
-              <a href="./contact.html" class="cta cta_info_white">
+              <a href="./reservation.html" class="cta cta_info_white">
                 <svg class="cta-icon_01_size" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                   <g id="icon-mail" transform="translate(-49)">
                     <rect id="長方形_23052" data-name="長方形 23052" width="24" height="24" transform="translate(49)" fill="none"/>
-                    <g id="icon-contact" transform="translate(51 4)">
+                    <g id="icon-reservation" transform="translate(51 4)">
                       <path class="cta-icon_01_fill" id="パス_43721" data-name="パス 43721" d="M5,6H21a2.006,2.006,0,0,1,2,2V20a2.006,2.006,0,0,1-2,2H5a2.006,2.006,0,0,1-2-2V8A2.006,2.006,0,0,1,5,6Z" transform="translate(-3 -6)" fill="none" stroke="#1391e6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                       <path id="パス_43722" data-name="パス 43722" d="M23,9,13,16.476,3,9" transform="translate(-3 -6.864)" fill="none" stroke="#1391e6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                     </g>
@@ -364,7 +508,7 @@
               <div class="footer-nav__unit-title">お問い合わせ</div>
               <ul class="footer-nav__items">
                 <li class="footer-nav__item">
-                  <a href="./contact.html" class="page-link">
+                  <a href="./reservation.html" class="page-link">
                     <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
                     <div class="page-link__text">お問い合わせフォーム</div>
                   </a>

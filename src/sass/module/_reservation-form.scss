@@ -1,0 +1,307 @@
+@use "global" as *;
+
+.reservation-form {
+
+}
+
+/* レイアウト */
+.reservation-form__dl {
+    margin-bottom: rem(40);
+
+    @include mq('md') {
+        margin-bottom: rem(60);
+    }
+}
+
+.reservation-form__row {
+    border-bottom: 1px solid #DDDDDD;
+    padding: rem(25) 0;
+    
+    &:first-child {
+        border-top: 1px solid #DDDDDD;
+    }
+
+    @include mq('md') {
+        padding: rem(28) 0;
+        display: grid;
+        grid-template-columns: minmax(240px, 1fr) 2fr;
+    }
+}
+
+/* 必須ラベルとテキストのレイアウト */
+.reservation-form__label {
+    display: flex;
+    align-items: center;
+    margin-bottom: rem(12);
+
+    @include mq('md') {
+        margin-bottom: 0;
+    }
+}
+
+.reservation-form__label_text {
+    font-size: rem(16);
+    line-height: 1;
+    margin-right: rem(12);
+
+    @include mq('md') {
+        margin-right: rem(16);
+    }
+
+    span {
+        font-size: rem(11);
+        color: #888888;
+    }
+}
+
+////////////////////
+// form
+////////////////////
+.reservation-form__input {
+    width: 100%;
+    [type="text"],
+    [type="tel"],
+    [type="email"],
+    select,
+    textarea,
+    [type="date"] {
+        box-shadow: none;
+        background: #F6F6F6;
+        padding: rem(12) rem(16);
+        border-radius: rem(4);
+        width: 100%;
+    }
+
+
+     /* focus時の指定 */
+     [type="text"],
+     [type="tel"],
+     [type="email"],
+     [type="date"],
+     select,
+     textarea {
+        &:focus {
+            border: 1px solid orange;
+        }
+     }
+
+    /* arrowアイコン設置 */
+    select {
+        background: #F6F6F6 url(../../../images/common/arrow-select.png) no-repeat right 10px center / 20px 20px;
+    }
+
+    textarea {
+        height: rem(160);
+        resize: none;
+
+        @include mq('md') {
+            height: rem(200);
+        }
+    }
+
+    /* カレンダーアイコン設置 */
+    [type="date"] {
+        background: #F6F6F6 url(../../../images/common/calendar-alt.svg) no-repeat right 13px center / 12.85px 14.98px;
+
+        /* デフォルトカレンダーアイコン */
+        &::-webkit-calendar-picker-indicator {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            background: transparent;
+            color: transparent;
+            padding: rem(12) rem(16);
+            height: auto;
+            width: 100%;
+            cursor: pointer;
+        }
+    }
+}
+
+/* placeholderの色 */
+::placeholder {
+    color: #C2C2C2;
+}
+
+/* radioボタン */
+.reservation-form__radio {
+
+    [type="radio"] {
+        box-shadow: none;
+        background: $color-bg-base;
+        position: absolute; // レイアウトに関与させない
+    }
+
+    span {
+        display: inline-block;
+        padding-left: rem(32);
+        position: relative;
+        margin-right: rem(40);
+
+        @include mq('md') {
+            margin-right: rem(32);
+        }
+
+        /* 外側の円 */
+        &::before {
+            content: "";
+            width: rem(24);
+            height: rem(24);
+            border: 1px solid $color-main;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        /* 内側の円 */
+        &::after {
+            content: "";
+            width: rem(12);
+            height: rem(12);
+            background: $color-main;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: rem(6);
+            transform: translateY(-50%);
+            opacity: 0;
+        }
+    }
+
+    /* focus時の指定 */
+    [type="radio"]:focus + span {
+        &::before {
+            border: 1px solid orange;
+        }
+    }
+
+    /* チェックされたら表示 */
+    [type="radio"]:checked + span {
+        &::after {
+            opacity: 1;
+        }
+    }
+}
+
+.reservation-form__check {
+
+    [type="checkbox"] {
+        box-shadow: none;
+        background: $color-bg-base;
+        position: absolute; // レイアウトに関与させない
+    }
+
+    span {
+        display: inline-block;
+        padding-left: rem(32);
+        position: relative;
+
+        /* 外枠 */
+        &::before {
+            content: "";
+            width: rem(24);
+            height: rem(24);
+            border: 1px solid $color-main;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+
+        /* チェックマーク */
+        &::after {
+            content: "";
+            width: rem(6.4);
+            height: rem(11.6);
+            border-bottom: 1px solid $color-main;
+            border-right: 1px solid $color-main;
+            position: absolute;
+            top: 42%;
+            left: rem(12);
+            transform: translate(-50%, -50%) rotate(45deg);
+            opacity: 0;
+        }
+    }
+
+    /* focus時の指定 */
+    [type="checkbox"]:focus + span {
+        &::before {
+            border: 1px solid orange;
+        }
+    }    
+
+    /* チェックされたら表示 */
+    [type="checkbox"]:checked + span {
+        &::after {
+            opacity: 1;
+        }
+    }
+
+    /* レイアウト */
+    label {
+        display: inline-block;
+        margin-bottom: rem(16);
+        margin-right: rem(24);
+        
+        &:nth-of-type(3n) {
+            margin-right: rem(-24);
+        }
+
+        @media screen and (min-width: 438px) {
+            margin-right: rem(24);
+
+            &:nth-of-type(3n) {
+                margin-right: rem(24);
+            }
+        }
+
+        @include mq('sm') {
+            margin-right: rem(32);
+
+            &:nth-child(3n) {
+                margin-right: rem(32);
+            }
+
+            &:nth-child(4) {
+                margin-right: rem(-32);
+            }
+        }
+
+        @include mq('md') {
+            margin-right: rem(32);
+
+            &:nth-child(3n) {
+                margin-right: rem(32);
+            }
+
+            &:nth-child(4n) {
+                margin-right: rem(-32);
+            }
+        }
+        
+        @include mq('lg') {
+            margin-right: rem(32);
+            
+            &:nth-of-type(4n) {
+                margin-right: rem(-32);
+            }
+            &:nth-of-type(3n) {
+                margin-right: rem(32);
+            }
+        }
+    }
+}
+
+/* カレンダー用の基準 */
+.reservation-form__date {
+    position: relative;
+}
+
+.reservation-form__cta {
+    text-align: center;
+}
+

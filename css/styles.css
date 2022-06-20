@@ -178,7 +178,7 @@ textarea {
 
 input[type=checkbox],
 input[type=radio] {
-  display: none;
+  opacity: 0;
 }
 
 input[type=submit],
@@ -3560,6 +3560,321 @@ select::-ms-expand {
   width: 100%;
 }
 
+/* レイアウト */
+.reservation-form__dl {
+  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .reservation-form__dl {
+    margin-bottom: 3.75rem;
+  }
+}
+
+.reservation-form__row {
+  border-bottom: 1px solid #DDDDDD;
+  padding: 25px 0;
+  padding: 1.5625rem 0;
+}
+.reservation-form__row:first-child {
+  border-top: 1px solid #DDDDDD;
+}
+@media screen and (min-width: 768px) {
+  .reservation-form__row {
+    padding: 1.75rem 0;
+    display: grid;
+    grid-template-columns: minmax(240px, 1fr) 2fr;
+  }
+}
+
+/* 必須ラベルとテキストのレイアウト */
+.reservation-form__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
+}
+@media screen and (min-width: 768px) {
+  .reservation-form__label {
+    margin-bottom: 0;
+  }
+}
+
+.reservation-form__label_text {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1;
+  margin-right: 12px;
+  margin-right: 0.75rem;
+}
+@media screen and (min-width: 768px) {
+  .reservation-form__label_text {
+    margin-right: 1rem;
+  }
+}
+.reservation-form__label_text span {
+  font-size: 11px;
+  font-size: 0.6875rem;
+  color: #888888;
+}
+
+.reservation-form__input {
+  width: 100%;
+  /* focus時の指定 */
+  /* arrowアイコン設置 */
+  /* カレンダーアイコン設置 */
+}
+.reservation-form__input [type=text],
+.reservation-form__input [type=tel],
+.reservation-form__input [type=email],
+.reservation-form__input select,
+.reservation-form__input textarea,
+.reservation-form__input [type=date] {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: #F6F6F6;
+  padding: 12px 16px;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  width: 100%;
+}
+.reservation-form__input [type=text]:focus,
+.reservation-form__input [type=tel]:focus,
+.reservation-form__input [type=email]:focus,
+.reservation-form__input [type=date]:focus,
+.reservation-form__input select:focus,
+.reservation-form__input textarea:focus {
+  border: 1px solid orange;
+}
+.reservation-form__input select {
+  background: #F6F6F6 url(../../../images/common/arrow-select.png) no-repeat right 10px center/20px 20px;
+}
+.reservation-form__input textarea {
+  height: 160px;
+  height: 10rem;
+  resize: none;
+}
+@media screen and (min-width: 768px) {
+  .reservation-form__input textarea {
+    height: 12.5rem;
+  }
+}
+.reservation-form__input [type=date] {
+  background: #F6F6F6 url(../../../images/common/calendar-alt.svg) no-repeat right 13px center/12.85px 14.98px;
+  /* デフォルトカレンダーアイコン */
+}
+.reservation-form__input [type=date]::-webkit-calendar-picker-indicator {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  background: transparent;
+  color: transparent;
+  padding: 12px 16px;
+  padding: 0.75rem 1rem;
+  height: auto;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* placeholderの色 */
+::-webkit-input-placeholder {
+  color: #C2C2C2;
+}
+::-moz-placeholder {
+  color: #C2C2C2;
+}
+::-ms-input-placeholder {
+  color: #C2C2C2;
+}
+::placeholder {
+  color: #C2C2C2;
+}
+
+/* radioボタン */
+.reservation-form__radio {
+  /* focus時の指定 */
+  /* チェックされたら表示 */
+}
+.reservation-form__radio [type=radio] {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: #FFF;
+  position: absolute;
+}
+.reservation-form__radio span {
+  display: inline-block;
+  padding-left: 32px;
+  padding-left: 2rem;
+  position: relative;
+  margin-right: 40px;
+  margin-right: 2.5rem;
+  /* 外側の円 */
+  /* 内側の円 */
+}
+@media screen and (min-width: 768px) {
+  .reservation-form__radio span {
+    margin-right: 2rem;
+  }
+}
+.reservation-form__radio span::before {
+  content: "";
+  width: 24px;
+  width: 1.5rem;
+  height: 24px;
+  height: 1.5rem;
+  border: 1px solid #1391E6;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.reservation-form__radio span::after {
+  content: "";
+  width: 12px;
+  width: 0.75rem;
+  height: 12px;
+  height: 0.75rem;
+  background: #1391E6;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 6px;
+  left: 0.375rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  opacity: 0;
+}
+.reservation-form__radio [type=radio]:focus + span::before {
+  border: 1px solid orange;
+}
+.reservation-form__radio [type=radio]:checked + span::after {
+  opacity: 1;
+}
+
+.reservation-form__check {
+  /* focus時の指定 */
+  /* チェックされたら表示 */
+  /* レイアウト */
+}
+.reservation-form__check [type=checkbox] {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  background: #FFF;
+  position: absolute;
+}
+.reservation-form__check span {
+  display: inline-block;
+  padding-left: 32px;
+  padding-left: 2rem;
+  position: relative;
+  /* 外枠 */
+  /* チェックマーク */
+}
+.reservation-form__check span::before {
+  content: "";
+  width: 24px;
+  width: 1.5rem;
+  height: 24px;
+  height: 1.5rem;
+  border: 1px solid #1391E6;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.reservation-form__check span::after {
+  content: "";
+  width: 6.4px;
+  width: 0.4rem;
+  height: 11.6px;
+  height: 0.725rem;
+  border-bottom: 1px solid #1391E6;
+  border-right: 1px solid #1391E6;
+  position: absolute;
+  top: 42%;
+  left: 12px;
+  left: 0.75rem;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+  opacity: 0;
+}
+.reservation-form__check [type=checkbox]:focus + span::before {
+  border: 1px solid orange;
+}
+.reservation-form__check [type=checkbox]:checked + span::after {
+  opacity: 1;
+}
+.reservation-form__check label {
+  display: inline-block;
+  margin-bottom: 16px;
+  margin-bottom: 1rem;
+  margin-right: 24px;
+  margin-right: 1.5rem;
+}
+.reservation-form__check label:nth-of-type(3n) {
+  margin-right: -24px;
+  margin-right: -1.5rem;
+}
+@media screen and (min-width: 438px) {
+  .reservation-form__check label {
+    margin-right: 1.5rem;
+  }
+  .reservation-form__check label:nth-of-type(3n) {
+    margin-right: 1.5rem;
+  }
+}
+@media screen and (min-width: 600px) {
+  .reservation-form__check label {
+    margin-right: 2rem;
+  }
+  .reservation-form__check label:nth-child(3n) {
+    margin-right: 2rem;
+  }
+  .reservation-form__check label:nth-child(4) {
+    margin-right: -2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .reservation-form__check label {
+    margin-right: 2rem;
+  }
+  .reservation-form__check label:nth-child(3n) {
+    margin-right: 2rem;
+  }
+  .reservation-form__check label:nth-child(4n) {
+    margin-right: -2rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .reservation-form__check label {
+    margin-right: 2rem;
+  }
+  .reservation-form__check label:nth-of-type(4n) {
+    margin-right: -2rem;
+  }
+  .reservation-form__check label:nth-of-type(3n) {
+    margin-right: 2rem;
+  }
+}
+
+/* カレンダー用の基準 */
+.reservation-form__date {
+  position: relative;
+}
+
+.reservation-form__cta {
+  text-align: center;
+}
+
 .section-bg01 {
   position: relative;
   overflow: hidden;
@@ -4340,12 +4655,12 @@ select::-ms-expand {
   }
 }
 
-.contact__description {
+.contact__desc {
   margin-bottom: 100px;
   margin-bottom: 6.25rem;
 }
 @media screen and (min-width: 768px) {
-  .contact__description {
+  .contact__desc {
     margin-bottom: 10rem;
   }
 }
@@ -4628,6 +4943,55 @@ select::-ms-expand {
   .main__title {
     width: 25.75rem;
   }
+}
+
+.reservation {
+  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
+}
+
+.reservation__inner {
+  width: 100%;
+  max-width: 600px;
+  max-width: 37.5rem;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .reservation__inner {
+    max-width: 778px;
+  }
+}
+
+.reservation__desc:not(:last-child) {
+  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
+}
+
+.reservation__desc-heading {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  margin-bottom: 28px;
+  margin-bottom: 1.75rem;
+}
+@media screen and (min-width: 768px) {
+  .reservation__desc-heading {
+    font-size: 1.75rem;
+  }
+}
+
+.reservation-cta__tel {
+  display: inline-block;
+  text-align: center;
+  margin-bottom: 28px;
+  margin-bottom: 1.75rem;
+}
+
+.reservation-cta__time-text {
+  font-size: 12px;
+  font-size: 0.75rem;
+  color: #1391E6;
 }
 
 .top-blog {
