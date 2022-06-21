@@ -61,7 +61,7 @@
                 <path class="global-nav__icon" id="パス_43766" data-name="パス 43766" d="M9,14h3a1,1,0,0,0,0-2H9a1,1,0,0,0,0,2Z" fill="#393939"/>
                 <path class="global-nav__icon" id="パス_43767" data-name="パス 43767" d="M19.74,8.33l-5.44-6A1,1,0,0,0,13.56,2h-7A2.53,2.53,0,0,0,4,4.5v15A2.53,2.53,0,0,0,6.56,22H17.44A2.53,2.53,0,0,0,20,19.5V9a1,1,0,0,0-.26-.67ZM14,5l2.74,3h-2A.79.79,0,0,1,14,7.15Zm3.44,15H6.56A.53.53,0,0,1,6,19.5V4.5A.53.53,0,0,1,6.56,4H12V7.15A2.79,2.79,0,0,0,14.71,10H18v9.5a.53.53,0,0,1-.56.5Z" fill="#393939"/>
               </svg>                
-              <span class="global-nav__link-text">診療案内</span>
+              <span class="global-nav__link-text">診療案内</span> 
             </a>
           </li>
           <li class="global-nav__item">
@@ -225,18 +225,20 @@
 
   <section class="reservation"> 
     <div class="reservation__inner inner">
-      <div class="reservation__desc">
-        <h3 class="reservation__desc-heading">お電話でのご予約/ご相談</h3>
-        <div class="reservation-cta__tel tel-number">
-          <p class="tel-number__text tel-number__text_md"><i class="fa-solid fa-phone"></i>03-1234-5678</p>
-          <p class="reservation-cta__time-text">(年中無休 AM9:00〜PM22:00)</p>  
-        </div>
-        <p class="text-base">お急ぎの方は電話での連絡がスムーズです。<br>混雑状況によっては当日受診をご利用いただけない場合がございます。<br>あらかじめご了承ください。</p>
-      </div><!-- /.reservation__desc -->
-      <div class="reservation__desc">
-        <h3 class="reservation__desc-heading">メールでのご予約/ご相談</h3>
-        <p class="text-base">【ご予約に関しての注意点】<br>メールアドレスの入力間違いにより送信できない事が発生しておりますので、メールアドレスは正しくご入力下さい。<br>※24時間以内に当院からの返信がない場合には、お電話(TEL 03-1234-5678)にてお問い合わせ下さい。</p>
-      </div><!-- /.reservation__desc -->
+      <div class="reservation__desc-wrap">
+        <div class="reservation__desc">
+          <h3 class="reservation__desc-heading">お電話でのご予約/ご相談</h3>
+          <div class="reservation-cta__tel tel-number">
+            <a href="tel:03-1234-5678" class="tel-number__text tel-number__text_md"><i class="fa-solid fa-phone"></i>03-1234-5678</a>
+            <p class="reservation-cta__time-text">(年中無休 AM9:00〜PM22:00)</p>  
+          </div>
+          <p class="text-base">お急ぎの方は電話での連絡がスムーズです。<br>混雑状況によっては当日受診をご利用いただけない場合がございます。<br>あらかじめご了承ください。</p>
+        </div><!-- /.reservation__desc -->
+        <div class="reservation__desc">
+          <h3 class="reservation__desc-heading">メールでのご予約/ご相談</h3>
+          <p class="text-base">【ご予約に関しての注意点】<br>メールアドレスの入力間違いにより送信できない事が発生しておりますので、メールアドレスは正しくご入力下さい。<br>※24時間以内に当院からの返信がない場合には、お電話(TEL 03-1234-5678)にてお問い合わせ下さい。</p>
+        </div><!-- /.reservation__desc -->
+      </div>
       <div class="section-title section-title_center">
         <span class="section-title__deco"><img src="./src/images/common/title-deco.png" alt="タイトルの装飾"></span>
         <h2 class="section-title__text">予約フォーム</h2>
@@ -334,7 +336,6 @@
             <div class="reservation-form__row">
               <dt class="reservation-form__label">
                 <label for="message" class="reservation-form__label_text">お問い合わせ内容</label>
-                <span class="label label_require">必須</span>
               </dt>
               <dd class="reservation-form__input">
                 <textarea name="message" id="message" placeholder="ご自由にご記入ください。" cols="30" rows="10"></textarea>
@@ -363,7 +364,7 @@
               </div>
             </dl>
             <div class="info__tel-number tel-number">
-              <p class="tel-number__text tel-number__text_md"><i class="fa-solid fa-phone"></i>03-1234-5678</p>
+              <a href="tel:03-1234-5678" class="tel-number__text tel-number__text_md"><i class="fa-solid fa-phone"></i>03-1234-5678</a>
             </div>
             <div class="info__text-wrap">
               <p class="info__time-text">(年中無休 AM9:00〜PM22:00)</p>  
@@ -385,11 +386,11 @@
                 </svg>        
                 <span class="cta_info-text">WEB予約</span>
               </a>
-              <a href="./reservation.html" class="cta cta_info_white">
+              <a href="./contact.html" class="cta cta_info_white">
                 <svg class="cta-icon_01_size" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                   <g id="icon-mail" transform="translate(-49)">
                     <rect id="長方形_23052" data-name="長方形 23052" width="24" height="24" transform="translate(49)" fill="none"/>
-                    <g id="icon-reservation" transform="translate(51 4)">
+                    <g id="icon-contact" transform="translate(51 4)">
                       <path class="cta-icon_01_fill" id="パス_43721" data-name="パス 43721" d="M5,6H21a2.006,2.006,0,0,1,2,2V20a2.006,2.006,0,0,1-2,2H5a2.006,2.006,0,0,1-2-2V8A2.006,2.006,0,0,1,5,6Z" transform="translate(-3 -6)" fill="none" stroke="#1391e6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                       <path id="パス_43722" data-name="パス 43722" d="M23,9,13,16.476,3,9" transform="translate(-3 -6.864)" fill="none" stroke="#1391e6" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
                     </g>
@@ -428,13 +429,13 @@
               <div class="footer-nav__unit-title">スタッフ紹介</div>
               <ul class="footer-nav__items">
                 <li class="footer-nav__item">
-                  <a href="#greeting" class="page-link">
+                  <a href="./staff.html#greeting" class="page-link">
                     <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
                     <div class="page-link__text">院長のあいさつ</div>
                   </a>
                 </li>
                 <li class="footer-nav__item">
-                  <a href="#staff-01" class="page-link">
+                  <a href="./staff.html#staff" class="page-link">
                     <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
                     <div class="page-link__text">スタッフ</div>
                   </a>
@@ -444,7 +445,7 @@
                     <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
                     <div class="page-link__text">スタッフブログ</div>
                   </a>
-                </li>
+                </li> 
               </ul><!-- /.footer-nav__items -->
             </li><!-- /.footer-nav__unit -->
             <li class="footer-nav__unit">
@@ -452,25 +453,25 @@
               <div class="footer-nav__items-wrap">
                 <ul class="footer-nav__items_left">
                   <li class="footer-nav__item">
-                    <a href="#medical-01" class="page-link">
+                    <a href="./medical.html#medical-01" class="page-link">
                       <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
                       <div class="page-link__text">一般歯科</div>
                     </a>
                   </li>
                   <li class="footer-nav__item">
-                    <a href="#medical-02" class="page-link">
+                    <a href="./medical.html#medical-02" class="page-link">
                       <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
                       <div class="page-link__text">小児歯科</div>
                     </a>
                   </li>
                   <li class="footer-nav__item">
-                    <a href="#medical-03" class="page-link">
+                    <a href="./medical.html#medical-03" class="page-link">
                       <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
                       <div class="page-link__text">予防歯科</div>
                     </a>
                   </li>
                   <li class="footer-nav__item">
-                    <a href="#medical-04" class="page-link">
+                    <a href="./medical.html#medical-04" class="page-link">
                       <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
                       <div class="page-link__text">入れ歯</div>
                     </a>
@@ -478,25 +479,25 @@
                 </ul><!-- /.footer-nav__items_left -->
                 <ul class="footer-nav__items_right">
                   <li class="footer-nav__item">
-                    <a href="#medical-05" class="page-link">
+                    <a href="./medical.html#medical-05" class="page-link">
                       <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
                       <div class="page-link__text">矯正歯科</div>
                     </a>
                   </li>
                   <li class="footer-nav__item">
-                    <a href="#medical-06" class="page-link">
+                    <a href="./medical.html#medical-06" class="page-link">
                       <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
                       <div class="page-link__text">ホワイトニング</div>
                     </a>
                   </li>
                   <li class="footer-nav__item">
-                    <a href="#medical-07" class="page-link">
+                    <a href="./medical.html#medical-07" class="page-link">
                       <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
                       <div class="page-link__text">口腔外科</div>
                     </a>
                   </li>
                   <li class="footer-nav__item">
-                    <a href="#medical-08" class="page-link">
+                    <a href="./medical.html#medical-08" class="page-link">
                       <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
                       <div class="page-link__text">レーザー治療</div>
                     </a>
@@ -508,7 +509,7 @@
               <div class="footer-nav__unit-title">お問い合わせ</div>
               <ul class="footer-nav__items">
                 <li class="footer-nav__item">
-                  <a href="./reservation.html" class="page-link">
+                  <a href="./contact.html" class="page-link">
                     <span class="page-link__icon"><img src="./images/common/pagelink-arrow.png" alt="アイコン"></span>
                     <div class="page-link__text">お問い合わせフォーム</div>
                   </a>
@@ -533,7 +534,7 @@
       <div class="footer-cta__wrap">
         <div class="footer-cta__tel">
           <div class="footer-cta__tel-number tel-number">
-            <p class="tel-number__text tel-number__text_sm"><i class="fa-solid fa-phone"></i>03-1234-5678</p>
+            <a href="tel:03-1234-5678" class="tel-number__text tel-number__text_sm"><i class="fa-solid fa-phone"></i>03-1234-5678</a>
           </div>
           <div class="footer-cta__text-wrap">
             <p class="footer-cta__time-text">(年中無休 AM9:00〜PM22:00)</p>  

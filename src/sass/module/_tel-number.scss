@@ -2,6 +2,14 @@
 @use "sass:math";
 
 .tel-number {
+    cursor: pointer;
+
+    /* スマホ時のみ電話発信 */
+    @include mq('md') {
+        a[href^="tel:"]{
+        pointer-events: none;
+        }
+    }
 }
 
 .fa-phone {
@@ -27,4 +35,3 @@
     line-height: math.div( 23, 20 );
     @include lineHeightCrop(1.15);
 }
-

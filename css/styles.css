@@ -4487,6 +4487,16 @@ select::-ms-expand {
   }
 }
 
+.tel-number {
+  cursor: pointer;
+  /* スマホ時のみ電話発信 */
+}
+@media screen and (min-width: 768px) {
+  .tel-number a[href^="tel:"] {
+    pointer-events: none;
+  }
+}
+
 .fa-phone {
   color: currentColor;
   font-size: 0.85em;
@@ -4538,6 +4548,33 @@ select::-ms-expand {
   height: 0;
   margin-bottom: -0.075em;
   content: "";
+}
+
+.thanks {
+  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
+}
+
+.thanks__inner {
+  width: 100%;
+  max-width: 600px;
+  max-width: 37.5rem;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .thanks__inner {
+    max-width: 778px;
+  }
+}
+
+.thanks__desc {
+  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
+}
+@media screen and (min-width: 768px) {
+  .thanks__desc {
+    margin-bottom: 10rem;
+  }
 }
 
 .global-nav__link {
@@ -4663,22 +4700,6 @@ select::-ms-expand {
   .contact__desc {
     margin-bottom: 10rem;
   }
-}
-
-::-webkit-input-placeholder {
-  color: #C2C2C2;
-}
-
-::-moz-placeholder {
-  color: #C2C2C2;
-}
-
-::-ms-input-placeholder {
-  color: #C2C2C2;
-}
-
-::placeholder {
-  color: #C2C2C2;
 }
 
 .about-policy {
@@ -4962,7 +4983,19 @@ select::-ms-expand {
   }
 }
 
-.reservation__desc:not(:last-child) {
+.reservation__desc-wrap {
+  margin-bottom: -40px;
+  margin-bottom: -2.5rem;
+  margin-bottom: 100px;
+  margin-bottom: 6.25rem;
+}
+@media screen and (min-width: 768px) {
+  .reservation__desc-wrap {
+    margin-bottom: 10rem;
+  }
+}
+
+.reservation__desc {
   margin-bottom: 40px;
   margin-bottom: 2.5rem;
 }
