@@ -3819,6 +3819,7 @@ select::-ms-expand {
   margin-bottom: 1rem;
   margin-right: 24px;
   margin-right: 1.5rem;
+  /* 診療内容のレイアウト */
 }
 .reservation-form__check label:nth-of-type(3n) {
   margin-right: -24px;
@@ -3866,9 +3867,13 @@ select::-ms-expand {
   }
 }
 
-/* カレンダー用の基準 */
 .reservation-form__date {
   position: relative;
+  display: block;
+}
+.reservation-form__date:not(:last-child) {
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
 }
 
 .reservation-form__cta {
@@ -4489,9 +4494,12 @@ select::-ms-expand {
 
 .tel-number {
   cursor: pointer;
-  /* スマホ時のみ電話発信 */
+  /* md以上電話発信なし */
 }
 @media screen and (min-width: 768px) {
+  .tel-number {
+    cursor: default;
+  }
   .tel-number a[href^="tel:"] {
     pointer-events: none;
   }

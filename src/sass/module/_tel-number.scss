@@ -3,9 +3,11 @@
 
 .tel-number {
     cursor: pointer;
-
-    /* スマホ時のみ電話発信 */
+    
+    /* md以上電話発信なし */
     @include mq('md') {
+        cursor: default;
+    
         a[href^="tel:"]{
         pointer-events: none;
         }

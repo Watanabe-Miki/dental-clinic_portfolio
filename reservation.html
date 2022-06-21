@@ -244,109 +244,115 @@
         <h2 class="section-title__text">予約フォーム</h2>
         <span class="section-title__deco"><img src="./src/images/common/title-deco.png" alt="タイトルの装飾"></span>
       </div>
-      <div class="reservation__form">
-        <form action="post" class="reservation-form">
-          <dl class="reservation-form__dl">
-            <div class="reservation-form__row">
-              <dt class="reservation-form__label">
-                <label for="your-name" class="reservation-form__label_text">お名前</label>
-                <span class="label label_require">必須</span>
-              </dt>
-              <dd class="reservation-form__input">
-                <input id="your-name" type="text" placeholder="山田 太郎" autocomplete="name">
-              </dd>
-            </div><!-- /.reservation-form__row -->
-            <div class="reservation-form__row">
-              <dt class="reservation-form__label">
-                <label for="your-name_furigana" class="reservation-form__label_text">フリガナ</label>
-                <span class="label label_require">必須</span>
-              </dt>
-              <dd class="reservation-form__input">
-                <input id="your-name_furigana" type="text" placeholder="ヤマダ タロウ" autocomplete="name">
-              </dd>
-            </div><!-- /.reservation-form__row -->
-            <div class="reservation-form__row">
-              <dt class="reservation-form__label">
-                <label for="your-tel" class="reservation-form__label_text">電話番号</label>
-                <span class="label label_require">必須</span>
-              </dt>
-              <dd class="reservation-form__input">
-                <input id="your-tel" type="tel" placeholder="000-0000-0000" autocomplete="tel">
-              </dd>
-            </div><!-- /.reservation-form__row -->
-            <div class="reservation-form__row">
-              <dt class="reservation-form__label">
-                <label for="your-email" class="reservation-form__label_text">メールアドレス</label>
-                <span class="label label_require">必須</span>
-              </dt>
-              <dd class="reservation-form__input">
-                <input id="your-email" type="email" placeholder="xxx@example.com" autocomplete="email">
-              </dd>
-            </div><!-- /.reservation-form__row -->
-            <div class="reservation-form__row">
-              <dt class="reservation-form__label">
-                <label for="your-kind" class="reservation-form__label_text">初診/再診</label>
-                <span class="label label_require">必須</span>
-              </dt>
-              <dd class="reservation-form__radio">
-                <label><input name="your-radio" type="radio" checked><span>初診</span></label>
-                <label><input name="your-radio" type="radio"><span>再診</span></label>
-              </dd>
-            </div><!-- /.reservation-form__row -->
-            <div class="reservation-form__row">
-              <dt class="reservation-form__label">
-                <label for="your-kind" class="reservation-form__label_text">診療内容<br><span>※(複数選択可)</span></label>
-                <span class="label label_require">必須</span>
-              </dt>
-              <dd class="reservation-form__check">
-                <label><input name="your-check" type="checkbox"><span>虫歯</span></label>
-                <label><input name="your-check" type="checkbox"><span>被せ物がとれた</span></label>
-                <label><input name="your-check" type="checkbox"><span>矯正歯科</span></label>
-                <label><input name="your-check" type="checkbox"><span>咬み合わせ</span></label>
-                <label><input name="your-check" type="checkbox"><span>歯周病</span></label>
-                <label><input name="your-check" type="checkbox"><span>小児歯科</span></label>
-                <label><input name="your-check" type="checkbox"><span>入れ歯</span></label>
-                <label><input name="your-check" type="checkbox"><span class="checkbox-text">インプラント</span></label>
-                <label><input name="your-check" type="checkbox"><span class="checkbox-text">その他</span></label>
-              </dd>
-            </div><!-- /.reservation-form__row -->
-            <div class="reservation-form__row">
-              <dt class="reservation-form__label">
-                <label for="your-kind" class="reservation-form__label_text">ご連絡方法</label>
-                <span class="label label_require">必須</span>
-              </dt>
-              <dd class="reservation-form__input">
-                <select name="contact-type" id="your-kind">
-                  <option value="email" selected>メール</option>
-                  <option value="email01">メール1</option>
-                  <option value="email02">メール2</option>
-                </select>
-              </dd>
-            </div><!-- /.reservation-form__row -->
-            <div class="reservation-form__row">
-              <dt class="reservation-form__label">
-                <label class="reservation-form__label_text">希望日</label>
-              </dt>
-              <dd class="reservation-form__input">
-                <label for="your-day" class="reservation-form__date">
-                  <input id="your-day" type="date" placeholder="年 / 月 / 日">
-                </label>
-              </dd>
-            </div><!-- /.reservation-form__row -->
-            <div class="reservation-form__row">
-              <dt class="reservation-form__label">
-                <label for="message" class="reservation-form__label_text">お問い合わせ内容</label>
-              </dt>
-              <dd class="reservation-form__input">
-                <textarea name="message" id="message" placeholder="ご自由にご記入ください。" cols="30" rows="10"></textarea>
-              </dd>
-            </div><!-- /.reservation-form__row -->
-          </dl>
-          <div class="reservation-form__cta">
-            <input type="submit" value="送信" class="cta cta_submit">  
-          </div><!-- /.reservation__cta -->
-        </form>
-      </div><!-- /.reservation__form -->
+    <div class="reservation__form">
+      <form action="post" class="reservation-form">
+        <dl class="reservation-form__dl">
+          <div class="reservation-form__row">
+            <dt class="reservation-form__label">
+              <label for="your-name" class="reservation-form__label_text">お名前</label>
+              <span class="label label_require">必須</span>
+            </dt>
+            <dd class="reservation-form__input">
+              <input id="your-name" type="text" placeholder="山田 太郎" autocomplete="name">
+            </dd>
+          </div><!-- /.reservation-form__row -->
+          <div class="reservation-form__row">
+            <dt class="reservation-form__label">
+              <label for="your-name_furigana" class="reservation-form__label_text">フリガナ</label>
+              <span class="label label_require">必須</span>
+            </dt>
+            <dd class="reservation-form__input">
+              <input id="your-name_furigana" type="text" placeholder="ヤマダ タロウ" autocomplete="name">
+            </dd>
+          </div><!-- /.reservation-form__row -->
+          <div class="reservation-form__row">
+            <dt class="reservation-form__label">
+              <label for="your-tel" class="reservation-form__label_text">電話番号</label>
+              <span class="label label_require">必須</span>
+            </dt>
+            <dd class="reservation-form__input">
+              <input id="your-tel" type="tel" placeholder="000-0000-0000" autocomplete="tel">
+            </dd>
+          </div><!-- /.reservation-form__row -->
+          <div class="reservation-form__row">
+            <dt class="reservation-form__label">
+              <label for="your-email" class="reservation-form__label_text">メールアドレス</label>
+              <span class="label label_require">必須</span>
+            </dt>
+            <dd class="reservation-form__input">
+              <input id="your-email" type="email" placeholder="xxx@example.com" autocomplete="email">
+            </dd>
+          </div><!-- /.reservation-form__row -->
+          <div class="reservation-form__row">
+            <dt class="reservation-form__label">
+              <label for="your-kind" class="reservation-form__label_text">初診/再診</label>
+              <span class="label label_require">必須</span>
+            </dt>
+            <dd class="reservation-form__radio">
+              <label><input name="your-radio" type="radio" checked><span>初診</span></label>
+              <label><input name="your-radio" type="radio"><span>再診</span></label>
+            </dd>
+          </div><!-- /.reservation-form__row -->
+          <div class="reservation-form__row">
+            <dt class="reservation-form__label">
+              <label for="your-kind" class="reservation-form__label_text">診療内容<br><span>※(複数選択可)</span></label>
+              <span class="label label_require">必須</span>
+            </dt>
+            <dd class="reservation-form__check">
+              <label><input name="your-check" type="checkbox"><span>虫歯</span></label>
+              <label><input name="your-check" type="checkbox"><span>被せ物がとれた</span></label>
+              <label><input name="your-check" type="checkbox"><span>矯正歯科</span></label>
+              <label><input name="your-check" type="checkbox"><span>咬み合わせ</span></label>
+              <label><input name="your-check" type="checkbox"><span>歯周病</span></label>
+              <label><input name="your-check" type="checkbox"><span>小児歯科</span></label>
+              <label><input name="your-check" type="checkbox"><span>入れ歯</span></label>
+              <label><input name="your-check" type="checkbox"><span class="checkbox-text">インプラント</span></label>
+              <label><input name="your-check" type="checkbox"><span class="checkbox-text">その他</span></label>
+            </dd>
+          </div><!-- /.reservation-form__row -->
+          <div class="reservation-form__row">
+            <dt class="reservation-form__label">
+              <label for="your-kind" class="reservation-form__label_text">ご連絡方法</label>
+              <span class="label label_require">必須</span>
+            </dt>
+            <dd class="reservation-form__input">
+              <select name="contact-type" id="your-kind">
+                <option value="email" selected>メール</option>
+                <option value="email01">メール1</option>
+                <option value="email02">メール2</option>
+              </select>
+            </dd>
+          </div><!-- /.reservation-form__row -->
+          <div class="reservation-form__row">
+            <dt class="reservation-form__label">
+              <label class="reservation-form__label_text">希望日</label>
+            </dt>
+            <dd class="reservation-form__input">
+              <label for="your-day" class="reservation-form__date">
+                <input id="your-day" type="date" placeholder="年 / 月 / 日">
+              </label>
+              <label for="your-day" class="reservation-form__date">
+                <input id="your-day" type="date" placeholder="年 / 月 / 日">
+              </label>
+              <label for="your-day" class="reservation-form__date">
+                <input id="your-day" type="date" placeholder="年 / 月 / 日">
+              </label>
+            </dd>
+          </div><!-- /.reservation-form__row -->
+          <div class="reservation-form__row">
+            <dt class="reservation-form__label">
+              <label for="message" class="reservation-form__label_text">お問い合わせ内容</label>
+            </dt>
+            <dd class="reservation-form__input">
+              <textarea name="message" id="message" placeholder="ご自由にご記入ください。" cols="30" rows="10"></textarea>
+            </dd>
+          </div><!-- /.reservation-form__row -->
+        </dl>
+        <div class="reservation-form__cta">
+          <input type="submit" value="送信" class="cta cta_submit">  
+        </div><!-- /.reservation__cta -->
+      </form>
+    </div><!-- /.reservation__form -->
     </div><!-- /.inner -->
   </section>
 

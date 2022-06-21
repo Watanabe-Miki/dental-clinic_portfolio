@@ -251,6 +251,7 @@
             margin-right: rem(-24);
         }
 
+        /* 診療内容のレイアウト */
         @media screen and (min-width: 438px) {
             margin-right: rem(24);
 
@@ -296,9 +297,13 @@
     }
 }
 
-/* カレンダー用の基準 */
 .reservation-form__date {
-    position: relative;
+    position: relative; // カレンダー用の基準
+    display: block;
+
+    &:not(:last-child) {
+        margin-bottom: rem(20);
+    }
 }
 
 .reservation-form__cta {
